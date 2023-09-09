@@ -43,7 +43,7 @@
 </html>
 ```
 
-![Ejemplo colores](ejemplo-colores.png)
+![Ejemplo colores](assets/ejemplo-colores.png)
 
 
 ![Rueda color](assets/rueda-color.webp)
