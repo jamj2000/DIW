@@ -7,6 +7,7 @@
 
 ### Herramientas
 
+- [HTML Colors](https://htmlcolorcodes.com/)
 - [Fresh Background Gradients](https://webgradients.com/)
 - [Gradient Generator](https://www.joshwcomeau.com/gradient-generator/)
 - [Google Fonts](https://fonts.google.com)
