@@ -12,6 +12,7 @@
 - [Gradient Generator](https://www.joshwcomeau.com/gradient-generator/)
 - [Google Fonts](https://fonts.google.com)
 - [Emojipedia](https://emojipedia.org/)
+- [Algunos símbolos Unicode](https://www.w3schools.com/charsets/ref_utf_symbols.asp)
 
 ### Formación
 
