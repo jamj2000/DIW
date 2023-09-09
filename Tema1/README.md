@@ -8,7 +8,7 @@
 ### Herramientas
 
 - [Fresh Background Gradients](https://webgradients.com/)
-  [Gradient Generator](https://www.joshwcomeau.com/gradient-generator/)
+- [Gradient Generator](https://www.joshwcomeau.com/gradient-generator/)
 
 ### Formación
 
