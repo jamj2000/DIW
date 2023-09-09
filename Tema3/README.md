@@ -17,3 +17,12 @@ Audio: formatos. Conversiones de formatos (exportar e importar) .
 Vídeo: codificación de vídeo, conversiones de formatos (exportar e importar) .
 
 Transformaciones, Transiones, Animaciones
+
+
+## Recursos
+
+### Herramientas
+
+- [Tabler Icons](https://tablericons.com/)
+- [Open-source illustrations](https://undraw.co/)
+- [Get Waves](https://getwaves.io/)
