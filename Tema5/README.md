@@ -16,12 +16,11 @@
 
 ```css
 input:invalid {
-  border-color: red;
+	background-color: #FADBD8;
 }
 
-
 input:valid {
-  border-color: green;
+ 	background-color: #EAFAF1;
 }
 ```
 
