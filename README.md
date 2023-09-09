@@ -17,7 +17,6 @@ Módulo de **Diseño de Interfaces Web** del ciclo de Desarrollo de Aplicaciones
 
 - [VSCode](https://code.visualstudio.com/)
 - [Extensión Live Server para VSCode](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-- [Iconos SVG - Tabler icons](https://tablericons.com/)
 - [W3C Validador CSS](https://jigsaw.w3.org/css-validator)
 
 
