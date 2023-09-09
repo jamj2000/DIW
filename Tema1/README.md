@@ -1,7 +1,7 @@
 > DISEÑO DE INTERFACES WEB
 
 # Tema 1: Planificación de interfaces gráficas
-
+> TEXTO, COLOR, MODELO DE CAJA
 
 ## Recursos
 
