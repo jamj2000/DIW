@@ -6,8 +6,18 @@ Tecnologías relacionadas con la inclusión de contenidos multimedia e interacti
 
 Audio y Vídeo. Reproducción de elementos multimedia e interactivos.
 
-Transformaciones, Transiones, Animaciones
+Transformaciones, Transiciones, Animaciones
 
 Posicionamiento de elementos
+
+
+
+## Recursos
+
+### Herramientas
+
+- [Clip Path](https://bennettfeely.com/clippy/)
+
+### Formación
 
 - [Posicionamiento](https://www.geeksforgeeks.org/css-positioning-elements/?ref=lbp)
