@@ -8,9 +8,22 @@
 
 ```html
   <input type="text"
-    id="codigo_pais" name="codigo_pais" pattern="[A-Za-z]{3}" title="Por favor, introduce 3 letras del código de país"
+    id="codigo_pais"
+    name="codigo_pais"
+    pattern="[A-Za-z]{3}" 
+    title="Por favor, introduce 3 letras del código de país"
 ```
 
+```css
+input:invalid {
+  border-color: red;
+}
+
+
+input:valid {
+  border-color: green;
+}
+```
 
 
 ## Recursos
