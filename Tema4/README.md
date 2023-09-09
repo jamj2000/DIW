@@ -4,7 +4,9 @@
 
 Tecnologías relacionadas con la inclusión de contenidos multimedia e interactivos.
 
-Audio y Víde. Reproducción de elementos multimedia e interactivos.
+Audio y Vídeo. Reproducción de elementos multimedia e interactivos.
+
+Transformaciones, Transiones, Animaciones
 
 Posicionamiento de elementos
 
