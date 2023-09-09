@@ -16,7 +16,6 @@ Audio: formatos. Conversiones de formatos (exportar e importar) .
 
 Vídeo: codificación de vídeo, conversiones de formatos (exportar e importar) .
 
-Transformaciones, Transiones, Animaciones
 
 
 ## Recursos
