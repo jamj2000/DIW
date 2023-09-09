@@ -23,7 +23,8 @@ Transformaciones, Transiones, Animaciones
 
 ### Herramientas
 
-- [Tabler Icons](https://tablericons.com/)
-- [Unsplash](https://unsplash.com/)
-- [Open-source illustrations](https://undraw.co/)
+- [Tabler Icons - Iconos SVG](https://tablericons.com/)
+- [Font Awesome - Iconos SVG](https://fontawesome.com/search?o=r&m=free). Existe la posibilidad de descarga en formato SVG.
+- [Unsplash - Imágenes gratuitas](https://unsplash.com/)
+- [Open-source illustrations - Ilustraciones gratuitas](https://undraw.co/)
 - [Get Waves](https://getwaves.io/)
