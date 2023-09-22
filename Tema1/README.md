@@ -122,16 +122,52 @@ Muchos diseñadores prefieren usar un **border-box**, para así evitar descuadre
 ```
 
 ## Texto
+
+Las propiedades más frecuentes para el texto son las siguientes:
+
+- `color`
+- `font-family`
+- `font-size`
+- `font-weight`
+- `text-align`
+- `word-spacing`
+- `letter-spacing`
+- `line-height`
+
+Para importar un tipo de letra o fuente, podemos usar la regla `@import`
+
+Ejemplo:
+
 ```css
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
+
+div {
     color: tomato;
     font-family: 'Fira Code', monospace;
     font-size: 1rem;  /* 16px */
     font-weight: 400;    
-    text-align: center;
     word-spacing: 8px;
     letter-spacing: 1rem;
     line-height: 300px;
-``` 
+    text-align: center;
+    text-decoration: none;
+}
+```
+
+Los valores por defecto son:
+
+```css
+    font-size: 1rem;  /* o  font-size: 16px */
+    font-weight: 400;
+```
+
+## Listas
+
+
+
+## Tablas
+
+
 
 ## Recursos
 
