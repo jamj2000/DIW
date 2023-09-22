@@ -122,8 +122,16 @@ Muchos diseñadores prefieren usar un **border-box**, para así evitar descuadre
 ```
 
 ## Texto
-
-
+```css
+    color: tomato;
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;  /* 16px */
+    font-weight: 400;    
+    text-align: center;
+    word-spacing: 8px;
+    letter-spacing: 1rem;
+    line-height: 300px;
+``` 
 
 ## Recursos
 
