@@ -1,17 +1,36 @@
 > DISEÑO DE INTERFACES WEB
 
-# Tema 1: Planificación de interfaces gráficas
-> REGLAS, COLOR, MODELO DE CAJA, TEXTO, LISTAS, TABLAS
+# Tema 1: Planificación de interfaces gráficas <!-- omit in toc -->
+> FORMATO DE REGLA, COLOR, MODELO DE CAJA, TEXTO, LISTAS, TABLAS
 
-## Introducción
+- [1. Introducción](#1-introducción)
+- [2. Formato de regla CSS](#2-formato-de-regla-css)
+- [3. Color](#3-color)
+  - [3.1. Identificación](#31-identificación)
+  - [3.2. Valores RGB](#32-valores-rgb)
+  - [3.3. Valores RGBA](#33-valores-rgba)
+  - [3.4. Valores HSL](#34-valores-hsl)
+  - [3.5. Valores HSLA](#35-valores-hsla)
+- [4. Modelo de caja (box model)](#4-modelo-de-caja-box-model)
+- [5. Texto](#5-texto)
+- [6. Listas](#6-listas)
+- [7. Tablas](#7-tablas)
+- [8. Recursos](#8-recursos)
+  - [8.1. Herramientas](#81-herramientas)
+  - [8.2. Formación](#82-formación)
 
-## Formato de regla CSS
+---
+
+
+## 1. Introducción
+
+## 2. Formato de regla CSS
 
 ![Regla CSS](assets/regla-css.gif)
 
-## Color
+## 3. Color
 
-### Identificación
+### 3.1. Identificación
 
 - Por **nombre**:  tomato
 - Por **valor hexadecimal**: #ff6347
@@ -46,7 +65,7 @@
 ![Ejemplo colores](assets/ejemplo-colores.png)
 
 
-### Valores RGB
+### 3.2. Valores RGB
 
 En CSS, un color se puede especificar como un valor RGB mediante esta fórmula:
 
@@ -60,7 +79,7 @@ En CSS, un color se puede especificar como un valor RGB mediante esta fórmula:
 - Para mostrar alguna nivel de gris, establezca todos los parámetros de color con igual valor, así: rgb(200, 200, 200)
 
 
-### Valores RGBA
+### 3.3. Valores RGBA
 
 Los valores de color RGBA son una extensión de los valores de color RGB con un **canal alfa**, que especifica la **opacidad de un color**.
 
@@ -71,7 +90,7 @@ Un valor de color RGBA se especifica con:
 El parámetro alfa es un número **entre 0,0 (completamente transparente) y 1,0 (nada transparente)**
 
 
-### Valores HSL
+### 3.4. Valores HSL
 
 En CSS, un color se puede especificar usando tono, saturación y luminosidad (HSL) en la forma:
 
@@ -93,7 +112,7 @@ En CSS, un color se puede especificar usando tono, saturación y luminosidad (HS
 ![HSL](assets/hsl_cone.jpg)
 
 
-### Valores HSLA
+### 3.5. Valores HSLA
 
 Los valores de color HSLA son una extensión de los valores de color HSL con un **canal alfa**, que especifica la **opacidad de un color**.
 
@@ -104,7 +123,7 @@ Un valor de color HSLA se especifica con:
 El parámetro alfa es un número **entre 0,0 (completamente transparente) y 1,0 (nada transparente)**
 
 
-## Modelo de caja (box model)
+## 4. Modelo de caja (box model)
 
 ![Box Model](assets/box-model.png)
 
@@ -121,7 +140,7 @@ Muchos diseñadores prefieren usar un **border-box**, para así evitar descuadre
 }
 ```
 
-## Texto
+## 5. Texto
 
 Las propiedades más frecuentes para el texto son las siguientes:
 
@@ -161,7 +180,7 @@ Los valores por defecto son:
     font-weight: 400;
 ```
 
-## Listas
+## 6. Listas
 
 La propiedad más usada es
 
@@ -184,13 +203,13 @@ ol {
 }
 ```
 
-## Tablas
+## 7. Tablas
 
 
 
-## Recursos
+## 8. Recursos
 
-### Herramientas
+### 8.1. Herramientas
 
 - [HTML Colors](https://htmlcolorcodes.com/)
 - [Conversor de color](https://www.w3schools.com/colors/colors_converter.asp)
@@ -200,7 +219,7 @@ ol {
 - [Emojipedia](https://emojipedia.org/)
 - [Algunos símbolos Unicode](https://www.w3schools.com/charsets/ref_utf_symbols.asp)
 
-### Formación
+### 8.2. Formación
 
 - [Modelo de color HSL: qué es y qué ventajas tiene](https://www.uifrommars.com/que-es-hsl/)
 - [Google Fonts Knowledge](https://fonts.google.com/knowledge)
