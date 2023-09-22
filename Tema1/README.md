@@ -163,7 +163,26 @@ Los valores por defecto son:
 
 ## Listas
 
+La propiedad más usada es
 
+- `list-style-type`
+
+
+Ejemplos:
+
+```css
+ul {
+  list-style-type: none;
+  list-style-type: circle;
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: none;
+  list-style-type: upper-roman;
+  list-style-type: lower-alpha;
+}
+```
 
 ## Tablas
 
