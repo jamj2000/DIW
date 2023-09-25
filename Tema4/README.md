@@ -1,6 +1,6 @@
 > DISEÑO DE INTERFACES WEB
 
-# Tema 4: Integración de contenido interactivo
+# Tema 4: Integración de contenido interactivo  <!-- omit in toc -->
 
 Tecnologías relacionadas con la inclusión de contenidos multimedia e interactivos.
 
@@ -12,12 +12,12 @@ Posicionamiento de elementos
 
 
 
-## Recursos
+# Recursos
 
-### Herramientas
+## Herramientas
 
 - [Clip Path](https://bennettfeely.com/clippy/)
 
-### Formación
+## Formación
 
 - [Posicionamiento](https://www.geeksforgeeks.org/css-positioning-elements/?ref=lbp)

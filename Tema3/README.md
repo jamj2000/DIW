@@ -1,6 +1,6 @@
 > DISEÑO DE INTERFACES WEB
 
-# Tema 3: Implantación de contenido multimedia
+# Tema 3: Implantación de contenido multimedia  <!-- omit in toc -->
 
 
 
@@ -18,9 +18,9 @@ Vídeo: codificación de vídeo, conversiones de formatos (exportar e importar) 
 
 
 
-## Recursos
+# Recursos
 
-### Herramientas
+## Herramientas
 
 - [Tabler Icons - Iconos SVG](https://tablericons.com/)
 - [Font Awesome - Iconos SVG](https://fontawesome.com/search?o=r&m=free). Existe la posibilidad de descarga en formato SVG.

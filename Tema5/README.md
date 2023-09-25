@@ -1,6 +1,6 @@
 > DISEÑO DE INTERFACES WEB
 
-# Tema 5: Desarrollo de Webs accesibles
+# Tema 5: Desarrollo de Webs accesibles  <!-- omit in toc -->
 
 > FLEXBOX Y GRID
 > 
@@ -25,9 +25,9 @@ input:valid {
 ```
 
 
-## Recursos
+# Recursos
 
-### Formación
+## Formación
 
 - [W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/design-develop/es)
 - [WCAG 2.1 de un vistazo](https://www.w3.org/WAI/standards-guidelines/wcag/glance/es)
