@@ -1,7 +1,7 @@
 > DISEÑO DE INTERFACES WEB
 
 # Tema 2: Creación de interfaces web utilizando estilos <!-- omit in toc -->
-> INSERTAR CSS, CASCADA, ESPECIFICIDAD, HERENCIA, DISPLAY
+> INSERTAR CSS, CASCADA, ESPECIFICIDAD, HERENCIA, DISPLAY, POSITION
 
 
 - [1. Introducción](#1-introducción)
