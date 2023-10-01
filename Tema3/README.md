@@ -15,9 +15,21 @@
 
 ## Software para crear y procesar imágenes
 
-**Visualizadores**
+**Visores**
+- Explorador de archivos
+- Navegador web
+- IrfanView
+- Gwenview (Linux)
+- Eye of GNOME (Linux)
 
 **Editores**
+- MS Paint
+- GIMP
+- Krita
+- Photoshop
+- CorelDRAW (Gráficos vectoriales)
+- Adobe Illustrato (Gráficos vectoriales)
+- Inkscape (Gráficos vectoriales)
 
 **Optimización de imágenes para la Web**
 
@@ -185,4 +197,9 @@ Derechos de la propiedad intelectual. Licencias. Ley de la propiedad intelectual
 - [Get Waves](https://getwaves.io/)
 - [Clip Path Generator](https://bennettfeely.com/clippy/)
 
-## Documentación
+## Formación
+
+- [Wikipedia - Formatos de imagen](https://es.wikipedia.org/wiki/Formatos_de_archivos_de_imagen)
+- [Wikipedia - Visores de imágenes](https://es.wikipedia.org/wiki/Visor_de_im%C3%A1genes)
+- [Wikipedia - Edición de imágenes](https://es.wikipedia.org/wiki/Edici%C3%B3n_de_im%C3%A1genes)
+- [Wikipedia - Gráfico vectorial](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)
