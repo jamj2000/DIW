@@ -4,20 +4,23 @@
 
 
 
-Derechos de la propiedad intelectual. Licencias. Ley de la propiedad intelectual. Derechos de autor.
 
-Tipos de Imágenes en la Web.
 
-Imágenes: mapa de bits, imagen vectorial. Software para crear y procesar imágenes. Formatos de imágenes.
 
-Optimización de imágenes para la Web.
 
-Audio: formatos. Conversiones de formatos (exportar e importar) .
 
-Vídeo: codificación de vídeo, conversiones de formatos (exportar e importar) .
 
 
 # Imágenes
+
+## Software para crear y procesar imágenes
+
+**Visualizadores**
+
+**Editores**
+
+**Optimización de imágenes para la Web**
+
 
 ## Tipos de imágenes
 
@@ -92,6 +95,16 @@ img {
 
 Se mantiene el ratio de la imagen. Si la relación de aspecto de la imagen no coincide con la relación de aspecto del área visible, entonces la imagen se recortará para ajustarse.
 
+Para fondos de página puede usarse la propiedad `background-size: cover;`
+
+```css
+body {
+  backgroud-image: url('...');
+  background-size: cover;
+}
+```
+
+
 ## Recorte
 
 - Propiedades `clip-path` y `mask-image`.
@@ -121,11 +134,16 @@ En el siguiente enlace tienes más información:
 # Audio
 
 
+Audio: formatos. Conversiones de formatos (exportar e importar) .
+
+
 # Vídeo
 
+Vídeo: codificación de vídeo, conversiones de formatos (exportar e importar) .
 
 # Licencias
 
+Derechos de la propiedad intelectual. Licencias. Ley de la propiedad intelectual. Derechos de autor.
 
 
 # Recursos
