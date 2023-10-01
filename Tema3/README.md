@@ -17,6 +17,14 @@ Audio: formatos. Conversiones de formatos (exportar e importar) .
 Vídeo: codificación de vídeo, conversiones de formatos (exportar e importar) .
 
 
+# Imágenes
+
+> **Para saber más**:
+>
+> Es posible aplicar distintos filtros a una imagen. En el siguiente enlace tienes más información:
+>
+> - [MDN - Filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
+
 
 # Recursos
 
