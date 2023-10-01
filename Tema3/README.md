@@ -30,6 +30,9 @@
 
 **Mapas de bits**
 
+Está compuesta por una cuadrícula de píxeles, organizados en una rejilla. Cada uno de los píxeles que conforma el mapa de bits tiene un color definido que presenta un valor.
+
+Si hacemos zoom sobre la imagen podemos ver claramente cada uno de esos píxeles. Cuanto mayor sea el número de píxeles por imagen, mayor será su resolución. Por otro lado los **píxeles por pulgada (ppi)** indican su representación gráfica y por tanto su calidad.
 
 
 **Vectoriales**
@@ -43,34 +46,43 @@
 
 Características:
 
-- Formato de mapa de bits 
+- Formato de mapa de bits.
+- Usa comprensión SIN pérdida.
+- 256 colores como máximo de paleta de 8 bits.
+- Admite transparencia. No admite semitransparencia.
+- Admite animaciones.
 - Usado ampliamente en el pasado.
-- Muy poco usado actualmente.
+- Muy poco usado actualmente en la web.
+- Muy usado en redes sociales y mensajería.
+
 
 **JPEG**
 
 Características:
 
-- Formato de mapa de bits que usa compresión CON pérdidas.
+- Formato de mapa de bits.
+- Usa compresión CON pérdida.
 - No admite transparencias.
 
 **PNG**
 
 Características:
 
-- Formato de mapa de bits que usa compresión SIN pérdidas.
+- Formato de mapa de bits.
+- Usa compresión SIN pérdidas.
 - Admite transparencias.
 
 **WEBP**
 
 Características:
 
-- Formato de mapa de bits que usa compresión CON/SIN pérdidas.
+- Formato de mapa de bits.
+- Usa compresión CON/SIN pérdidas.
 - Admite transparencias.
 - Admite animaciones.
 - Código abierto.
 
-Consultar: https://www.adslzone.net/reportajes/foto-video/webp-formato-ventajas/
+> **Más información**: https://www.adslzone.net/reportajes/foto-video/webp-formato-ventajas/
 
 **SVG**
 
