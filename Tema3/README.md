@@ -19,6 +19,58 @@ Vídeo: codificación de vídeo, conversiones de formatos (exportar e importar) 
 
 # Imágenes
 
+## Tipos de imágenes
+
+**Mapas de bits**
+
+**Vectoriales**
+
+## Formatos
+
+**GIF**
+
+Características:
+
+- Formato de mapa de bits 
+- Usado ampliamente en el pasado.
+- Muy poco usado actualmente.
+
+**JPEG**
+
+Características:
+
+- Formato de mapa de bits que usa compresión CON pérdidas.
+- No admite transparencias.
+
+**PNG**
+
+Características:
+
+- Formato de mapa de bits que usa compresión SIN pérdidas.
+- Admite transparencias.
+
+**WEBP**
+
+Características:
+
+- Formato de mapa de bits que usa compresión CON/SIN pérdidas.
+- Admite transparencias.
+- Admite animaciones.
+- Código abierto.
+
+Consultar: https://www.adslzone.net/reportajes/foto-video/webp-formato-ventajas/
+
+**SVG**
+
+Características:
+
+- Formato vectorial.
+- Permite reescalado sin pérdida de calidad.
+- Ideal para logotipos y formas simples.
+- No adecuado para fotografías.
+
+ 
+
 ## Ajuste
 
 - Propiedades **`object-fit`** y **`object-position`**
