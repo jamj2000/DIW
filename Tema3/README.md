@@ -1,6 +1,7 @@
 > DISEÑO DE INTERFACES WEB
 
 # Tema 3: Implantación de contenido multimedia  <!-- omit in toc -->
+> IMAGEN, AUDIO, VIDEO, LICENCIAS
 
 
 
@@ -8,8 +9,7 @@
 
 
 
-
-
+---
 
 # Imágenes
 
@@ -22,11 +22,20 @@
 **Optimización de imágenes para la Web**
 
 
+- Imágenes adaptables: [MDN -Responsive Images ](https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+
+
+
 ## Tipos de imágenes
 
 **Mapas de bits**
 
+
+
 **Vectoriales**
+
+
+> **Más información**: https://www.marcaprint.com/blog/diferencia-entre-bits-y-vectorial/
 
 ## Formatos
 
@@ -156,3 +165,5 @@ Derechos de la propiedad intelectual. Licencias. Ley de la propiedad intelectual
 - [Open-source illustrations - Ilustraciones gratuitas](https://undraw.co/)
 - [Get Waves](https://getwaves.io/)
 - [Clip Path Generator](https://bennettfeely.com/clippy/)
+
+## Documentación
