@@ -4,10 +4,13 @@
 > LAYOUTS, FLEX, GRID, RESPONSIVE, MEDIA QUERIES
 
 
+---
+# Flex
 
-> FLEXBOX Y GRID
-> 
-> VALIDACIÓN DE FORMULARIOS con ATRIBUTO PATTERN (expresiones regulares)
+# Grid
+
+ 
+# VALIDACIÓN DE FORMULARIOS con ATRIBUTO PATTERN (expresiones regulares)
 
 ```html
   <input type="text"
