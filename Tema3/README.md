@@ -19,7 +19,7 @@ Vídeo: codificación de vídeo, conversiones de formatos (exportar e importar) 
 
 # Imágenes
 
-## Ajuste de imágen
+## Ajuste
 
 - Propiedades **`object-fit`** y **`object-position`**
 
@@ -39,14 +39,32 @@ img {
 ```
 
 Se mantiene el ratio de la imagen. Si la relación de aspecto de la imagen no coincide con la relación de aspecto del área visible, entonces la imagen se recortará para ajustarse.
+
+## Recorte
+
+- Propiedades `clip-path` y `mask-image`.
+
+Permite recortar la imagen según el contorno deseado. 
+Por ejemplo, para recortar la imagen en forma de triángulo podemos hacer **`clip-path: polygon(50% 0%, 0% 100%, 100% 100%);`**
+
+Existe un generador de recortes en https://bennettfeely.com/clippy/
+
+![Clip Path](assets/clip-path.png)
+
+Por otro lado, también podemos emplear la propiedad `mask-image` para el mismo fin. Consultar https://www.w3schools.com/css/css3_masking.asp
+
+![Mask Image](assets/mask-image.png)
+
+## Filtros 
  
 - Propiedad **`filter`**
 
 Permite aplicar ciertos filtros a la imagen. Por ejemplo, para aplicar un desenfoque hacemos **`filter: blur(5px);`**
-
 En el siguiente enlace tienes más información:
 
 - [MDN - Filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
+
+![Filter Blur](assets/filter-blur.png)
 
 # Audio
 
@@ -67,3 +85,4 @@ En el siguiente enlace tienes más información:
 - [Unsplash - Imágenes gratuitas](https://unsplash.com/)
 - [Open-source illustrations - Ilustraciones gratuitas](https://undraw.co/)
 - [Get Waves](https://getwaves.io/)
+- [Clip Path Generator](https://bennettfeely.com/clippy/)
