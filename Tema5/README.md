@@ -1,6 +1,9 @@
 > DISEÑO DE INTERFACES WEB
 
 # Tema 5: Desarrollo de Webs accesibles  <!-- omit in toc -->
+> LAYOUTS, FLEX, GRID, RESPONSIVE, MEDIA QUERIES
+
+
 
 > FLEXBOX Y GRID
 > 
@@ -29,5 +32,6 @@ input:valid {
 
 ## Formación
 
+- [MDN - CSS Layout](https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout)
 - [W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/design-develop/es)
 - [WCAG 2.1 de un vistazo](https://www.w3.org/WAI/standards-guidelines/wcag/glance/es)
