@@ -19,11 +19,11 @@ Vídeo: codificación de vídeo, conversiones de formatos (exportar e importar) 
 
 # Imágenes
 
-## 
+## Ajuste de imágen
 
-`object-fit` y `object-position`
+- Propiedades **`object-fit`** y **`object-position`**
 
-Para obtener un ajuste agradable a la vista suele usarse `object-fit: cover;`.
+Permite ajustar y posicionar una imagen en su área de visualización. Para obtener un ajuste agradable a la vista suele usarse **`object-fit: cover;`**.
 
 Ejemplo:
 
@@ -40,14 +40,13 @@ img {
 
 Se mantiene el ratio de la imagen. Si la relación de aspecto de la imagen no coincide con la relación de aspecto del área visible, entonces la imagen se recortará para ajustarse.
  
+- Propiedad **`filter`**
 
+Permite aplicar ciertos filtros a la imagen. Por ejemplo, para aplicar un desenfoque hacemos **`filter: blur(5px);`**
 
+En el siguiente enlace tienes más información:
 
-> **Para saber más**:
->
-> Es posible aplicar distintos filtros a una imagen. En el siguiente enlace tienes más información:
->
-> - [MDN - Filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
+- [MDN - Filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
 
 # Audio
 
