@@ -11,6 +11,7 @@
   - [3.3. Valores RGBA](#33-valores-rgba)
   - [3.4. Valores HSL](#34-valores-hsl)
   - [3.5. Valores HSLA](#35-valores-hsla)
+  - [3.6. Uso](#36-uso)
 - [4. Modelo de caja (box model)](#4-modelo-de-caja-box-model)
   - [4.1. Colapso de márgenes](#41-colapso-de-márgenes)
 - [5. Texto](#5-texto)
@@ -136,7 +137,7 @@ El parámetro alfa es un número entre:
 -  **0,0**: completamente **transparente**
 -  **1,0**: completamente **opaco**
 
-## Uso
+## 3.6. Uso
 
 El color está presente en numerosas propiedades. A continuación, se muestran unas cuantas:
 
