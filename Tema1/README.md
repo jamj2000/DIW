@@ -136,6 +136,27 @@ El parámetro alfa es un número entre:
 -  **0,0**: completamente **transparente**
 -  **1,0**: completamente **opaco**
 
+## Uso
+
+El color está presente en numerosas propiedades. A continuación, se muestran unas cuantas:
+
+- `color`
+- `border`
+- `background`
+- `background-color`
+- `background-image`
+
+**Ejemplo:**
+
+A continuación se muestra como crear un fondo de página con un gradiente en forma de arco iris, usando la propiedad `background-image`.
+
+```css
+body {
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, red 0%, orange 15%, yellow 30%,
+    lightgreen 45%, cyan 60%, rgb(4 138 183) 75%, rgb(180 4 180) 100%);
+}
+```
 
 # 4. Modelo de caja (box model)
 
