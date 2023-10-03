@@ -153,10 +153,19 @@ A continuación se muestra como crear un fondo de página con un gradiente en fo
 ```css
 body {
   height: 100vh;
-  background-image: linear-gradient(to bottom right, red 0%, orange 15%, yellow 30%,
-    lightgreen 45%, cyan 60%, rgb(4 138 183) 75%, rgb(180 4 180) 100%);
+  background-image: linear-gradient(to bottom right,
+    red 0%,
+    orange 15%,
+    yellow 30%,
+    lightgreen 45%,
+    cyan 60%,
+    rgb(4 138 183) 75%,
+    rgb(180 4 180) 100%);
 }
 ```
+
+![Gradiente Arco Iris](assets/gradiente.png)
+
 
 # 4. Modelo de caja (box model)
 
