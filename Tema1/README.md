@@ -373,6 +373,27 @@ Por ejemplo para disponer los items en una fila, con espacio entre ellos, podemo
 }
 ```
 
+Si sólo tenemos un item y queremos que esté centrado en el `body` podemos hacer
+
+```html
+<body>
+  <div class="item"></div>
+</body>
+```
+
+```css
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center center;
+}
+
+.item {
+  width: 300px;
+  height: 300px;  
+}
+```
+
 La maquetación con `flex` y `grid` proporciona numerosas opciones que estudiaremos en mucho mayor detalle en un tema posterior.
 
 
