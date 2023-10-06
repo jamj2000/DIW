@@ -239,6 +239,7 @@ Las propiedades más frecuentes para el texto son las siguientes:
 - `word-spacing`
 - `letter-spacing`
 - `line-height`
+- `text-shadow`
 
 Para importar un tipo de letra o fuente, podemos usar la regla `@import`
 
@@ -257,6 +258,7 @@ div {
     line-height: 300px;
     text-align: center;
     text-decoration: none;
+    text-shadow: 4px 4px 4px #aaa;
 }
 ```
 
@@ -266,6 +268,46 @@ Los valores por defecto son:
     font-size: 1rem;  /* o  font-size: 16px */
     font-weight: 400;
 ```
+
+## Efectos 
+
+[Muchas fuentes de Google Fonts soportan efectos](https://developers.google.com/fonts/docs/getting_started?hl=es-419).
+Estos efectos se ven realmente bien en títulos, no en texto de párrafo.
+
+Por ejemplo, el siguiente código HTML
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=anaglyph|fire|fire-animation|	brick-sign|neon|outline|emboss|shadow-multiple|3d-float|3d">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1 class="font-effect-anaglyph">Anaglyph Effect</h1>
+<h1 class="font-effect-fire">Fire Effect</h1>
+<h1 class="font-effect-fire-animation">Fire Animation Effect</h1>
+<h1 class="font-effect-neon">Neon Effect</h1>
+<h1 class="font-effect-brick-sign">Brick Sign Effect</h1>
+<h1 class="font-effect-outline">Outline Effect</h1>
+<h1 class="font-effect-emboss">Emboss Effect</h1>
+<h1 class="font-effect-shadow-multiple">Multiple Shadow Effect</h1>
+<h1 class="font-effect-3d-float">3d float Shadow Effect</h1>
+<h1 class="font-effect-3d">3d Shadow Effect</h1>
+
+</body>
+</html>
+```
+
+Se vería así
+
+![google fonts effects](assets/google-font-effects.png)
 
 # 6. Listas
 
