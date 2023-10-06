@@ -294,7 +294,6 @@ body {
 <h1 class="font-effect-fire">Fire Effect</h1>
 <h1 class="font-effect-fire-animation">Fire Animation Effect</h1>
 <h1 class="font-effect-neon">Neon Effect</h1>
-<h1 class="font-effect-brick-sign">Brick Sign Effect</h1>
 <h1 class="font-effect-outline">Outline Effect</h1>
 <h1 class="font-effect-emboss">Emboss Effect</h1>
 <h1 class="font-effect-shadow-multiple">Multiple Shadow Effect</h1>
