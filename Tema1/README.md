@@ -280,7 +280,7 @@ Por ejemplo, el siguiente código HTML
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=anaglyph|fire|fire-animation|	brick-sign|neon|outline|emboss|shadow-multiple|3d-float|3d">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=anaglyph|fire|fire-animation|neon|outline|emboss|shadow-multiple|3d-float|3d">
 <style>
 body {
   font-family: "Sofia", sans-serif;
