@@ -308,6 +308,9 @@ Se vería así
 
 ![google fonts effects](assets/google-font-effects.png)
 
+Referencia: https://www.w3schools.com/css/css_font_google.asp
+
+
 # 6. Listas
 
 La propiedad más usada es
