@@ -15,12 +15,15 @@
 - [4. Modelo de caja (box model)](#4-modelo-de-caja-box-model)
   - [4.1. Colapso de márgenes](#41-colapso-de-márgenes)
 - [5. Texto](#5-texto)
+  - [5.1. Efectos](#51-efectos)
 - [6. Listas](#6-listas)
 - [7. Tablas](#7-tablas)
 - [8. Introducción a la maquetación](#8-introducción-a-la-maquetación)
-- [9. Recursos](#9-recursos)
-  - [9.1. Herramientas](#91-herramientas)
-  - [9.2. Formación](#92-formación)
+- [9. Linter para CSS](#9-linter-para-css)
+- [10. Recursos](#10-recursos)
+  - [10.1. Herramientas](#101-herramientas)
+  - [10.2. Formación](#102-formación)
+
 
 
 
@@ -269,7 +272,7 @@ Los valores por defecto son:
     font-weight: 400;
 ```
 
-## Efectos 
+## 5.1. Efectos 
 
 [Muchas fuentes de Google Fonts soportan efectos](https://developers.google.com/fonts/docs/getting_started?hl=es-419).
 Estos efectos se ven realmente bien en títulos, no en texto de párrafo.
@@ -442,9 +445,42 @@ body {
 La maquetación con `flex` y `grid` proporciona numerosas opciones que estudiaremos en mucho mayor detalle en un tema posterior.
 
 
-# 9. Recursos
+# 9. Linter para CSS
 
-## 9.1. Herramientas
+Un `linter` es una herramienta que te ayuda a mejorar tu código mediante el análisis del código fuente en busca de problemas.
+
+Para CSS, un `linter` muy usado es `stylelint`.
+
+Una forma rápida y sencilla de pasar esta herramienta a tu código CSS es ejecutando:
+
+```bash
+npx  stylelint  *.css
+```
+> **IMPORTANTE**:
+>
+> Previamente deberás crear un archivo `.stylelintrc.json` con la configuración deseada. Una configuración muy básica es:
+>
+> ```json
+>{
+>  "rules": {
+>    "indentation": 2
+>  }
+>}
+>```
+
+
+Si deseas reparar los problemas detectados, ejecuta
+
+```bash
+npx  stylelint  *.css  --fix
+```
+
+
+
+
+# 10. Recursos
+
+## 10.1. Herramientas
 
 - [HTML Colors](https://htmlcolorcodes.com/)
 - [Conversor de color](https://www.w3schools.com/colors/colors_converter.asp)
@@ -454,7 +490,7 @@ La maquetación con `flex` y `grid` proporciona numerosas opciones que estudiare
 - [Emojipedia](https://emojipedia.org/)
 - [Algunos símbolos Unicode](https://www.w3schools.com/charsets/ref_utf_symbols.asp)
 
-## 9.2. Formación
+## 10.2. Formación
 
 - [Modelo de color HSL: qué es y qué ventajas tiene](https://www.uifrommars.com/que-es-hsl/)
 - [Google Fonts Knowledge](https://fonts.google.com/knowledge)
