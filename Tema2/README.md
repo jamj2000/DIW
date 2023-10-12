@@ -3,7 +3,6 @@
 # Tema 2: Creación de interfaces web utilizando estilos <!-- omit in toc -->
 > INSERTAR CSS, SELECTORES, CASCADA, ESPECIFICIDAD, HERENCIA, DISPLAY, POSITION
 
-
 - [1. Introducción](#1-introducción)
 - [2. Formas de insertar CSS](#2-formas-de-insertar-css)
 - [3. Selectores](#3-selectores)
@@ -12,12 +11,22 @@
   - [3.3. Selectores de pseudoclase](#33-selectores-de-pseudoclase)
   - [3.4. Selectores de pseudoelementos](#34-selectores-de-pseudoelementos)
   - [3.5. Selectores de atributos](#35-selectores-de-atributos)
-  - [3.6. Cascada](#36-cascada)
-  - [3.7. Especificidad](#37-especificidad)
-  - [3.8. Herencia](#38-herencia)
-- [4. Display](#4-display)
-  - [4.1. Ocultar un elemento](#41-ocultar-un-elemento)
-- [5. Recursos](#5-recursos)
+- [4. Cascada, especificidad y herencia](#4-cascada-especificidad-y-herencia)
+  - [4.1. Cascada](#41-cascada)
+  - [4.2. Especificidad](#42-especificidad)
+  - [4.3. Herencia](#43-herencia)
+- [5. Display](#5-display)
+  - [5.1. Block](#51-block)
+  - [5.2. Inline](#52-inline)
+  - [5.3. Flex y Grid](#53-flex-y-grid)
+  - [5.4. None, para ocultar un elemento](#54-none-para-ocultar-un-elemento)
+- [6. Position](#6-position)
+  - [6.1. z-index](#61-z-index)
+- [7. Recursos](#7-recursos)
+  - [7.1. Herramientas](#71-herramientas)
+  - [7.2. Formación](#72-formación)
+
+
 
 ---
 
@@ -98,29 +107,125 @@ h1 {
 4. **Selectores de pseudoelementos** (selecciona y aplica estilo a una parte de un elemento)
 5. **Selectores de atributos** (selecciona elementos según un atributo o valor de atributo)
 
+A continuación se muestran ejemplos de cada uno de ellos.
+
 ## 3.1. Selectores simples
+
+**Etiqueta HTML**
+
+- `body`
+- `h1`, `h2`, `h3`, ...
+- `div`, `p`
+- `img`, `a`, `span`
+- `form`, `input`, ...
+
+
+**IDs** **`#`**
+
+- `#identificador`
+
+Elemento cuyo atributo HTML es `id="identificador"`. Debe ser único dentro del documento.
+
+
+**Clases** **`.`**
+
+- `.nombre-clase`
+
+Elementos cuyo atributo HTML es `class="nombre-clase"`. 
 
 
 ## 3.2. Selectores combinadores
 
+**Cualquier descendiente** **` espacio en blanco `**
 
-## 3.3. Selectores de pseudoclase
+- `div p`
+
+Cualquier elemento `p` dentro de un elemento `div` sin importar el nivel de anidamiento.
+
+
+**Cualquier hijo** **`>`**
+
+- `div > p`
+
+Cualquier elemento `p` dentro de un elemento `div` en el primer nivel de anidamiento.
+
+
+**Hermano adjacente** **`+`**
+
+- `div + p`
+
+Primer elemento `p` adjacente de un `div`.
+
+> **NOTA:** Sólo se tienen en cuenta los hermanos siguientes, no los anteriores.
+
+**Todos los hermanos adjacentes** **`~`**
+
+- `div ~ p`
+
+Cualquier elemento `p` adjacente de un `div`.
+
+> **NOTA:** Sólo se tienen en cuenta los hermanos siguientes, no los anteriores.
+
+
+## 3.3. Selectores de pseudoclase 
+
+Para seleccionar un elemento HTML según su estado. Se expresa con **`:`**. Ejemplos:
+
+- `:root`
+- `:not(p)`
+- `a:link`
+- `a:visited`
+- `a:active`
+- `a:hover`
+- `div:hover`
+- `p:first-child`
+- `input:focus`
+- `input:checked`
+- `input:valid`
+- `input:invalid`
+- ...
+
+Más información en https://www.w3schools.com/css/css_pseudo_classes.asp
+
 
 
 ## 3.4. Selectores de pseudoelementos
 
+Para seleccionar partes de un elemento HTML. Se indica con **`::`**. Ejemplos:
+
+- `p::after`
+- `p::before`
+- `p::first-line`
+- `p::first-letter`
+- `p::selection`
+- ...
+
+Mas información en https://www.w3schools.com/css/css_pseudo_elements.asp
+
 
 ## 3.5. Selectores de atributos
 
+Para seleccionar partes de un elemento HTML. Se indica con **`[]`**. Ejemplos:
+
+- `a[target]`
+- `a[target="_blank"]`
+- `input[type="text"]`
+- `input[type="button"]`
+- ...
+
+Más información en https://www.w3schools.com/css/css_attribute_selectors.asp
 
 
+# 4. Cascada, especificidad y herencia
 
-## 3.6. Cascada
+Estos 3 aspectos determinan que valor de propiedad será aplicado a un elemento cuando dicha propiedad aparece varias veces con distintos valores en la hoja de estilo a aplicar.
+
+## 4.1. Cascada
 
 El listado de reglas CSS que establecemos es interpretado de forma secuencial. Es decir, si definimos una propiedad al principio de la hoja de estilos y más adelante volvemos a definir la misma propiedad con otro valor, la que se aplicará será esta última, puesto que sobreescrirá a la primera.
 
 
-## 3.7. Especificidad
+## 4.2. Especificidad
 
 | Peso | Tipo                                          | Ejemplo                          |
 | ---: | --------------------------------------------- | -------------------------------- |
@@ -133,7 +238,7 @@ El listado de reglas CSS que establecemos es interpretado de forma secuencial. E
 > Material de consulta: https://www.w3schools.com/css/css_specificity.asp
 
 
-## 3.8. Herencia
+## 4.3. Herencia
 
 Muchas de los valores de las propiedades se heredan de padres a hijos, es decir que elementos contenedores a elementos contenidos.
 
@@ -178,7 +283,7 @@ No todas las propiedades son heredadas. Las propiedades que se heredan son:
 - `word-wrap`
 
 
-# 4. Display
+# 5. Display
 
 Según la forma en la que es renderizado un elemento dentro de la página existen, en principio, 2+2 tipos de elementos:
 
@@ -187,6 +292,8 @@ Según la forma en la que es renderizado un elemento dentro de la página existe
 - `flex`: **Contenedor flexible**
 - `grid`: **Contenedor de cuadrícula o grilla**
 
+
+## 5.1. Block
 
 **Un elemento a nivel de bloque siempre comienza en una nueva línea y ocupa todo el ancho disponible** (se extiende hacia la izquierda y hacia la derecha tanto como puede).
 
@@ -202,6 +309,9 @@ Ejemplos de elementos a nivel de bloque:
 - `<footer>`
 - `<section>`
 
+
+## 5.2. Inline
+
 **Un elemento en línea no comienza en una nueva línea y solo ocupa el ancho necesario**.
 
 El elemento <span> es un elemento en línea.
@@ -212,8 +322,9 @@ Ejemplos de elementos en línea:
 - `<a>`
 - `<img>`
 
-**Los contenedores de tipo `flex` y `grid` nos permiten distribuir los elementos dentro de un contenedor**
+## 5.3. Flex y Grid
 
+**Los contenedores de tipo `flex` y `grid` nos permiten distribuir los elementos dentro de un contenedor**
 
 Para hacer uso en CSS de los `display` anteriores, escribimos:
 
@@ -225,7 +336,7 @@ display: grid;
 ```
 
 
-## 4.1. Ocultar un elemento
+## 5.4. None, para ocultar un elemento
 
 Existen 2 formas de ocultar un elemento:
 
@@ -235,4 +346,39 @@ Existen 2 formas de ocultar un elemento:
 La primera forma, elimina de la vista el elemento y también elimina el hueco que ocupaba. Mientras que la segunda forma, no elimina el hueco que ocupaba el elemento.
 
 
-# 5. Recursos
+# 6. Position
+
+Un elemento HTML puede ser posicionado de 5 maneras posibles:
+
+- `static`
+- `relative`
+- `absolute`
+- `fixed`
+- `sticky`
+
+Más información en https://www.w3schools.com/css/css_positioning.asp
+
+## 6.1. z-index
+
+Esta propiedad especifica el orden de pila de un elemento (qué elemento debe colocarse delante o detrás de los demás). Puede entenderse como la posición del elemento en el `eje de coordenadas Z`
+
+![z-index](assets/z-index.png)
+
+Un elemento puede tener un orden de pila positivo o negativo. Por defecto, el valor de `z-index` es 0. Elementos con valores más elevados se superponen sobre elementos con valores más bajos.
+
+![z-index](assets/z-index.webp)
+
+> **NOTA**: `z-index` sólo funciona en elementos posicionados (`position: absolute`, `position: relative`, `position: fixed`, or `position: sticky`) y elementos flexibles (elementos que son hijos directos de un elemento `display: flex`).
+
+
+# 7. Recursos
+
+## 7.1. Herramientas
+
+- [Conversor px / em](https://www.w3schools.com/cssref/css_pxtoemconversion.php)
+
+## 7.2. Formación
+
+- [Valores por defecto de los elementos HTML](https://www.w3schools.com/cssref/css_default_values.php)
+- [Unidades de medida](https://www.w3schools.com/cssref/css_units.php)
+- [Listado de entidades](https://www.w3schools.com/cssref/css_entities.php)
