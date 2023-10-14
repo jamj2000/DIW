@@ -22,9 +22,10 @@
   - [5.4. None, para ocultar un elemento](#54-none-para-ocultar-un-elemento)
 - [6. Position](#6-position)
   - [6.1. z-index](#61-z-index)
-- [7. Recursos](#7-recursos)
-  - [7.1. Herramientas](#71-herramientas)
-  - [7.2. Formación](#72-formación)
+- [7. Alineación horizontal y vertical](#7-alineación-horizontal-y-vertical)
+- [8. Recursos](#8-recursos)
+  - [8.1. Herramientas](#81-herramientas)
+  - [8.2. Formación](#82-formación)
 
 
 
@@ -113,11 +114,14 @@ A continuación se muestran ejemplos de cada uno de ellos.
 
 **Etiqueta HTML**
 
+- `*`
 - `body`
 - `h1`, `h2`, `h3`, ...
 - `div`, `p`
 - `img`, `a`, `span`
 - `form`, `input`, ...
+
+> **NOTA**: `*` se conoce como `selector universal`. Hace referencia a todos los elementos HTML.
 
 
 **IDs** **`#`**
@@ -135,6 +139,12 @@ Elementos cuyo atributo HTML es `class="nombre-clase"`.
 
 
 ## 3.2. Selectores combinadores
+
+**Varios elementos** **`,`**
+
+- `div, p`
+
+Cualquier elemento que sea `div` o `p`.
 
 **Cualquier descendiente** **` espacio en blanco `**
 
@@ -178,11 +188,13 @@ Para seleccionar un elemento HTML según su estado. Se expresa con **`:`**. Ejem
 - `a:active`
 - `a:hover`
 - `div:hover`
-- `p:first-child`
 - `input:focus`
 - `input:checked`
 - `input:valid`
 - `input:invalid`
+- `p:first-child`
+- `tr:nth-child(even)`
+- `p:last-child`
 - ...
 
 Más información en https://www.w3schools.com/css/css_pseudo_classes.asp
@@ -198,6 +210,7 @@ Para seleccionar partes de un elemento HTML. Se indica con **`::`**. Ejemplos:
 - `p::first-line`
 - `p::first-letter`
 - `p::selection`
+- `dialog::backdrop`
 - ...
 
 Mas información en https://www.w3schools.com/css/css_pseudo_elements.asp
@@ -232,7 +245,7 @@ El listado de reglas CSS que establecemos es interpretado de forma secuencial. E
 | 1000 | en línea                                      | `<h1 style="color: pink;"></h1>` |
 |  100 | id                                            | #navbar                          |
 |   10 | clases, pseudoclases, selectores de atributos | .test, :hover, [href]            |
-|    1 | elementos, pseudoelementos                    | h1, ::before                     |
+|    1 | elementos, pseudoelementos                    | h1, p::before                     |
 
 
 > Material de consulta: https://www.w3schools.com/css/css_specificity.asp
@@ -282,6 +295,27 @@ No todas las propiedades son heredadas. Las propiedades que se heredan son:
 - `word-spacing`
 - `word-wrap`
 
+Cuando trabajamos con propiedades heredables, dos valores que son de gran utilidad son:
+
+- `initial`: Si la propiedad es heredada, ignoramos y establecemos valor predeterminado.
+- `inherit`: Si la propiedad no es heredada, forzamos a heredar el valor del padre.
+
+Podemos indicar que un elemento haga un *reset* de todas las propiedades, incluso las [predeterminadas](https://www.w3schools.com/cssref/css_default_values.php). Por ejemplo:
+
+```css
+p {
+  all: initial;
+}
+```
+
+También podemos indicar que un elemento herede todas las propiedades de su padre, incluso las no heredables. Por ejemplo:
+
+```css
+p {
+  all: inherit;
+}
+```
+
 
 # 5. Display
 
@@ -291,6 +325,15 @@ Según la forma en la que es renderizado un elemento dentro de la página existe
 - `inline`: **Elemento en línea**
 - `flex`: **Contenedor flexible**
 - `grid`: **Contenedor de cuadrícula o grilla**
+
+Para hacer uso en CSS de los `display` anteriores, escribimos:
+
+```css
+display: block;
+display: inline;
+display: flex;
+display: grid;
+```
 
 
 ## 5.1. Block
@@ -324,16 +367,9 @@ Ejemplos de elementos en línea:
 
 ## 5.3. Flex y Grid
 
-**Los contenedores de tipo `flex` y `grid` nos permiten distribuir los elementos dentro de un contenedor**
+**Los elementos de tipo `flex` y `grid` nos permiten distribuir otros elementos hijo dentro de ellos. Por tanto, estos valores se usan para elementos contenedores.**
 
-Para hacer uso en CSS de los `display` anteriores, escribimos:
-
-```css
-display: block;
-display: inline;
-display: flex;
-display: grid;
-```
+Estudiaremos estos tipos de `display` en un tema posterior.
 
 
 ## 5.4. None, para ocultar un elemento
@@ -346,6 +382,7 @@ Existen 2 formas de ocultar un elemento:
 La primera forma, elimina de la vista el elemento y también elimina el hueco que ocupaba. Mientras que la segunda forma, no elimina el hueco que ocupaba el elemento.
 
 
+
 # 6. Position
 
 Un elemento HTML puede ser posicionado de 5 maneras posibles:
@@ -356,7 +393,70 @@ Un elemento HTML puede ser posicionado de 5 maneras posibles:
 - `fixed`
 - `sticky`
 
+Para hacer uso en CSS de las `position` anteriores, escribimos:
+
+```css
+position: relative;
+position: absolute;
+position: fixed;
+position: sticky;
+```
+
+Una vez establecido el modo de posicionado, podemos utilizar las propiedades `top`, `bottom`, `left` y `right` para indicar el desplazamiento respecto de la posición original del elemento en cuestión.
+
+El resto de elementos no son desplazados de su posición.
+
+**static**
+
+Los elementos HTML son colocados de esta manera de forma predeterminada. Por tanto, es innecesario indicarlo. Las propiedades `top`, `bottom`, `left`, `right` no tienen efecto. 
+
+**relative**
+
+Las propiedades `top`, `bottom`, `left`, `right` indican desplazamiento **respecto de la posición original** del elemento.
+
+El elemento **deja espacio vacío** en su posición original.
+
+**absolute**
+
+Las propiedades `top`, `bottom`, `left`, `right` indican desplazamiento **respecto al ancestro posicionado más cercano** del elemento. 
+
+Si el elemento no tiene antepasados ​​posicionados (en forma `relative`, `absolute`, `fixed` o `sticky`), entonces utiliza el cuerpo del documento y se mueve junto con el desplazamiento de la página.
+
+El elemento **no deja espacio vacío** en su posición original.
+
+**fixed**
+
+Las propiedades `top`, `bottom`, `left`, `right` indican desplazamiento **respecto al viewport**. Por tanto, el elemento siempre permanece en el mismo lugar incluso si se desplaza la página. 
+
+El elemento **no deja espacio vacío** en su posición original.
+
+**sticky**
+
+Las propiedades `top` y `bottom` indican desplazamiento **respecto al viewport**, pero sólo se aplica cuando el desplazamiento de la página hace que el elemento pueda desaparecer de la vista. En este caso, el elemento se pegará al *viewport* 
+
+El elemento **deja espacio vacío** en su posición original.
+
+La posición `sticky` es usada a menudo para posicionar cabeceras, barras de navegación y similares que no queremos que desaparezcan de la vista al desplazar hacia abajo la página. En este caso suele usarse junto a la propiedad `top`.
+
+La posición `sticky` es usada a menudo para posicionar pies de página y similares que no queremos que desaparezcan de la vista al desplazar hacia arriba la página. En este caso suele usarse junto a la propiedad `bottom`.
+
+
+Ejemplo:
+
+```css
+header {
+  position: sticky;
+  top: 0px;
+}
+
+footer {
+  position: sticky;
+  bottom: 0px;
+}
+```
+
 Más información en https://www.w3schools.com/css/css_positioning.asp
+
 
 ## 6.1. z-index
 
@@ -368,16 +468,21 @@ Un elemento puede tener un orden de pila positivo o negativo. Por defecto, el va
 
 ![z-index](assets/z-index.webp)
 
-> **NOTA**: `z-index` sólo funciona en elementos posicionados (`position: absolute`, `position: relative`, `position: fixed`, or `position: sticky`) y elementos flexibles (elementos que son hijos directos de un elemento `display: flex`).
+> **NOTA**: `z-index` sólo funciona en elementos posicionados (`absolute`, `relative`, `fixed`, or `sticky`) y elementos flexibles (elementos que son hijos directos de un elemento `display: flex`).
 
+# 7. Alineación horizontal y vertical
 
-# 7. Recursos
+Existen numerosas formas de alinear un elemento tanto horizontalmente como verticalmente.
 
-## 7.1. Herramientas
+Para más información consultar https://www.w3schools.com/css/css_align.asp
+
+# 8. Recursos
+
+## 8.1. Herramientas
 
 - [Conversor px / em](https://www.w3schools.com/cssref/css_pxtoemconversion.php)
 
-## 7.2. Formación
+## 8.2. Formación
 
 - [Valores por defecto de los elementos HTML](https://www.w3schools.com/cssref/css_default_values.php)
 - [Unidades de medida](https://www.w3schools.com/cssref/css_units.php)
