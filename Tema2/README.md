@@ -487,3 +487,4 @@ Para más información consultar https://www.w3schools.com/css/css_align.asp
 - [Valores por defecto de los elementos HTML](https://www.w3schools.com/cssref/css_default_values.php)
 - [Unidades de medida](https://www.w3schools.com/cssref/css_units.php)
 - [Listado de entidades](https://www.w3schools.com/cssref/css_entities.php)
+- [Posicionamiento](https://www.geeksforgeeks.org/css-positioning-elements/?ref=lbp)

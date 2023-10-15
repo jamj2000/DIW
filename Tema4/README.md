@@ -8,7 +8,6 @@ Audio y Vídeo. Reproducción de elementos multimedia e interactivos.
 
 Transformaciones, Transiciones, Animaciones
 
-Posicionamiento de elementos
 
 
 
@@ -20,4 +19,4 @@ Posicionamiento de elementos
 
 ## Formación
 
-- [Posicionamiento](https://www.geeksforgeeks.org/css-positioning-elements/?ref=lbp)
+

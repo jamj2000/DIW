@@ -16,8 +16,8 @@
   <input type="text"
     id="codigo_pais"
     name="codigo_pais"
-    pattern="[A-Za-z]{3}" 
-    title="Por favor, introduce 3 letras del código de país"
+    pattern="[A-Za-z]{2}" 
+    title="Por favor, introduce 2 letras del código de país"
 ```
 
 ```css
@@ -32,6 +32,8 @@ input:valid {
 
 
 # Recursos
+
+## Herramientas
 
 ## Formación
 

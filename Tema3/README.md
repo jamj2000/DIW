@@ -3,7 +3,27 @@
 # Tema 3: Implantación de contenido multimedia  <!-- omit in toc -->
 > IMAGEN, AUDIO, VIDEO, LICENCIAS
 
-
+- [1. Introducción](#1-introducción)
+- [2. Imágenes](#2-imágenes)
+  - [2.1. Software para crear y procesar imágenes](#21-software-para-crear-y-procesar-imágenes)
+  - [2.2. Tipos de imágenes](#22-tipos-de-imágenes)
+  - [2.3. Formatos](#23-formatos)
+  - [2.4. Ajuste](#24-ajuste)
+  - [2.5. Recorte](#25-recorte)
+  - [2.6. Filtros](#26-filtros)
+  - [2.7. Optimización de imágenes para la Web](#27-optimización-de-imágenes-para-la-web)
+- [3. Audio](#3-audio)
+  - [3.1. Formatos de codec y archivo](#31-formatos-de-codec-y-archivo)
+- [4. Vídeo](#4-vídeo)
+  - [4.1. Formatos de codec](#41-formatos-de-codec)
+  - [4.2. Formatos de archivo](#42-formatos-de-archivo)
+- [5. Otras tecnologías](#5-otras-tecnologías)
+  - [5.1. Iframe](#51-iframe)
+  - [5.2. Canvas](#52-canvas)
+- [6. Licencias](#6-licencias)
+- [7. Recursos](#7-recursos)
+  - [7.1. Herramientas](#71-herramientas)
+  - [7.2. Formación](#72-formación)
 
 
 
@@ -11,9 +31,64 @@
 
 ---
 
-# Imágenes
+# 1. Introducción
 
-## Software para crear y procesar imágenes
+Este documento es un resumen realizado a partir de la documentación disponible en **[W3Schools](https://www.w3schools.com/css/default.asp)**. 
+
+Por favor, para un tratamiento en mayor profundidad y demos on-line, no dudes en consultar la documentación anterior.
+
+
+# 2. Imágenes
+
+El uso de imágenes en la web está muy extendido, puesto que proporciona una funcionalidad añadida a la información textual.
+
+Existen numerosas formas de añadir imágenes a una página web. Aquí tienes algunas etiquetas HTML para ello:
+
+- `img`
+- `figure`
+- `picture`
+
+**Ejemplos**:
+
+```html
+<img src="elephant-660-480.jpg" 
+     alt="Elephant at sunset" 
+     title="A elephant a sunset"
+     loading="lazy" />
+
+<figure>
+  <img src="/media/cc0-images/elephant-660-480.jpg" alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+
+<picture>
+  <source srcset="photo.avif" type="image/avif" />
+  <source srcset="photo.webp" type="image/webp" />
+  <img src="photo.jpg" alt="photo" />
+</picture>
+
+<picture>
+  <source srcset="mdn-logo-wide.png" media="(min-width: 800px)" />
+  <source srcset="mdn-logo-medium.png" media="(min-width: 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN Web Docs" />
+</picture>
+```
+
+Además tenemos la posibilidad de usar las propiedades de CSS `background` y `background-image`.
+
+**Ejemplo**:
+
+```css
+div {
+  width: 200px;
+  height: 200px; 
+  background-image: url('fondo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+```
+
+## 2.1. Software para crear y procesar imágenes
 
 **Visores**
 - Explorador de archivos
@@ -28,17 +103,11 @@
 - Krita
 - Photoshop
 - CorelDRAW (Gráficos vectoriales)
-- Adobe Illustrato (Gráficos vectoriales)
+- Adobe Illustrator (Gráficos vectoriales)
 - Inkscape (Gráficos vectoriales)
 
-**Optimización de imágenes para la Web**
 
-
-- Imágenes adaptables: [MDN -Responsive Images ](https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-
-
-
-## Tipos de imágenes
+## 2.2. Tipos de imágenes
 
 **Mapas de bits**
 
@@ -59,7 +128,7 @@ Además, las vectoriales permiten definir una imagen con muy poca información, 
 
 > **Más información**: https://www.marcaprint.com/blog/diferencia-entre-bits-y-vectorial/
 
-## Formatos
+## 2.3. Formatos
 
 **GIF**
 
@@ -113,8 +182,7 @@ Características:
 - No adecuado para fotografías.
 
  
-
-## Ajuste
+## 2.4. Ajuste
 
 - Propiedades **`object-fit`** y **`object-position`**
 
@@ -139,13 +207,13 @@ Para fondos de página puede usarse la propiedad `background-size: cover;`
 
 ```css
 body {
-  backgroud-image: url('...');
+  background-image: url('...');
   background-size: cover;
 }
 ```
 
 
-## Recorte
+## 2.5. Recorte
 
 - Propiedades `clip-path` y `mask-image`.
 
@@ -160,7 +228,8 @@ Por otro lado, también podemos emplear la propiedad `mask-image` para el mismo 
 
 ![Mask Image](assets/mask-image.png)
 
-## Filtros 
+
+## 2.6. Filtros 
  
 - Propiedad **`filter`**
 
@@ -171,24 +240,188 @@ En el siguiente enlace tienes más información:
 
 ![Filter Blur](assets/filter-blur.png)
 
-# Audio
+
+## 2.7. Optimización de imágenes para la Web
+
+Consulta el siguiente enlace de MDN:
+
+- [Imágenes adaptables](https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+
+Y realiza el siguiente proyecto propuesto por MDN:
+
+- [Proyecto propuesto](https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page#assessment_or_further_help)
+
+El código fuente del proyecto puede obtenerse en [Github](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/mdn-splash-page-start)
 
 
-Audio: formatos. Conversiones de formatos (exportar e importar) .
+# 3. Audio
+
+Para añadir audio a una página web podemos usar la etiqueta HTML `audio`.
+
+**Ejemplo**:
+
+```html
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+
+  Descarga <a download href="horse.ogg">OGG</a> o <a download href="horse.mp3">MP3</a>  
+</audio>
+```
+
+Más información acerca de atributos soportados en [MDN - Etiqueta HTML de audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
 
 
-# Vídeo
+## 3.1. Formatos de codec y archivo
 
-Vídeo: codificación de vídeo, conversiones de formatos (exportar e importar) .
+Los principales formatos para la web son:
 
-# Licencias
-
-Derechos de la propiedad intelectual. Licencias. Ley de la propiedad intelectual. Derechos de autor.
+**MP3**
 
 
-# Recursos
+**OGG**
 
-## Herramientas
+
+**3GP**
+
+
+**AAC**
+
+
+
+# 4. Vídeo
+
+Para añadir vídeo a una página web podemos usar la etiqueta HTML `video`.
+
+**Ejemplos**:
+
+```html
+<video controls>
+  <source src="flower.webm" type="video/webm" />
+  <source src="flower.mp4" type="video/mp4" />
+
+  Descarga <a download href="flower.webm">WEBM</a> o <a download href="flower.mp4">MP4</a>
+</video>
+``` 
+
+```html
+<!-- Simple video example -->
+<!-- 'Big Buck Bunny' licensed under CC 3.0 by the Blender foundation. Hosted by archive.org -->
+<!-- Poster from peach.blender.org -->
+<video
+  controls
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  width="620">
+  Lo sentimos, tu navegador no admite vídeos incrustados, pero no te preocupes, puedes
+  <a href="https://archive.org/details/BigBuckBunny_124">descargarlo</a>
+  ¡Y verlo con tu reproductor de video favorito!
+</video>
+```
+
+Más información acerca de atributos soportados en [MDN - Etiqueta HTML de vídeo](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
+
+## 4.1. Formatos de codec
+
+Los principales formatos de codec para la web son:
+
+**VP8/VP9**
+
+
+**MPEG4**
+
+
+**H.264**
+
+
+**H.265 (HEVC)**
+
+
+## 4.2. Formatos de archivo
+
+Los archivos de vídeo proporcionan un **contenedor** a las pistas de audio, video y, opcionalmente, subtítulos.
+
+![contenedor de vídeo](assets/contenedor-video.png)
+
+Las pistas de audio y video dentro del contenedor mantienen los datos en un formato adecuado para el *codec* usado para codificar ese medio. Se usan diferentes formatos para pistas de audio versus de video. 
+
+Cada pista de audio es codificada usando un *codec* de audio mientras que las pistas de video son codificadas usando un *codec* de video. 
+
+Los principales formatos de archivo para la web son:
+
+**WebM**
+
+Normalmente contiene audio Ogg Vorbis y vídeo VP8/VP9.
+
+**MP4**
+
+Normalmente contiene audio AAC o MP3 y vídeo H.264
+
+**3GP**
+
+Normalmente contiene audio AMR-NB o AAC-LC y vídeo MPEG4 o H.263.
+
+**MKV**
+
+Contiene diferentes tipos de audio y vídeo (incluido el nuevo H.265). También tiene cabida para  subtitulos. 
+
+
+# 5. Otras tecnologías
+
+## 5.1. Iframe
+
+Es un elemento HTML que permite insertar contenido externo, embebido dentro de la página. Es habitual su uso para la inserción de vídeos de diversas plataformas de streaming o la inserción de mapas geográficos. Asimismo también admite incrustar otro tipo de contenido.
+
+**Ejemplo**:
+
+```html
+<iframe width="560" height="315" 
+  src="https://www.youtube.com/embed/ojcNcvb1olg?si=t8jYzqQyB28DYNtf" 
+  title="YouTube video player" 
+  frameborder="0" 
+  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
+  allowfullscreen>
+</iframe>
+``` 
+
+## 5.2. Canvas
+
+Es un elemento HTML que permite dibujar gráficos y animaciones. Para ello es necesario hacer uso del lenguaje `Javascript`.
+
+**Ejemplo**:
+
+```html
+<canvas width="120" height="120">
+  Un texto alternativo que describe lo que muestra el lienzo.
+</canvas>
+```
+
+```javascript
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
+// Añadir un rectangulo en posición (10, 10) con ancho 100x100 pixeles
+ctx.fillRect(10, 10, 100, 100);
+```
+
+# 6. Licencias
+
+Licencias. Ley de la propiedad intelectual. Derechos de autor.
+
+![creative commons](assets/propiedad-intelectual.png)
+
+Consulta el siguiente enlace:
+
+- [Derechos de autor, copyright y creative commons](https://www.compilatio.net/es/noticias/derechos-autor-copyright-creative-commons)
+
+Y haz un resumen de la página anterior. ¿Qué es la licencia CC0?
+
+![creative commons](assets/licencias-cc.png)
+
+
+# 7. Recursos
+
+## 7.1. Herramientas
 
 - [Tabler Icons - Iconos SVG](https://tablericons.com/)
 - [Font Awesome - Iconos SVG](https://fontawesome.com/search?o=r&m=free). Existe la posibilidad de descarga en formato SVG.
@@ -196,10 +429,14 @@ Derechos de la propiedad intelectual. Licencias. Ley de la propiedad intelectual
 - [Open-source illustrations - Ilustraciones gratuitas](https://undraw.co/)
 - [Get Waves](https://getwaves.io/)
 - [Clip Path Generator](https://bennettfeely.com/clippy/)
+- [Optimizador de imágenes online](https://tinypng.com/)
 
-## Formación
+## 7.2. Formación
 
 - [Wikipedia - Formatos de imagen](https://es.wikipedia.org/wiki/Formatos_de_archivos_de_imagen)
 - [Wikipedia - Visores de imágenes](https://es.wikipedia.org/wiki/Visor_de_im%C3%A1genes)
 - [Wikipedia - Edición de imágenes](https://es.wikipedia.org/wiki/Edici%C3%B3n_de_im%C3%A1genes)
 - [Wikipedia - Gráfico vectorial](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)
+- [MDN - Contenido de audio y vídeo](https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Formatos de audio](https://culturasonora.es/blog/formatos-de-audio/)
+- [Formatos de vídeo](https://hotmart.com/es/blog/formatos-de-video)
