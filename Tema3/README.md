@@ -424,8 +424,12 @@ Y haz un resumen de la página anterior. ¿Qué es la licencia CC0?
 ## 7.1. Herramientas
 
 - [Tabler Icons - Iconos SVG](https://tablericons.com/)
+- [Flaticon - Iconos SVG](https://www.flaticon.es/)
 - [Font Awesome - Iconos SVG](https://fontawesome.com/search?o=r&m=free). Existe la posibilidad de descarga en formato SVG.
 - [Unsplash - Imágenes gratuitas](https://unsplash.com/)
+- [Pexels - Imágenes gratuitas](https://www.pexels.com/es-es/)
+- [Pixabay - Imágenes gratuitas](https://pixabay.com/es/)
+- [Freepik - Imágenes gratuitas](https://www.freepik.es/)
 - [Open-source illustrations - Ilustraciones gratuitas](https://undraw.co/)
 - [Get Waves](https://getwaves.io/)
 - [Clip Path Generator](https://bennettfeely.com/clippy/)
