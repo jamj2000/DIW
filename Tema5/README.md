@@ -7,7 +7,13 @@
 ---
 # Flex
 
+Disposición **flexible**
+
 # Grid
+
+Disposición en **cuadricula**
+
+
 
  
 # VALIDACIÓN DE FORMULARIOS con ATRIBUTO PATTERN (expresiones regulares)
@@ -34,6 +40,8 @@ input:valid {
 # Recursos
 
 ## Herramientas
+
+- [Flexbox Froggy](https://flexboxfroggy.com/#es)
 
 ## Formación
 

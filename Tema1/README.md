@@ -119,13 +119,13 @@ En CSS, un color se puede especificar usando tono, saturación y luminosidad (HS
 
 **Tono** o Hue
 
-![Rueda color](assets/rueda-color.webp)
+![Rueda color](assets/color-wheel.png)
+
+- Referencia: https://developer.mozilla.org/en-US/docs/Web/CSS/hue
 
 **Saturación** y **Luminosidad**
 
-![Munsell system](assets/munsell-color-system.png)
-
-![HSL](assets/hsl_cone.jpg)
+![Munsell system](assets/doble-cono-hsl.png)
 
 
 ## 3.5. Valores HSLA

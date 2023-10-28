@@ -23,10 +23,11 @@ Módulo de **Diseño de Interfaces Web** del ciclo de Desarrollo de Aplicaciones
 ### Formación
 
 - [APRENDE CSS desde CERO ✅ (videotutorial completo)](https://www.youtube.com/watch?v=WfDqFArJnYA&t=8617s)
+- [Lenguaje CSS, por Manz](https://lenguajecss.com/css/)
 - [Aprender CSS](https://web.dev/learn/css/)
-- [W3Schools Tutorial CSS](https://www.w3schools.com/css/default.asp)
-- [W3Schools Tutorial Bootstrap 5](https://www.w3schools.com/bootstrap5/index.php)
+- [MDN Tutorial CSS](https://developer.mozilla.org/es/docs/Learn/CSS/First_steps)
 - [MDN Referencia CSS](https://developer.mozilla.org/es/docs/Web/CSS/Reference)
+- [W3Schools Tutorial CSS](https://www.w3schools.com/css/default.asp)
 - [Retos Frontend Mentor](https://www.frontendmentor.io/challenges)
 
 

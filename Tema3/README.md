@@ -404,6 +404,14 @@ ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
+**Ejemplo**:
+
+- [El juego del Tetris](https://github.com/jamj2000/tetris-code)
+
+
+
+
+
 # 6. Licencias
 
 Licencias. Ley de la propiedad intelectual. Derechos de autor.
