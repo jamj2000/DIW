@@ -14,9 +14,11 @@
   - [2.7. Optimización de imágenes para la Web](#27-optimización-de-imágenes-para-la-web)
 - [3. Audio](#3-audio)
   - [3.1. Formatos de codec y archivo](#31-formatos-de-codec-y-archivo)
+  - [3.2. Funcionalidades](#32-funcionalidades)
 - [4. Vídeo](#4-vídeo)
   - [4.1. Formatos de codec](#41-formatos-de-codec)
   - [4.2. Formatos de archivo](#42-formatos-de-archivo)
+  - [4.3. Funcionalidades](#43-funcionalidades)
 - [5. Otras tecnologías](#5-otras-tecnologías)
   - [5.1. Iframe](#51-iframe)
   - [5.2. Canvas](#52-canvas)
@@ -24,6 +26,7 @@
 - [7. Recursos](#7-recursos)
   - [7.1. Herramientas](#71-herramientas)
   - [7.2. Formación](#72-formación)
+
 
 
 
@@ -160,6 +163,7 @@ Características:
 - Usa compresión SIN pérdidas.
 - Admite transparencias.
 
+
 **WEBP**
 
 Características:
@@ -171,6 +175,18 @@ Características:
 - Código abierto.
 
 > **Más información**: https://www.adslzone.net/reportajes/foto-video/webp-formato-ventajas/
+
+
+**AVIF**
+
+Características:
+
+- Formato de mapa de bits.
+- Usa compresión CON/SIN pérdidas.
+- Admite transparencias.
+- Admite animaciones.
+- Espacio en disco menor que JPEG y WEBP.
+- Características avanzadas: HDR, gran profundidad de color, ...
 
 **SVG**
 
@@ -233,7 +249,8 @@ Por otro lado, también podemos emplear la propiedad `mask-image` para el mismo 
  
 - Propiedad **`filter`**
 
-Permite aplicar ciertos filtros a la imagen. Por ejemplo, para aplicar un desenfoque hacemos **`filter: blur(5px);`**
+Permite aplicar ciertos filtros a la imagen. Por ejemplo, para aplicar un desenfoque hacemos **`filter: blur(5px);`**, o para aplicar una sombra al contorno (especialmente atractivo con imágenes PNG con fondo transparente) hacemos **`filter: drop-shadow(2px 2px 10px gray);`**
+
 En el siguiente enlace tienes más información:
 
 - [MDN - Filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
@@ -272,6 +289,7 @@ Para añadir audio a una página web podemos usar la etiqueta HTML `audio`.
 Más información acerca de atributos soportados en [MDN - Etiqueta HTML de audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
 
 
+
 ## 3.1. Formatos de codec y archivo
 
 Los principales formatos para la web son:
@@ -288,6 +306,40 @@ Los principales formatos para la web son:
 **AAC**
 
 
+## 3.2. Funcionalidades
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Audio</title>
+</head>
+
+<body>
+
+  <audio controls src="https://mdn.github.io/webaudio-examples/audio-basics/outfoxing.mp3">
+  </audio>
+
+  <script>
+    const audio = document.querySelector("audio");
+    let reanudar;
+    // Pausamos el audio si cambiamos a otra pestaña.
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        // Si el audio se está reproduciendo, establecemos reanudar a true
+        if (!audio.paused) reanudar = true;
+        else reanudar = false;        
+        audio.pause();        
+      } 
+      else if (reanudar) audio.play();
+    });
+  </script>
+</body>
+
+</html>
+```
 
 # 4. Vídeo
 
@@ -366,6 +418,53 @@ Normalmente contiene audio AMR-NB o AAC-LC y vídeo MPEG4 o H.263.
 Contiene diferentes tipos de audio y vídeo (incluido el nuevo H.265). También tiene cabida para  subtitulos. 
 
 
+## 4.3. Funcionalidades
+
+Una de las funcionalidades más llamativas y útiles es la de **Picture In Picture** (PIP).
+
+PIP básicamente permite a los usuarios ver videos en una ventana separada del navegador y siempre por encima de otras ventanas incluso si el navegador está minimizado. Esto permite poder ver contenido multimedia mientras se realizan otras actividades.
+
+Referencias:
+- https://filisantillan.com/blog/picture-in-picture/
+- https://developer.mozilla.org/en-US/docs/Web/API/Picture-in-Picture_API
+
+Para hacer uso de esta funcionalidad no basta con tener código HTML. Es necesario además añadir código Javascript.
+
+> **NOTA**: Firefox no soporta PIP
+
+**Ejemplo**
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Picture In Picture - Ejemplo</title>
+</head>
+
+<body>
+  <video width="720" controls 
+    src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>  
+  <button> Cambiar PIP </button>
+ 
+  <script>
+    const video = document.querySelector("video");
+    const button = document.querySelector("button");
+
+    button.addEventListener("click", async () => {
+      if (document.pictureInPictureElement === video) 
+        await document.exitPictureInPicture();
+      else 
+        await video.requestPictureInPicture();
+    });
+  </script>
+</body>
+
+</html>
+```
+
+
 # 5. Otras tecnologías
 
 ## 5.1. Iframe
@@ -407,8 +506,6 @@ ctx.fillRect(10, 10, 100, 100);
 **Ejemplo**:
 
 - [El juego del Tetris](https://github.com/jamj2000/tetris-code)
-
-
 
 
 
