@@ -219,10 +219,17 @@ img {
 
 Se mantiene el ratio de la imagen. Si la relación de aspecto de la imagen no coincide con la relación de aspecto del área visible, entonces la imagen se recortará para ajustarse.
 
-Para fondos de página puede usarse la propiedad `background-size: cover;`
+Para fondos de página o de capa puede usarse la propiedad `background-size: cover;`
 
 ```css
 body {
+  background-image: url('...');
+  background-size: cover;
+}
+
+div {
+  width: /* ... */ ;
+  height:  /* ... */;
   background-image: url('...');
   background-size: cover;
 }
