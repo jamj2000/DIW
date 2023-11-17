@@ -538,6 +538,8 @@ Y haz un resumen de la página anterior. ¿Qué es la licencia CC0?
 - [Tabler Icons - Iconos SVG](https://tablericons.com/)
 - [Flaticon - Iconos SVG](https://www.flaticon.es/)
 - [Font Awesome - Iconos SVG](https://fontawesome.com/search?o=r&m=free). Existe la posibilidad de descarga en formato SVG.
+- [Icomoon- Iconos](https://icomoon.io/)
+- [Ionicons - Iconos](https://ionicons.com)
 - [Unsplash - Imágenes gratuitas](https://unsplash.com/)
 - [Pexels - Imágenes gratuitas](https://www.pexels.com/es-es/)
 - [Pixabay - Imágenes gratuitas](https://pixabay.com/es/)
