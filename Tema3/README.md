@@ -77,6 +77,8 @@ Existen numerosas formas de añadir imágenes a una página web. Aquí tienes al
 </picture>
 ```
 
+**Imágenes como fondo**
+
 Además tenemos la posibilidad de usar las propiedades de CSS `background` y `background-image`.
 
 **Ejemplo**:
@@ -90,6 +92,16 @@ div {
   background-size: cover;
 }
 ```
+
+La propiedad `background-image` soporta la colocación de múltiples imágenes, colores o gradientes. Esto es especialmente útil si se combina con transparencias. 
+
+Cada imagen, gradiente o color se separa del resto mediante comas. Por ejemplo:
+
+```css
+
+```
+
+
 
 ## 2.1. Software para crear y procesar imágenes
 
