@@ -77,9 +77,9 @@ Existen numerosas formas de añadir imágenes a una página web. Aquí tienes al
 </picture>
 ```
 
-**Imágenes como fondo**
+## Imágenes de fondo
 
-Además tenemos la posibilidad de usar las propiedades de CSS `background` y `background-image`.
+También podemos poner imágenes como fondo de página y/o capas. Para ello podemos usar las propiedades de CSS `background` y `background-image`.
 
 **Ejemplo**:
 
@@ -98,8 +98,16 @@ La propiedad `background-image` soporta la colocación de múltiples imágenes, 
 Cada imagen, gradiente o color se separa del resto mediante comas. Por ejemplo:
 
 ```css
-
+background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+                  url("../../media/examples/lizard.png");
 ```
+
+Otra propiedad muy interesante es `background-blend-mode`, que permite hacer una combinación de las imágenes, gradientes o colores. 
+
+Referencias:
+
+- [Propiedad background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+- [Propiedad background-blend-mode](https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode)
 
 
 
