@@ -5,13 +5,14 @@
 
 - [1. Introducción](#1-introducción)
 - [2. Imágenes](#2-imágenes)
-  - [2.1. Software para crear y procesar imágenes](#21-software-para-crear-y-procesar-imágenes)
-  - [2.2. Tipos de imágenes](#22-tipos-de-imágenes)
-  - [2.3. Formatos](#23-formatos)
-  - [2.4. Ajuste](#24-ajuste)
-  - [2.5. Recorte](#25-recorte)
-  - [2.6. Filtros](#26-filtros)
-  - [2.7. Optimización de imágenes para la Web](#27-optimización-de-imágenes-para-la-web)
+  - [2.1. Imágenes de fondo](#21-imágenes-de-fondo)
+  - [2.2. Software para crear y procesar imágenes](#22-software-para-crear-y-procesar-imágenes)
+  - [2.3. Tipos de imágenes](#23-tipos-de-imágenes)
+  - [2.4. Formatos](#24-formatos)
+  - [2.5. Ajuste](#25-ajuste)
+  - [2.6. Recorte](#26-recorte)
+  - [2.7. Filtros](#27-filtros)
+  - [2.8. Optimización de imágenes para la Web](#28-optimización-de-imágenes-para-la-web)
 - [3. Audio](#3-audio)
   - [3.1. Formatos de codec y archivo](#31-formatos-de-codec-y-archivo)
   - [3.2. Funcionalidades](#32-funcionalidades)
@@ -77,7 +78,7 @@ Existen numerosas formas de añadir imágenes a una página web. Aquí tienes al
 </picture>
 ```
 
-## Imágenes de fondo
+## 2.1. Imágenes de fondo
 
 También podemos poner imágenes como fondo de página y/o capas. Para ello podemos usar las propiedades de CSS `background` y `background-image`.
 
@@ -111,7 +112,7 @@ Referencias:
 
 
 
-## 2.1. Software para crear y procesar imágenes
+## 2.2. Software para crear y procesar imágenes
 
 **Visores**
 - Explorador de archivos
@@ -130,7 +131,7 @@ Referencias:
 - Inkscape (Gráficos vectoriales)
 
 
-## 2.2. Tipos de imágenes
+## 2.3. Tipos de imágenes
 
 **Mapas de bits**
 
@@ -151,7 +152,7 @@ Además, las vectoriales permiten definir una imagen con muy poca información, 
 
 > **Más información**: https://www.marcaprint.com/blog/diferencia-entre-bits-y-vectorial/
 
-## 2.3. Formatos
+## 2.4. Formatos
 
 **GIF**
 
@@ -218,7 +219,7 @@ Características:
 - No adecuado para fotografías.
 
  
-## 2.4. Ajuste
+## 2.5. Ajuste
 
 - Propiedades **`object-fit`** y **`object-position`**
 
@@ -256,7 +257,7 @@ div {
 ```
 
 
-## 2.5. Recorte
+## 2.6. Recorte
 
 - Propiedades `clip-path` y `mask-image`.
 
@@ -272,7 +273,7 @@ Por otro lado, también podemos emplear la propiedad `mask-image` para el mismo 
 ![Mask Image](assets/mask-image.png)
 
 
-## 2.6. Filtros 
+## 2.7. Filtros 
  
 - Propiedad **`filter`**
 
@@ -285,7 +286,7 @@ En el siguiente enlace tienes más información:
 ![Filter Blur](assets/filter-blur.png)
 
 
-## 2.7. Optimización de imágenes para la Web
+## 2.8. Optimización de imágenes para la Web
 
 Consulta el siguiente enlace de MDN:
 
