@@ -413,11 +413,13 @@ Más información acerca de atributos soportados en [MDN - Etiqueta HTML de víd
 
 Los principales formatos de codec para la web son:
 
-**MPEG4**
+**MPEG-4**
 
 MPEG 4 es un método para la compresión digital de audio y vídeo. Fue introducido a finales de 1998 y designado como un estándar para un grupo de formatos de codificación de audio, video y las tecnologías relacionadas.
 
 MPEG-4 absorbe muchas de las características de MPEG-1 y MPEG-2 y otros estándares relacionados, añadiendo nuevas características.
+
+- Codecs famosos basados en MPEG4: **DivX**, **Xvid**.
 
 **Theora OGG**
 
@@ -461,6 +463,10 @@ Normalmente contiene audio Ogg Vorbis y vídeo VP8/VP9.
 **MP4**
 
 Normalmente contiene audio AAC o MP3 y vídeo H.264
+
+**AVI**
+
+Puede contener cualquier formato audio/video (AC3/DivX, o MP3/Xvid, entre otros).
 
 **3GP**
 
