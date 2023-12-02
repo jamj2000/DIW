@@ -419,7 +419,7 @@ MPEG 4 es un método para la compresión digital de audio y vídeo. Fue introduc
 
 MPEG-4 absorbe muchas de las características de MPEG-1 y MPEG-2 y otros estándares relacionados, añadiendo nuevas características.
 
-- Codecs famosos basados en MPEG4: **DivX**, **Xvid**.
+- Codecs famosos basados en MPEG-4: **DivX**, **Xvid**.
 
 **Theora OGG**
 
