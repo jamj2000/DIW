@@ -15,7 +15,6 @@ Disposición en **cuadricula**
 
 
 
- 
 # VALIDACIÓN DE FORMULARIOS con ATRIBUTO PATTERN (expresiones regulares)
 
 ```html
@@ -36,6 +35,7 @@ input:valid {
 }
 ```
 
+ 
 # Reto
 
 - Landing Page: https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5
