@@ -31,8 +31,6 @@
 
 
 
-
-
 ---
 
 # 1. Introducción
@@ -324,14 +322,24 @@ Los principales formatos para la web son:
 
 **MP3**
 
+El formato MP3 se convirtió en el estándar utilizado para streaming de audio y compresión de audio con pérdida de mediana fidelidad gracias a la posibilidad de ajustar la calidad de la compresión, proporcional a la tasa de bits (bitrate) y en consecuencia el tamaño final del archivo, permitiendo reducir hasta 12 e incluso 15 veces el del archivo original antes de su compresión.
 
-**OGG**
+Fue el primer formato de compresión de audio popularizado gracias a Internet, ya que hizo posible el intercambio de ficheros musicales.
 
+**Vorbis OGG**
 
-**3GP**
+Ogg es un formato contenedor libre y abierto, desarrollado y mantenido por la Fundación Xiph.Org que no está restringido por las patentes de software,​ y está diseñado para proporcionar una difusión de flujo eficiente y manipulación de multimedios digitales de alta calidad.
 
+- Codecs de audio con pérdida: **Vorbis**, **Opus**.
+- Codecs de audio sin pérdida: **FLAC**
+
+La Fundación Xiph.Org está detrás de formatos de compresión libres tales como FLAC, Vorbis, Theora, Icecast y Speex.
 
 **AAC**
+
+Formato de señal digital audio basado en un algoritmo de compresión con pérdida, un proceso por el que se eliminan algunos de los datos de audio para poder obtener el mayor grado de compresión posible, resultando en un archivo de salida que suena lo más parecido posible al original.
+
+El formato AAC a diferencia del formato .ogg, permite incluir legalmente la protección de los derechos de autor, como la protección anticopia.
 
 
 ## 3.2. Funcionalidades
@@ -405,16 +413,33 @@ Más información acerca de atributos soportados en [MDN - Etiqueta HTML de víd
 
 Los principales formatos de codec para la web son:
 
-**VP8/VP9**
-
-
 **MPEG4**
 
+MPEG 4 es un método para la compresión digital de audio y vídeo. Fue introducido a finales de 1998 y designado como un estándar para un grupo de formatos de codificación de audio, video y las tecnologías relacionadas.
+
+MPEG-4 absorbe muchas de las características de MPEG-1 y MPEG-2 y otros estándares relacionados, añadiendo nuevas características.
+
+**Theora OGG**
+
+Theora es un códec de vídeo de propósito general con bajo consumo de CPU.​ Está basado en el códec de vídeo VP3 producido por On2 Technologies quien donó el código fuente del VP3.1 a la Fundación Xiph.Org quién lo publicó bajo la licencia BSD revisada de 3 cláusulas.
+
+Theora es un método de compresión de vídeo con pérdidas. El vídeo comprimido puede ser almacenado en cualquier contenedor multimedia conveniente (ej. Matroska), pero generalmente se encuentra en el formato contenedor Ogg que es el recomendado por Xiph.Org y es frecuentemente usado con el formato de audio Vorbis.
+
+**VP8/VP9**
+
+VP8 es un códec de video de formato abierto diseñado por On2 Technologies como sucesor de VP7. Fue anunciado el 13 de septiembre de 2008.
+
+VP9 es un formato abierto de compresión de vídeo libre de regalías desarrollado por Google. El desarrollo de VP9 comenzó en el tercer cuatrimestre de 2011.1​2​ Uno de los objetivos de VP9 es reducir la tasa de bits un 50% en comparación con VP8 manteniendo la misma calidad de vídeo.
 
 **H.264**
 
+Códec de vídeo de alta compresión, desarrollada conjuntamente por el ITU-T Video Coding Experts Group (VCEG) y el ISO/IEC Moving Picture Experts Group (MPEG).
 
 **H.265 (HEVC)**
+
+H.265, MPEG-H Parte2 o HEVC (High Efficiency Video Coding «codificación de vídeo de alta eficiencia»)1​ es una norma que define un formato de compresión de video, sucesor de H.264/MPEG-4 AVC (Advanced Video Coding, «codificación avanzada de vídeo»), desarrollado conjuntamente por la ISO/IEC Moving Picture Experts Group (MPEG) y ITU-T Video Coding Experts Group (VCEG)
+
+Asimismo puede ser utilizado para proporcionar mejor calidad de videos con la misma tasa de datos. Es compatible con la televisión en ultraalta definición y resoluciones hasta 8192x4320.
 
 
 ## 4.2. Formatos de archivo
@@ -443,7 +468,7 @@ Normalmente contiene audio AMR-NB o AAC-LC y vídeo MPEG4 o H.263.
 
 **MKV**
 
-Contiene diferentes tipos de audio y vídeo (incluido el nuevo H.265). También tiene cabida para  subtitulos. 
+Contiene diferentes tipos de audio y vídeo (incluido el nuevo H.265). También tiene cabida para  subtítulos. 
 
 
 ## 4.3. Funcionalidades
