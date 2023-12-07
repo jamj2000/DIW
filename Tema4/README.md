@@ -4,15 +4,16 @@
 > TRANSFORMACIONES, TRANSICIONES, ANIMACIONES
 
 - [1. Introducción](#1-introducción)
-- [2. Transformaciones](#2-transformaciones)
-- [3. Transiciones](#3-transiciones)
-- [4. Animaciones](#4-animaciones)
-- [5. Funcionalidades avanzadas](#5-funcionalidades-avanzadas)
-  - [5.1. Scroll driven animations](#51-scroll-driven-animations)
-  - [5.2. View Transitions](#52-view-transitions)
-- [6. Recursos](#6-recursos)
-  - [6.1. Herramientas](#61-herramientas)
-  - [6.2. Formación](#62-formación)
+- [2. Formularios](#2-formularios)
+- [3. Transformaciones](#3-transformaciones)
+- [4. Transiciones](#4-transiciones)
+- [5. Animaciones](#5-animaciones)
+- [6. Funcionalidades avanzadas](#6-funcionalidades-avanzadas)
+  - [6.1. Scroll driven animations](#61-scroll-driven-animations)
+  - [6.2. View Transitions](#62-view-transitions)
+- [7. Recursos](#7-recursos)
+  - [7.1. Herramientas](#71-herramientas)
+  - [7.2. Formación](#72-formación)
 
 
 
@@ -20,22 +21,37 @@
 
 # 1. Introducción
 
-# 2. Transformaciones
+En este tema trabajaremos la integración de contenido interactivo y multimedia en documentos web.
 
-# 3. Transiciones
+Empezaremos con los formularios por ser el elemento HTML interactivo por antonomasia.
 
-# 4. Animaciones
+Después pasaremos a tratar las propiedades de las que dispone CSS para dar dinamismo visual al contenido. Empezaremos con las transformaciones, para finalizar con las transiciones y animaciones.
+
+Finalmente comentaremos algunos aspectos avanzados y más modernos que proporcionaran a nuestras páginas unos efectos bastante atractivos.
+
+
+# 2. Formularios
+
+
+- [W3School - Aplicar estilos a formularios](https://www.w3schools.com/css/css_form.asp)
+
+
+# 3. Transformaciones
+
+# 4. Transiciones
+
+# 5. Animaciones
 
 
 
-# 5. Funcionalidades avanzadas
+# 6. Funcionalidades avanzadas
 
 > **IMPORTANTE**: 
 > 
 > **Las siguientes funcionalidades son bastante modernas. Por tanto, es esperable que el soporte entre navegadores sea muy dispar. Por tanto, antes de usarlas, asegúrate de que estén suficientemente soportadas para evitar problemas de accesibilidad.**
 
 
-## 5.1. Scroll driven animations
+## 6.1. Scroll driven animations
 
 Las **animaciones asociadas al desplazamiento** proporcionan efectos visuales muy atractivos en una página a medida que nos desplazamos hacia abajo hasta el final de dicha página. 
 
@@ -84,7 +100,7 @@ Las **animaciones asociadas al desplazamiento** proporcionan efectos visuales mu
 ![animation scroll](assets/animation-scroll.png)
 
 
-## 5.2. View Transitions
+## 6.2. View Transitions
 
 Las **transiciones de vista** son una opción de diseño popular para reducir la carga cognitiva de los usuarios, ayudarlos a mantenerse en contexto y reducir la latencia de carga percibida a medida que se mueven entre estados o vistas de una aplicación.
 
@@ -108,13 +124,13 @@ La API View Transitions proporciona un mecanismo para crear fácilmente transici
 
 ![view transitions](assets/view-transitions.png)
 
-# 6. Recursos
+# 7. Recursos
 
-## 6.1. Herramientas
+## 7.1. Herramientas
 
 - [Can I use](https://caniuse.com/)
 
-## 6.2. Formación
+## 7.2. Formación
 
 - [Videotutorial de animaciones](https://www.youtube.com/watch?v=RwjgfNX41TE&t=44s)
 - [MDN - Animaciones basadas en desplazamiento](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
