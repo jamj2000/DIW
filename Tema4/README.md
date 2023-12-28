@@ -5,16 +5,16 @@
 
 - [1. Introducción](#1-introducción)
 - [2. Formularios](#2-formularios)
-  - [Selectores de atributos](#selectores-de-atributos)
-  - [Pseudoclases](#pseudoclases)
-  - [Validación de formularios](#validación-de-formularios)
-    - [Nuevos tipos de input](#nuevos-tipos-de-input)
-    - [Atributo **pattern**](#atributo-pattern)
+  - [2.1. Selectores de atributos](#21-selectores-de-atributos)
+  - [2.2. Pseudoclases](#22-pseudoclases)
+  - [2.3. Validación de formularios](#23-validación-de-formularios)
+    - [2.3.1. Nuevos tipos de input](#231-nuevos-tipos-de-input)
+    - [2.3.2. Atributo **pattern**](#232-atributo-pattern)
 - [3. Transformaciones](#3-transformaciones)
-  - [Rotación](#rotación)
-  - [Escalado](#escalado)
-  - [Traslación](#traslación)
-  - [Combinar transformaciones](#combinar-transformaciones)
+  - [3.1. Rotación](#31-rotación)
+  - [3.2. Escalado](#32-escalado)
+  - [3.3. Traslación](#33-traslación)
+  - [3.4. Combinar transformaciones](#34-combinar-transformaciones)
 - [4. Transiciones](#4-transiciones)
 - [5. Animaciones](#5-animaciones)
 - [6. Funcionalidades avanzadas](#6-funcionalidades-avanzadas)
@@ -23,7 +23,6 @@
 - [7. Recursos](#7-recursos)
   - [7.1. Herramientas](#71-herramientas)
   - [7.2. Formación](#72-formación)
-
 
 
 --- 
@@ -64,7 +63,7 @@ Para aprender como aplicar un estilizado básico a los formularios puedes consul
 - [W3School - Aplicar estilos a formularios](https://www.w3schools.com/css/css_form.asp)
 
 
-## Selectores de atributos
+## 2.1. Selectores de atributos
 
 Selectores habituales para elementos de un formulario son:
 
@@ -78,7 +77,7 @@ input[type=number]
 ```
 
 
-## Pseudoclases
+## 2.2. Pseudoclases
 
 Pseudoclases habituales, en orden alfabético, para elementos de un formulario son:
 
@@ -97,7 +96,7 @@ Pseudoclase     | Ejemplo            | Descripción
 `:required`     | input:required	   | Selecciona elementos `input` con atributo "required" 
 `:valid`        | input:valid	       | Selecciona todos los elementos `input` con un valor válido
 
-## Validación de formularios
+## 2.3. Validación de formularios
 
 Como desarrolladores o diseñadores web debemos evitar que nuestros usuarios introduzcan datos erróneos en los formularios. 
 
@@ -107,7 +106,7 @@ La validación de datos en el lado cliente se ha visto favorecida de gran medida
 - [Atributo pattern en inputs](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern)
 
 
-### Nuevos tipos de input
+### 2.3.1. Nuevos tipos de input
 
 ```html
 <input type="email" />
@@ -124,7 +123,7 @@ La validación de datos en el lado cliente se ha visto favorecida de gran medida
 <input type="color" />
 ```
 
-### Atributo **pattern** 
+### 2.3.2. Atributo **pattern** 
 
 Este nuevo atributo nos permite tener un control más fino de la entrada del usuario, la cual comprobamos que se ajuste al patrón que indicamos. 
 
@@ -184,7 +183,7 @@ Referencias:
 - [MDN: Propiedad transform-origin](https://developer.mozilla.org/es/docs/Web/CSS/transform-origin)
 
 
-## Rotación
+## 3.1. Rotación
 
 La función `rotate()` define una transformación que mueve al elemento alrededor de un punto fijo (especificado por la propiedad `transform-origin`) sin deformarlo. La cantidad de movimiento es definida por el ángulo especificado; si es positivo, el movimiento será en sentido de las manecillas del reloj, y si es negativo, será en sentido opuesto.
 
@@ -211,7 +210,7 @@ La función `rotate()` define una transformación que mueve al elemento alrededo
 > Mas info: https://developer.mozilla.org/en-US/docs/Web/CSS/rotate
 
 
-## Escalado
+## 3.2. Escalado
 
 La función `scale()` modifica el tamaño del elemento. Puede aumentar o disminuir su tamaño, y ya que la cantidad de escalada es definida por un vector, puede hacerlo más hacia una dirección que a otra. 
 
@@ -242,7 +241,7 @@ La función `scale()` modifica el tamaño del elemento. Puede aumentar o disminu
 > Más info: https://developer.mozilla.org/en-US/docs/Web/CSS/scale
  
 
-## Traslación
+## 3.3. Traslación
 
 La función `translate()` mueve la posición del elemento sobre el plano. Esta transformación se caracteriza por un vector cuyas coordenadas definen qué tanto se moverá en cada dirección.
 
@@ -273,7 +272,7 @@ La función `translate()` mueve la posición del elemento sobre el plano. Esta t
 > Más info: https://developer.mozilla.org/en-US/docs/Web/CSS/translate
 
 
-## Combinar transformaciones
+## 3.4. Combinar transformaciones
 
 Podemos combinar varias transformaciones en una misma propiedad `transform`. Por ejemplo:
 
