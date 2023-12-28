@@ -14,26 +14,8 @@ Disposición **flexible**
 Disposición en **cuadricula**
 
 
+# Media queries
 
-# VALIDACIÓN DE FORMULARIOS con ATRIBUTO PATTERN (expresiones regulares)
-
-```html
-  <input type="text"
-    id="codigo_pais"
-    name="codigo_pais"
-    pattern="[A-Za-z]{2}" 
-    title="Por favor, introduce 2 letras del código de país"
-```
-
-```css
-input:invalid {
-	background-color: #FADBD8;
-}
-
-input:valid {
- 	background-color: #EAFAF1;
-}
-```
 
  
 # Reto
