@@ -461,7 +461,7 @@ https://github.com/jamj2000/DIW/assets/2934084/f46c3ef3-22fd-4329-a188-7fbae838e
 
 Observa el uso de **`animation-timeline: scroll()`**.
 
-Otra posibilidad a nuestra disposición es **`animation-timeline: view()`**.  Con esta propiedad y valor podemos generar animaciones de elementos según su están en el *viewport* o no, como puede verse en el siguiente vídeo.
+Otra posibilidad a nuestra disposición es **`animation-timeline: view()`**.  Con esta propiedad y valor podemos generar animaciones de elementos según esten en el *viewport* o no, como puede verse en el siguiente vídeo.
 
 
 https://github.com/jamj2000/DIW/assets/2934084/ab2e78ac-31cf-4bea-8dae-47c6ef0d8858
