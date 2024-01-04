@@ -456,6 +456,11 @@ Las **animaciones asociadas al desplazamiento** proporcionan efectos visuales mu
 }
 ```
 
+Observa el uso de **`animation-timeline: scroll()`**.
+
+Otra posibilidad a nuestra disposición es **`animation-timeline: view()`**.  
+
+
 **Referencias**:
 
 - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations
@@ -471,7 +476,6 @@ Las **animaciones asociadas al desplazamiento** proporcionan efectos visuales mu
 (a fecha de 2 Dic 2023)
 
 ![animation scroll](assets/animation-scroll.png)
-
 
 ## 6.2. View Transitions
 
