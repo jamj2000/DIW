@@ -425,9 +425,12 @@ Mas info:
 
 ## 6.1. Scroll driven animations
 
-Las **animaciones asociadas al desplazamiento** proporcionan efectos visuales muy atractivos en una página a medida que nos desplazamos hacia abajo hasta el final de dicha página. 
+Las **animaciones asociadas al desplazamiento** proporcionan efectos visuales muy atractivos en una página a medida que nos desplazamos hacia abajo hasta el final de dicha página, como puede verse en el siguiente vídeo. 
 
-**Ejemplo**:
+https://github.com/jamj2000/DIW/assets/2934084/f46c3ef3-22fd-4329-a188-7fbae838e7e6
+
+
+**Código fuente**:
 
 ```html
 <body>
@@ -458,8 +461,35 @@ Las **animaciones asociadas al desplazamiento** proporcionan efectos visuales mu
 
 Observa el uso de **`animation-timeline: scroll()`**.
 
-Otra posibilidad a nuestra disposición es **`animation-timeline: view()`**.  
+Otra posibilidad a nuestra disposición es **`animation-timeline: view()`**.  Con esta propiedad y valor podemos generar animaciones de elementos según su están en el *viewport* o no, como puede verse en el siguiente vídeo.
 
+
+https://github.com/jamj2000/DIW/assets/2934084/ab2e78ac-31cf-4bea-8dae-47c6ef0d8858
+
+**Código fuente**:
+```html
+<body>
+  …
+  <img src="polar_bear.jpeg" class="revealing-image" >
+  …
+</body>
+```
+
+
+```css
+@keyframes reveal {
+  from { opacity: 0; clip-path: inset(0% 60% 0% 50%); }
+  to { opacity: 1; clip-path: inset(0% 0% 0% 0%); }
+}
+
+.revealing-image {
+  animation: auto linear reveal both;
+  animation-timeline: view();
+  animation-range: entry 25% cover 50%;
+}
+```
+
+En este caso hemos usado además la propiedad **`animation-range: entry 25% cover 50%`** para indicar en que momento debemos iniciar y finalizar la animación.
 
 **Referencias**:
 
