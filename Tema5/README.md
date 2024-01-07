@@ -73,23 +73,11 @@ align-content: center;
 
 # Media queries
 
+## Desktop first
 
- 
-# Reto
 
-- Landing Page: https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5
-- Lista de reproducción: https://youtube.com/playlist?list=PL4-IK0AVhVjNDRHoXGort7sDWcna8cGPA&si=5FF176VsDJEHSfbg
-- Parte 1: https://youtu.be/h3bTwCqX4ns?si=etDa01_wycsRgUty
-- Parte 2: https://youtu.be/3K6zr1CdZy8?si=s3a23on9rFLRKdyv
-- Parte 3: https://youtu.be/Ch_LoWKLv3A?si=acT6zLGtNp7E36_l
-- Parte 4: https://youtu.be/zPHMqqyD2kY?si=A1UwRxRxN2Vjb9G8
-- Parte 5: https://youtu.be/mQYRWvIj0Yw?si=GXDtHb9MowBpmQY9
-- Parte 6: https://youtu.be/NorLM-dalTE?si=M55NUbaJ2YPDeya2
-- Parte 7: https://youtu.be/eX9JhQtMxCg?si=x8BA1coC3UFKn3zC
-- Parte 8: https://youtu.be/r6hx35TbtN4?si=NpSxri_mw2K2Mifu
-- Parte 9: https://youtu.be/a8OiB2NnHMo?si=rqYEz-BxDyGiPVAQ
-- Parte 10: https://youtu.be/vGFiOhl-hjY?si=iODUxlKk-VDDO-b0
-- Parte 11: https://youtu.be/e7o69Zi-Iao?si=XtRgYhfEimoZCJEw
+## Mobile first
+
 
 
 # Recursos
