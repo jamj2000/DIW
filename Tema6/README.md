@@ -10,18 +10,20 @@
   - [3.2. Desarrollo](#32-desarrollo)
   - [3.3. Características](#33-características)
     - [3.3.1. Diseño responsive](#331-diseño-responsive)
-    - [3.3.2. Modificadores](#332-modificadores)
-    - [3.3.3. Propiedades con medidas múltiplo de 4px o 0.25rem](#333-propiedades-con-medidas-múltiplo-de-4px-o-025rem)
-    - [3.3.4. Propiedades con medidas no múltiplo de 4px o 0.25rem](#334-propiedades-con-medidas-no-múltiplo-de-4px-o-025rem)
-    - [3.3.5. Propiedades con medidas con sm, md, xl, 2xl, ...](#335-propiedades-con-medidas-con-sm-md-xl-2xl-)
-    - [3.3.6. Propiedades con medidas específicas](#336-propiedades-con-medidas-específicas)
-    - [3.3.7. Colores](#337-colores)
+    - [3.3.2. Container](#332-container)
+    - [3.3.3. Modificadores](#333-modificadores)
+    - [3.3.4. Propiedades con medidas múltiplo de 4px o 0.25rem](#334-propiedades-con-medidas-múltiplo-de-4px-o-025rem)
+    - [3.3.5. Propiedades con medidas no múltiplo de 4px o 0.25rem](#335-propiedades-con-medidas-no-múltiplo-de-4px-o-025rem)
+    - [3.3.6. Propiedades con medidas con sm, md, xl, 2xl, ...](#336-propiedades-con-medidas-con-sm-md-xl-2xl-)
+    - [3.3.7. Propiedades con medidas específicas](#337-propiedades-con-medidas-específicas)
+    - [3.3.8. Colores](#338-colores)
 - [4. Reto Landing Page](#4-reto-landing-page)
   - [4.1. Solución usando Tailwind](#41-solución-usando-tailwind)
   - [4.2. Solución usando sólo CSS](#42-solución-usando-sólo-css)
 - [5. Recursos](#5-recursos)
   - [5.1. Herramientas](#51-herramientas)
   - [5.2. Formación](#52-formación)
+
 
 
 --- 
@@ -149,7 +151,30 @@ Lo que esto significa es que las utilidades sin prefijo (como `uppercase`) tiene
 
 De forma predeterminada, los estilos aplicados por reglas como `md:flex` se aplicarán en ese punto de interrupción y permanecerán aplicados en puntos de interrupción más grandes.
 
-### 3.3.2. Modificadores
+### 3.3.2. Container
+
+La clase `container` establece el ancho máximo de un elemento para que coincida con el ancho mínimo del punto de interrupción actual. Esto es útil si deseas diseñar para un conjunto fijo de tamaños de pantalla en lugar de intentar acomodar un *viewport* completamente fluido.
+
+Clase     | Punto de ruptura | Propiedades
+----------|------------------|-----------------
+container	| None	           | width: 100%;
+          | sm (640px)       | max-width: 640px;
+          | md (768px)       | max-width: 768px;
+          | lg (1024px)      | max-width: 1024px;
+          | xl (1280px)      | max-width: 1280px;
+          | 2xl (1536px)     | max-width: 1536px;
+
+Ten en cuenta que, a diferencia de los contenedores que podría haber utilizado en otros marcos, el contenedor de Tailwind no se centra automáticamente y no tiene ningún relleno horizontal incorporado.
+
+Para centrar un contenedor, usa la clase de utilidad `mx-auto`:
+
+```html
+<div class="container mx-auto">
+  <!-- ... -->
+</div>
+```
+
+### 3.3.3. Modificadores
 
 Tailwind dispone de numerosos modificadores, que **se anteponen a las propiedades que deseemos**. Los modificadores cambian el momento o el lugar en los cuales las propiedades son aplicadas. 
 
@@ -189,7 +214,7 @@ Estos modificadores pueden incluso acumularse para apuntar a situaciones más es
 ```
 
 
-### 3.3.3. Propiedades con medidas múltiplo de 4px o 0.25rem
+### 3.3.4. Propiedades con medidas múltiplo de 4px o 0.25rem
 
 En Tailwind muchas clases de utilidad utilizan identificadores cuya cifra númerica se multiplicará por 4px al convertir a código CSS. Esta es la [escala de espaciado por defecto](https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale). Por ejemplo:
 
@@ -213,7 +238,7 @@ Esto sucede con las siguientes propiedades:
 Según la documentación, esta escala es heredada por padding, margin, width, minWidth, maxWidth, height, minHeight, maxHeight, gap, inset, space, translate y algunos plugins. [Esta escala puede personalizarse](https://tailwindcss.com/docs/customizing-spacing).
 
 
-### 3.3.4. Propiedades con medidas no múltiplo de 4px o 0.25rem
+### 3.3.5. Propiedades con medidas no múltiplo de 4px o 0.25rem
 
 Medidas que no siguen la convención anterior son:
 
@@ -227,7 +252,7 @@ border-2
 outline-2
 ```
 
-### 3.3.5. Propiedades con medidas con sm, md, xl, 2xl, ...
+### 3.3.6. Propiedades con medidas con sm, md, xl, 2xl, ...
 
 Medidas que siguen esta convención son:
 
@@ -245,7 +270,7 @@ rounded	     // border-radius: 0.25rem; /* 4px */
 rounded-full //	border-radius: 9999px;
 ```
 
-###  3.3.6. Propiedades con medidas específicas
+###  3.3.7. Propiedades con medidas específicas
 
 - [font-weight](https://tailwindcss.com/docs/font-weight)
 - [text-align](https://tailwindcss.com/docs/text-align)
@@ -265,7 +290,7 @@ lowercase	  // text-transform: lowercase;
 capitalize  // text-transform: capitalize;
 ```
 
-### 3.3.7. Colores
+### 3.3.8. Colores
 
 Tailwind incluye una [paleta de colores](https://tailwindcss.com/docs/customizing-colors) predeterminada diseñada por expertos y lista para usar que es un excelente punto de partida si no tiene su propia marca específica en mente.
 
