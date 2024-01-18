@@ -319,11 +319,11 @@ shadow-slate-950 /* Color de sombra */
 1. Solución proporcionada por el canal de Youtube [AlexCGDesign](https://www.youtube.com/@AlexCGDesign)
 
 - [Vídeo](https://www.youtube.com/watch?v=VcIQviqWDRs)
-- 
+  
 Vídeo en español de 1 hora y media aproximada de duración.
 
 
-2. Solución proporcionada por el canal de Youtube [Traversy Media](https://www.youtube.com/@TraversyMedia)
+1. Solución proporcionada por el canal de Youtube [Traversy Media](https://www.youtube.com/@TraversyMedia)
 
 - [Vídeo](https://www.youtube.com/watch?v=dFgzHOX84xQ) 
 
