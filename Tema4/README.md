@@ -550,6 +550,7 @@ La API View Transitions proporciona un mecanismo para crear fácilmente transici
 - [Video: Texto animado](https://www.youtube.com/watch?v=-g8Mg8J6RtU)
 - [Video: Pure CSS Animated Text](https://www.youtube.com/watch?v=CgI-1MZAGMs)
 - [Video: Borde animado](https://www.youtube.com/watch?v=nvSbdc2zTwg)
+- [Video: Formulario SignUp / SignIn](https://www.youtube.com/watch?v=beqUxJrcbNY)
 - [Video: Personalizar Checkbox](https://www.youtube.com/watch?v=z3TgmTi42ic)
 - [Video: Personalizar Searchbox](https://www.youtube.com/watch?v=v1PeTDrw6OY)
 - [Video: Personalizar Search input](https://www.youtube.com/watch?v=tkzP6D1iMug)
