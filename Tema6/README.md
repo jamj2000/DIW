@@ -166,7 +166,7 @@ De apilado a horizontal. Usando un único conjunto de clases `.col-sm-*`, podemo
 </div>
 ```
 
-El siguiente código fuente:
+El siguiente código fuente siguiente:
 
 ```html
 <div class="container text-center">
