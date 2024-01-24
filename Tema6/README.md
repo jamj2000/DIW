@@ -103,14 +103,14 @@ Bootstrap viene ya con muchos componentes que podremos usar simplemente copiando
 
 Bootstrap incluye seis puntos de interrupción predeterminados,
 
-Punto de ruptura | Infijo de clase |   Dimensiones
------------------|-----------------|---------------------
-Extra small      |  None           |     <576px
-Small            |  sm             |     ≥576px
-Medium           |  md             |     ≥768px
-Large            |  lg             |     ≥992px
-Extra large      |  xl             |     ≥1200px
-Extra extra large|  xxl            |     ≥1400px
+| Punto de ruptura  | Infijo de clase | Dimensiones |
+|-------------------|-----------------|-------------|
+| Extra small       | None            | <576px      |
+| Small             | sm              | ≥576px      |
+| Medium            | md              | ≥768px      |
+| Large             | lg              | ≥992px      |
+| Extra large       | xl              | ≥1200px     |
+| Extra extra large | xxl             | ≥1400px     |
 
 
 ### 2.3.2. Container
@@ -150,7 +150,7 @@ Para cuadrículas que son iguales desde el dispositivo más pequeño hasta el m�
 
 De apilado a horizontal. Usando un único conjunto de clases `.col-sm-*`, podemos crear un sistema de cuadrícula básico que comienza apilado y se vuelve horizontal en el punto de interrupción pequeño (`sm`).
 
-![ejemplo 2](assets/bootstrap-col-sm.png)
+![ejemplo 2](assets/bootstrap-col-sm2.png)
 
 ```html
 <div class="container text-center">
@@ -165,6 +165,65 @@ De apilado a horizontal. Usando un único conjunto de clases `.col-sm-*`, podemo
   </div>
 </div>
 ```
+
+El siguiente código fuente:
+
+```html
+<div class="container text-center">
+  <div class="row">
+    <div class="col-4">.col-4</div>
+    <div class="col-4">.col-4</div>
+    <div class="col-4">.col-4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">.col-sm-4</div>
+    <div class="col-sm-4">.col-sm-4</div>
+    <div class="col-sm-4">.col-sm-4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4">.col-lg-4</div>
+    <div class="col-lg-4">.col-lg-4</div>
+    <div class="col-lg-4">.col-lg-4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-4">.col-xl-4</div>
+    <div class="col-xl-4">.col-xl-4</div>
+    <div class="col-xl-4">.col-xl-4</div>
+  </div>
+</div>
+```
+
+Producirá los siguientes diseños:
+
+**En pantallas `xs`:**
+
+![xs](assets/bootstrap-col-xs.png)
+
+**A partir de pantallas `sm`:**
+
+![sm](assets/bootstrap-col-sm.png)
+
+**A partir de pantallas `md`:**
+
+![md](assets/bootstrap-col-md.png)
+
+**A partir de pantallas `lg`:**
+
+![lg](assets/bootstrap-col-lg.png)
+
+**A partir de pantallas `xl`:**
+
+![xl](assets/bootstrap-col-xl.png)
+
 
 # 3. Tailwind
 
@@ -293,13 +352,13 @@ Es aconsejable tener un servidor web con recarga automática para ver los cambio
 
 ### 3.3.1. Diseño responsive
 
-Prefijo | Ancho mínimo | CSS equivalente
---------|--------------|------------------------------
-`sm`	  | 640px	       | `@media (min-width: 640px) { ... }`
-`md`	  | 768px	       | `@media (min-width: 768px) { ... }`
-`lg`	  | 1024px	     | `@media (min-width: 1024px) { ... }`
-`xl`	  | 1280px	     | `@media (min-width: 1280px) { ... }`
-`2xl`	  | 1536px	     | `@media (min-width: 1536px) { ... }`
+| Prefijo | Ancho mínimo | CSS equivalente                      |
+| ------- | ------------ | ------------------------------------ |
+| `sm`    | 640px        | `@media (min-width: 640px) { ... }`  |
+| `md`    | 768px        | `@media (min-width: 768px) { ... }`  |
+| `lg`    | 1024px       | `@media (min-width: 1024px) { ... }` |
+| `xl`    | 1280px       | `@media (min-width: 1280px) { ... }` |
+| `2xl`   | 1536px       | `@media (min-width: 1536px) { ... }` |
 
 
 De forma predeterminada, Tailwind utiliza un sistema ***mobile-first***, similar al que podrías estar acostumbrado en otros frameworks como Bootstrap.
@@ -312,14 +371,14 @@ De forma predeterminada, los estilos aplicados por reglas como `md:flex` se apli
 
 La clase `container` establece el ancho máximo de un elemento para que coincida con el ancho mínimo del punto de interrupción actual. Esto es útil si deseas diseñar para un conjunto fijo de tamaños de pantalla en lugar de intentar acomodar un *viewport* completamente fluido.
 
-Clase     | Punto de ruptura | Propiedades
-----------|------------------|-----------------
-container	| None	           | width: 100%;
-          | sm (640px)       | max-width: 640px;
-          | md (768px)       | max-width: 768px;
-          | lg (1024px)      | max-width: 1024px;
-          | xl (1280px)      | max-width: 1280px;
-          | 2xl (1536px)     | max-width: 1536px;
+| Clase        | Punto de ruptura   | Propiedades  |
+| ------------ | ------------------ | ------------ |
+| container    | None               | width: 100%; |
+| sm (640px)   | max-width: 640px;  |
+| md (768px)   | max-width: 768px;  |
+| lg (1024px)  | max-width: 1024px; |
+| xl (1280px)  | max-width: 1280px; |
+| 2xl (1536px) | max-width: 1536px; |
 
 Ten en cuenta que, a diferencia de los contenedores que podría haber utilizado en otros marcos, el contenedor de Tailwind no se centra automáticamente y no tiene ningún relleno horizontal incorporado.
 
@@ -375,11 +434,11 @@ Estos modificadores pueden incluso acumularse para apuntar a situaciones más es
 
 En Tailwind muchas clases de utilidad utilizan identificadores cuya cifra númerica se multiplicará por 4px al convertir a código CSS. Esta es la [escala de espaciado por defecto](https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale). Por ejemplo:
 
-Clase  | Propiedad CSS
--------|------------------------------
-p-0.5	 | padding: 0.125rem; /* 2px */
-p-1	   | padding: 0.25rem; /* 4px */
-p-2    | padding: 0.25rem; /* 8px */
+| Clase | Propiedad CSS                |
+| ----- | ---------------------------- |
+| p-0.5 | padding: 0.125rem; /* 2px */ |
+| p-1   | padding: 0.25rem; /* 4px */  |
+| p-2   | padding: 0.25rem; /* 8px */  |
 
 Esto sucede con las siguientes propiedades:
 
@@ -480,7 +539,7 @@ shadow-slate-950 /* Color de sombra */
 Vídeo en español de 1 hora y media aproximada de duración.
 
 
-1. Solución proporcionada por el canal de Youtube [Traversy Media](https://www.youtube.com/@TraversyMedia)
+2. Solución proporcionada por el canal de Youtube [Traversy Media](https://www.youtube.com/@TraversyMedia)
 
 - [Vídeo](https://www.youtube.com/watch?v=dFgzHOX84xQ) 
 
@@ -488,17 +547,19 @@ Vídeo en inglés de 1 hora y media aproximada de duración.
 
 
 
-## 4.2. [Solución usando sólo CSS](https://youtube.com/playlist?list=PL4-IK0AVhVjNDRHoXGort7sDWcna8cGPA&si=5FF176VsDJEHSfbg)
+## 4.2. Solución usando sólo CSS
 
-> Solución proporcionada por el canal de Youtube de [Kevin Powell](https://www.youtube.com/@KevinPowell)
+- Solución proporcionada por el canal de Youtube de [Kevin Powell](https://www.youtube.com/@KevinPowell)
 
-Es una lista de reproducción con 11 vídeos. Cada vídeo tiene una duración entre 20 y 50 minutos aproximadamente.
+Es una [lista de reproducción con 11 vídeos](https://youtube.com/playlist?list=PL4-IK0AVhVjNDRHoXGort7sDWcna8cGPA&si=5FF176VsDJEHSfbg). Cada vídeo tiene una duración entre 20 y 50 minutos aproximadamente.
 
 
 
 # 5. Recursos
 
 ## 5.1. Herramientas
+
+- [Generador de columnas para Bootstrap](https://mdbootstrap.com/docs/standard/tools/builders/grid/)
 
 ## 5.2. Formación
 
