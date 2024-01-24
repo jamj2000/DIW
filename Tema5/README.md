@@ -19,6 +19,7 @@
   - [5.1. Herramientas](#51-herramientas)
   - [5.2. Formación](#52-formación)
 
+
 ---
 
 # 1. Introducción
@@ -164,13 +165,31 @@ align-items: stretch;
 # 4. Media queries
 
 
-**Una de las funcionalidades más usadas es el cambio de disposición o `layout` de elementos en la página.**
+**Una de las funcionalidades más usadas es el cambio de disposición o `layout` de elementos en la página según la resolución de la pantalla.**
+
+
+No podemos decir que exista una resolución estándar para los dispositivos, pero sí existen algunos puntos de interrupción comúnmente utilizados en la programación diaria. Si está utilizando un framework CSS como Bootstrap, también puede utilizar sus puntos de interrupción.
+
+Veamos algunos puntos de interrupción comunes para anchos de dispositivos:
+
+- 320px — 480px: dispositivos móviles
+- 481px — 768px: iPads, tabletas
+- 769px — 1024px: pantallas pequeñas, portátiles
+- 1025px — 1200px: escritorios, pantallas grandes
+- 1201px y más —  Pantallas extra grandes, TV
+
+Estos puntos de interrupción pueden diferir y no existe un estándar exactamente definido, pero estos son algunos de los que se usan comúnmente.
+
+Existen 2 formas de especificar el punto de interrupción:
+
+- Usando las propiedades `min-width` y `max-width`
+- Usando la propiedad `width` y algún comparador como `>=`, `>`, `<=`, `<`
 
 ```css
+/* Estas 2 media queries significan lo mismo */
 @media (max-width: 640px) {
   /* … */
 }
-
 
 @media (width <= 640px) {
   /* … */
@@ -179,6 +198,7 @@ align-items: stretch;
 
 
 ```css
+/* Estas 2 media queries significan lo mismo */
 @media (min-width: 640px) and (max-width: 1024px) {
   /* … */
 }
@@ -188,15 +208,71 @@ align-items: stretch;
 }
 ```
 
+En cuanto a las estrategias disponibles a la hora de abordar el diseño responsive, disponemos de:
+
+- **Mobile first**
+- **Desktop first**
 
 ## 4.1. Mobile first
+
+Diseño responsive a partir del diseño más pequeño (el de móvil)
+
+Si seguimos esta estrategia, **diseñaremos primero para dispositivos móviles e iremos escalando hacia arriba** en los distitos puntos de interrupción. 
+
+A continuación se muestra un ejemplo:
+
+```css
+/*
+Pantallas muy pequeñas  (móviles en portrait de menos de 576px)
+No hace falta media-query porque será nuestro diseño por defecto
+*/
+
+/* Pantallas pequeñas (móviles en landscape de más de 576px) */
+@media (min-width: 576px) { ... }
+
+
+/* Pantallas medianas (tablets de más de 768px) */
+@media (min-width: 768px) { ... }
+
+
+/* Pantallas grandes (desktops de más de 992px) */
+@media (min-width: 992px) { ... }
+
+
+/* Pantallas muy grandes (desktops de más de 1200px) */
+@media (min-width: 1200px) { ... }
+```
+
 
 
 ## 4.2. Desktop first
 
+Diseño responsive a partir del diseño más grande (el de escritorio)
+
+Si seguimos esta estrategia, **diseñaremos primero para dispositivos con pantalla grande e iremos escalando hacia abajo** en los distitos puntos de interrupción. 
+
+A continuación se muestra un ejemplo:
+
+```css
+/*
+Pantallas muy grandes  (desktops de más de 1200px de ancho)
+No hace falta media-query porque será nuestro diseño por defecto
+*/
+
+/* Pantallas grandes (desktops de menos de 1200px) */
+@media (max-width: 1199px) { ... }
 
 
+/* Pantallas medianas (tablets de menos de 992px) */
+@media (max-width: 991px) { ... }
 
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+@media (max-width: 767px) { ... }
+
+
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+@media (max-width: 575px) { ... }
+```
 
 
 # 5. Recursos
@@ -215,5 +291,6 @@ align-items: stretch;
 - [Flexbox: flex-grow, flex-shrink y flex-basis](https://dev.to/duxtech/flexbox-flex-grow-flex-shrink-y-flex-basis-o96)
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Media queries](https://lenguajecss.com/css/responsive-web-design/media-queries/)
 - [W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/design-develop/es)
 - [WCAG 2.1 de un vistazo](https://www.w3.org/WAI/standards-guidelines/wcag/glance/es)
