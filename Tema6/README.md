@@ -150,7 +150,7 @@ Para cuadrículas que son iguales desde el dispositivo más pequeño hasta el m�
 
 De apilado a horizontal. Usando un único conjunto de clases `.col-sm-*`, podemos crear un sistema de cuadrícula básico que comienza apilado y se vuelve horizontal en el punto de interrupción pequeño (`sm`).
 
-![ejemplo 2](assets/bootstrap-col-sm2.png)
+![ejemplo 2](assets/bootstrap-col-sm-.png)
 
 ```html
 <div class="container text-center">
