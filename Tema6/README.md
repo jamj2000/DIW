@@ -564,5 +564,6 @@ Es una [lista de reproducción con 11 vídeos](https://youtube.com/playlist?list
 ## 5.2. Formación
 
 - [Documentación oficial de Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Bootstrap 5 Grid system](https://mdbootstrap.com/docs/standard/layout/grid/)
 - [Documentación oficial de Tailwind](https://tailwindcss.com/docs)
 - [DesarrolloWeb: Manual de Tailwind](https://desarrolloweb.com/manuales/manual-de-tailwindcss)
