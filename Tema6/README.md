@@ -5,6 +5,12 @@
 
 - [1. Introducción](#1-introducción)
 - [2. Bootstrap](#2-bootstrap)
+  - [2.1. Instalación](#21-instalación)
+  - [2.2. Desarrollo](#22-desarrollo)
+  - [2.3. Características](#23-características)
+    - [2.3.1. Diseño responsive](#231-diseño-responsive)
+    - [2.3.2. Container](#232-container)
+    - [2.3.3. Sistema de doce columnas](#233-sistema-de-doce-columnas)
 - [3. Tailwind](#3-tailwind)
   - [3.1. Instalación](#31-instalación)
   - [3.2. Desarrollo](#32-desarrollo)
@@ -24,17 +30,141 @@
   - [5.1. Herramientas](#51-herramientas)
   - [5.2. Formación](#52-formación)
 
-
-
 --- 
 
 # 1. Introducción
+
+En este tema comentaremos acerca de 2 famosos frameworks con filosofías bastante diferentes. Son Bootstrap y Tailwind.
+
+En ambos se realiza el diseño siguiendo la estrategia de **Mobile first**.
+
 
 # 2. Bootstrap
 
 Referencia:
 - [Documentación oficial de Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 
+
+## 2.1. Instalación
+
+En bootstrap no es necesario realizar instalación alguna. En su lugar, deberemos insertar 2 enlaces en el documento HTML a dar estilo, uno para CSS y otro para JS, puesto que algunos componentes de bootstrap necesitan javascript para su correcto funcionamiento.
+
+Colocaremos dentro de la etiqueta `head` el siguiente enlace:
+
+```html
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+```
+
+Colocaremos dentro de la etiqueta `body`, justo antes de su cierre, el siguiente enlace:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+```
+
+## 2.2. Desarrollo
+
+El desarrollo con Bootstrap no suele ser muy complicado. Normalmente se restringe a conocer un poco el framework y a escoger los componentes que necesitamos.
+
+Bootstrap viene ya con muchos componentes que podremos usar simplemente copiando y pegando. Algunos ejemplos son:
+
+- [Alertas](https://getbootstrap.com/docs/5.3/components/alerts/)
+- [Botones](https://getbootstrap.com/docs/5.3/components/buttons/)
+- [Card](https://getbootstrap.com/docs/5.3/components/card/)
+- [Carrousel](https://getbootstrap.com/docs/5.3/components/carousel/)
+- [Listas](https://getbootstrap.com/docs/5.3/components/list-group/)
+- [Barras de navegación](https://getbootstrap.com/docs/5.3/components/navbar/)
+- [Spinners](https://getbootstrap.com/docs/5.3/components/spinners/)
+- [Toasts](https://getbootstrap.com/docs/5.3/components/toasts/)
+
+## 2.3. Características
+
+**VENTAJAS**
+
+1. **Es fácil de usar**. Una vez el usuario dispone de los conocimientos necesarios, sacarle partido a este framework es muy simple. Al dominar los archivos principales gracias a la documentación oficial, solo precisas tener nociones básicas de HTML, CSS y JavaScript para comenzar a construir un sitio web.
+
+2. **Ofrece una compatibilidad altísima**. Bootstrap ha sido diseñado para funcionar en cualquier navegador actual. Así que una vez termines tu sitio, tendrás la convicción de que va a ser funcional allá donde se abra. 
+
+3. **Gestión eficiente de las imágenes**. Incluye clases para las imágenes que activan un redimensionamiento inteligente con el fin de adaptar los gráficos a cualquier tamaño de pantalla.
+
+4. **Creación de contenido mediante rejillas adaptables**. Bootstrap utiliza como patrón de diseño un grid o rejilla que facilita el ajuste de los contenidos a toda clase de pantallas. Para ello, ofrece dos tipos de contenedores, uno fijo y otro fluido.
+
+5. Hay una **comunidad muy grande** detrás del proyecto.
+
+
+**DESVENTAJAS**
+
+1. **Sobrecarga de código:** Bootstrap incluye una gran cantidad de archivos CSS y JavaScript que pueden generar una sobrecarga de código innecesaria si no se utilizan todos los componentes y estilos que el framework ofrece.
+
+2. **Falta de personalización:** Aunque Bootstrap brinda una amplia gama de opciones de personalización, es posible que algunas necesidades específicas del sitio web no puedan cumplirse sin la adición de código personalizado.
+
+3. **Mismo diseño reconocible:** El uso extensivo de Bootstrap ha llevado a que muchos sitios web tengan un aspecto similar debido al uso de los mismos componentes y estilos predefinidos, lo que puede restar originalidad y diferenciación visual.
+
+### 2.3.1. Diseño responsive
+
+Bootstrap incluye seis puntos de interrupción predeterminados,
+
+Punto de ruptura | Infijo de clase |   Dimensiones
+-----------------|-----------------|---------------------
+Extra small      |  None           |     <576px
+Small            |  sm             |     ≥576px
+Medium           |  md             |     ≥768px
+Large            |  lg             |     ≥992px
+Extra large      |  xl             |     ≥1200px
+Extra extra large|  xxl            |     ≥1400px
+
+
+### 2.3.2. Container
+
+Los contenedores son el elemento de diseño más básico en Bootstrap y son necesarios cuando utilizamos el sistema de cuadrícula predeterminado. Los contenedores se utilizan para contener, rellenar y (a veces) centrar el contenido dentro de ellos.
+
+La clase predeterminada `.container`  es un contenedor responsive de ancho fijo, lo que significa que su ancho máximo cambia en cada punto de interrupción.
+
+```html
+<div class="container">
+  <!-- Content here -->
+</div>
+```
+
+### 2.3.3. Sistema de doce columnas
+
+El sistema de cuadrícula de Bootstrap utiliza una serie de contenedores, filas y columnas para diseñar y alinear el contenido. Está construido con flexbox y es totalmente responsivo.
+
+Para cuadrículas que son iguales desde el dispositivo más pequeño hasta el más grande, usaremos las clases `.col` y `.col-*`. Especificares una clase numerada cuando necesitemos una columna de tamaño particular.
+
+![ejemplo 1](assets/bootstrap-col.png)
+
+```html
+<div class="container text-center">
+  <div class="row">
+    <div class="col">col</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
+  </div>
+  <div class="row">
+    <div class="col-8">col-8</div>
+    <div class="col-4">col-4</div>
+  </div>
+</div>
+```
+
+De apilado a horizontal. Usando un único conjunto de clases `.col-sm-*`, podemos crear un sistema de cuadrícula básico que comienza apilado y se vuelve horizontal en el punto de interrupción pequeño (`sm`).
+
+![ejemplo 2](assets/bootstrap-col-sm.png)
+
+```html
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-8">col-sm-8</div>
+    <div class="col-sm-4">col-sm-4</div>
+  </div>
+  <div class="row">
+    <div class="col-sm">col-sm</div>
+    <div class="col-sm">col-sm</div>
+    <div class="col-sm">col-sm</div>
+  </div>
+</div>
+```
 
 # 3. Tailwind
 
@@ -133,6 +263,33 @@ Es aconsejable tener un servidor web con recarga automática para ver los cambio
 
 
 ## 3.3. Características
+
+**VENTAJAS**
+
+1. Proceso de **desarrollo más rápido**
+
+2. Te ayuda a practicar más tu CSS ya que las utilidades son similares
+
+3. **Todas las utilidades y componentes son fácilmente personalizables**
+
+4. **El tamaño total del archivo para la producción suele ser pequeño**
+
+5. **Fácil de aprender si ya conoces el CSS**
+   
+6. Buena documentación para el aprendizaje
+   
+
+**DESVENTAJAS**
+
+1. **Tu marcado puede parecer desorganizado** para proyectos grandes porque todos los estilos están en los archivos HTML.
+
+2. **No es fácil de aprender si no entiendes bien el CSS.**
+
+3. **Te ves obligado a construir todo desde cero**, incluidos los elementos de entrada. Cuando instalas Tailwind CSS, elimina todos los estilos CSS por defecto.
+
+4. Tailwind CSS **no es la mejor opción si buscas minimizar el tiempo dedicado a desarrollar el frontend** de tu sitio web y centrarte principalmente en la lógica del backend.
+
+
 
 ### 3.3.1. Diseño responsive
 
