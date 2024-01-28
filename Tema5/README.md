@@ -244,7 +244,6 @@ No hace falta media-query porque será nuestro diseño por defecto
 ```
 
 
-
 ## 4.2. Desktop first
 
 Diseño responsive a partir del diseño más grande (el de escritorio)
