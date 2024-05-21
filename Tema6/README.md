@@ -567,3 +567,4 @@ Es una [lista de reproducción con 11 vídeos](https://youtube.com/playlist?list
 - [Bootstrap 5 Grid system](https://mdbootstrap.com/docs/standard/layout/grid/)
 - [Documentación oficial de Tailwind](https://tailwindcss.com/docs)
 - [DesarrolloWeb: Manual de Tailwind](https://desarrolloweb.com/manuales/manual-de-tailwindcss)
+- [css2wind: Aprende Tailwind a partir de CSS](https://www.css2wind.com/)
