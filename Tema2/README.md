@@ -18,6 +18,8 @@
 - [5. Display](#5-display)
   - [5.1. Block](#51-block)
   - [5.2. Inline](#52-inline)
+  - [Inline-Block](#inline-block)
+  - [Otros displays](#otros-displays)
   - [5.3. Flex y Grid](#53-flex-y-grid)
   - [5.4. None, para ocultar un elemento](#54-none-para-ocultar-un-elemento)
 - [6. Position](#6-position)
@@ -363,7 +365,30 @@ Ejemplos de elementos en línea:
 
 - `<span>`
 - `<a>`
+- `<input>`
+- `<textarea>`
+- `<button>`
+
+> **IMPORTANTE:** Los elementos anteriores no admiten configuración de ancho (`width`) ni alto (`height`). Tampoco admiten `margin-top` ni `margin-bottom`. Y `padding-top` y `padding-bottom` se comportan de una manera particular.
+
+## Inline-Block
+
+**Un elemento de bloque en línea se comporta igual que un elemento de bloque con la salvedad que no se realiza salto de línea**.
+
+Ejemplos de elementos de bloque en línea:
+
 - `<img>`
+
+
+## Otros displays
+
+Hay otros *display* menos frecuentes como son:
+
+```css
+display: table;
+display: list-item;
+```  
+
 
 ## 5.3. Flex y Grid
 

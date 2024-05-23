@@ -387,6 +387,22 @@ Si la tabla es ancha y se va a visualizar en dispositivos móviles, debemos aseg
 
 Entendemos la maquetación como el proceso de realizar la **disposición de elementos** dentro de la página web.
 
+Un aspecto recomendable es que el contenido de la página (`body`) no sobrepase el ancho horizontal del *viewport*. Para ello podemos usar el siguiente CSS:
+
+```css
+body {
+  overflow-x: hidden;
+}
+```
+
+Otro aspecto deseado a menudo es el de centrar horizontalmente algún elemento en la página. Por ejemplo si queremos centrar los elementos de tipo `section`, hacemos:
+
+```css
+section {
+  margin: 0 auto
+}
+``` 
+
 La maquetación, también conocida con el término inglés **layout**, en sus inicios, cuando la navegación por internet se realizaba a través de pantallas de PC o portátil, hacía uso de la etiqueta html `frame`, y más tarde la etiqueta html `table` para distribuir los elementos en la página. 
 
 No obstante, con la llegada y amplio uso de dispositivos portátiles con pantallas de tamaño más reducido, se hizo necesario una nueva forma más flexible de maquetar. Se pasó entoces a la maquetación mediante la **etiqueta html `div`** principalmente y la **propiedad css `display`** con valores **`flex`** y **`grid`**.
@@ -395,7 +411,7 @@ La maquetación con `flex` permite distribuir los elementos a lo largo de un eje
 
 Junto con estas nuevas formas de maquetar, se han añadido a CSS numerosas propiedades nuevas, que permiten afinar el diseño con estos nuevos `layout`.  
 
-Por ejemplo para disponer los items en una fila, con espacio entre ellos, podemos hacer:
+Por ejemplo para disponer los items en una fila, con espacio entre ellos, podemos hacer uso de display `flex`:
 
 ```html
 <div class="contenedor">
@@ -417,11 +433,28 @@ Por ejemplo para disponer los items en una fila, con espacio entre ellos, podemo
 .item {
   width: 300px;
   height: 300px;  
-  margin: 100px auto;  /* Para centrar el item */
 }
 ```
 
-Si sólo tenemos un item y queremos que esté centrado en el `body` podemos hacer
+O también podemos emplear el display `grid`:
+
+```css
+/* Contenedor de items */
+.contenedor { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center; 
+}
+
+/* Item */
+.item {
+  width: 300px;
+  height: 300px;  
+}
+```
+
+
+Si sólo tenemos un item y queremos que esté centrado en el `body`, tanto horizontal como vertical, podemos hacer
 
 ```html
 <body>
@@ -443,6 +476,7 @@ body {
 ```
 
 La maquetación con `flex` y `grid` proporciona numerosas opciones que estudiaremos en mucho mayor detalle en un tema posterior.
+
 
 
 # 9. Linter para CSS
