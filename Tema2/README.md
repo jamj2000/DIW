@@ -3,6 +3,7 @@
 # Tema 2: Creación de interfaces web utilizando estilos <!-- omit in toc -->
 > INSERTAR CSS, SELECTORES, CASCADA, ESPECIFICIDAD, HERENCIA, DISPLAY, POSITION
 
+p- [1. Introducción](#1-introducción)
 - [1. Introducción](#1-introducción)
 - [2. Formas de insertar CSS](#2-formas-de-insertar-css)
 - [3. Selectores](#3-selectores)
@@ -18,16 +19,17 @@
 - [5. Display](#5-display)
   - [5.1. Block](#51-block)
   - [5.2. Inline](#52-inline)
-  - [Inline-Block](#inline-block)
-  - [Otros displays](#otros-displays)
-  - [5.3. Flex y Grid](#53-flex-y-grid)
-  - [5.4. None, para ocultar un elemento](#54-none-para-ocultar-un-elemento)
+  - [5.3. Inline-Block](#53-inline-block)
+  - [5.4. Flex y Grid](#54-flex-y-grid)
+  - [5.5. None, para ocultar un elemento](#55-none-para-ocultar-un-elemento)
+  - [5.6. Otros displays](#56-otros-displays)
 - [6. Position](#6-position)
   - [6.1. z-index](#61-z-index)
 - [7. Alineación horizontal y vertical](#7-alineación-horizontal-y-vertical)
 - [8. Recursos](#8-recursos)
   - [8.1. Herramientas](#81-herramientas)
   - [8.2. Formación](#82-formación)
+
 
 
 
@@ -371,7 +373,7 @@ Ejemplos de elementos en línea:
 
 > **IMPORTANTE:** Los elementos anteriores no admiten configuración de ancho (`width`) ni alto (`height`). Tampoco admiten `margin-top` ni `margin-bottom`. Y `padding-top` y `padding-bottom` se comportan de una manera particular.
 
-## Inline-Block
+## 5.3. Inline-Block
 
 **Un elemento de bloque en línea se comporta igual que un elemento de bloque con la salvedad que no se realiza salto de línea**.
 
@@ -380,24 +382,14 @@ Ejemplos de elementos de bloque en línea:
 - `<img>`
 
 
-## Otros displays
-
-Hay otros *display* menos frecuentes como son:
-
-```css
-display: table;
-display: list-item;
-```  
-
-
-## 5.3. Flex y Grid
+## 5.4. Flex y Grid
 
 **Los elementos de tipo `flex` y `grid` nos permiten distribuir otros elementos hijo dentro de ellos. Por tanto, estos valores se usan para elementos contenedores.**
 
 Estudiaremos estos tipos de `display` en un tema posterior.
 
 
-## 5.4. None, para ocultar un elemento
+## 5.5. None, para ocultar un elemento
 
 Existen 2 formas de ocultar un elemento:
 
@@ -405,6 +397,15 @@ Existen 2 formas de ocultar un elemento:
 - **`visibility: hidden;`**
 
 La primera forma, elimina de la vista el elemento y también elimina el hueco que ocupaba. Mientras que la segunda forma, no elimina el hueco que ocupaba el elemento.
+
+## 5.6. Otros displays
+
+Hay otros *display* menos frecuentes como son:
+
+```css
+display: table;
+display: list-item;
+```  
 
 
 
