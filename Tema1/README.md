@@ -477,6 +477,13 @@ body {
 
 La maquetación con `flex` y `grid` proporciona numerosas opciones que estudiaremos en mucho mayor detalle en un tema posterior.
 
+> **CURIOSIDAD:** En algunas situaciones, sobre todo si tenemos el mismo fondo fijo en distintas páginas, puede observarse que éste se desplaza ligeramente a la izquierda al aparecer la barra de scroll en páginas con mucho contenido y vuelve a la derecha al desaparecer esta barra en páginas con poco contenido. Para evitar este molesto efecto usamos la propiedad `scrollbar-gutter` dentro de la etiqueta html.
+>
+> ```css
+> html {
+>   scrollbar-gutter: stable; 
+> }
+> ```
 
 
 # 9. Linter para CSS
