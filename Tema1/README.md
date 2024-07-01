@@ -466,7 +466,7 @@ Si sólo tenemos un item y queremos que esté centrado en el `body`, tanto horiz
 body {
   height: 100vh;
   display: grid;
-  place-content: center center;
+  place-content: center;
 }
 
 .item {
@@ -474,6 +474,10 @@ body {
   height: 300px;  
 }
 ```
+
+> **NOTA:**
+>
+> Otra propiedad similar a `place-content` es `place-items` aunque con [un comportamiento ligeramente diferente](https://www.youtube.com/watch?v=vNwoDkn7AIc).
 
 La maquetación con `flex` y `grid` proporciona numerosas opciones que estudiaremos en mucho mayor detalle en un tema posterior.
 
