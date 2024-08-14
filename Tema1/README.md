@@ -150,9 +150,11 @@ El color está presente en numerosas propiedades. A continuación, se muestran u
 - `background-color`
 - `background-image`
 
-**Ejemplo:**
+**Ejemplo 1:**
 
 A continuación se muestra como crear un fondo de página con un gradiente en forma de arco iris, usando la propiedad `background-image`.
+
+![Gradiente Arco Iris](assets/gradiente.png)
 
 ```css
 body {
@@ -168,8 +170,63 @@ body {
 }
 ```
 
-![Gradiente Arco Iris](assets/gradiente.png)
 
+**Ejemplo 2:**
+
+Un ejemplo más elaborado. En este caso aplicamos el gradiente lineal a un elemento `h1`. Para ello necesitaremos hacer uso de las siguientes propiedades adicionales:
+
+```css
+h1 {
+  background-clip: text;
+  color: transparent;
+}
+```
+
+![Gradiente H1](assets/gradiente-h1.png)
+
+
+También hemos usado otras propiedades no relacionadas con el color como `overflow` y `text-wrap`, con la finalidad de ofrecer funcionalidades de gestión del desbordamiento y ajuste de línea. 
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        div {
+            overflow-x: scroll;
+        }
+
+        h1 {
+            margin-block: 0;
+            width: 1100px;
+            text-wrap: nowrap;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 700;
+            font-size: 10rem;
+            background: linear-gradient(.25turn, red, orange, blue, green, cyan, violet);
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Hola mundo</h1>
+    </div>
+</body>
+
+</html>
+```
 
 # 4. Modelo de caja (box model)
 
