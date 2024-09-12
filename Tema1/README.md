@@ -12,18 +12,18 @@
   - [3.4. Valores HSL](#34-valores-hsl)
   - [3.5. Valores HSLA](#35-valores-hsla)
   - [3.6. Uso](#36-uso)
-- [4. Modelo de caja (box model)](#4-modelo-de-caja-box-model)
-  - [4.1. Colapso de márgenes](#41-colapso-de-márgenes)
-- [5. Texto](#5-texto)
-  - [5.1. Efectos](#51-efectos)
-- [6. Listas](#6-listas)
-- [7. Tablas](#7-tablas)
-- [8. Introducción a la maquetación](#8-introducción-a-la-maquetación)
-- [9. Linter para CSS](#9-linter-para-css)
-- [10. Recursos](#10-recursos)
-  - [10.1. Herramientas](#101-herramientas)
-  - [10.2. Formación](#102-formación)
-
+- [4. Modo claro / oscuro](#4-modo-claro--oscuro)
+- [5. Modelo de caja (box model)](#5-modelo-de-caja-box-model)
+  - [5.1. Colapso de márgenes](#51-colapso-de-márgenes)
+- [6. Texto](#6-texto)
+  - [6.1. Efectos](#61-efectos)
+- [7. Listas](#7-listas)
+- [8. Tablas](#8-tablas)
+- [9. Introducción a la maquetación](#9-introducción-a-la-maquetación)
+- [10. Linter para CSS](#10-linter-para-css)
+- [11. Recursos](#11-recursos)
+  - [11.1. Herramientas](#111-herramientas)
+  - [11.2. Formación](#112-formación)
 
 
 
@@ -105,6 +105,13 @@ El parámetro alfa es un número entre:
 -  **0,0**: completamente **transparente**
 -  **1,0**: completamente **opaco**
 
+
+> **NOTA:** La [`función rgb()`](https://lenguajecss.com/css/colores/funcion-rgb/) también admite una forma más moderna, en la cual separamos los valores por espacios y podemos indicar la opacidad después del separador de /, siendo 0 o 0% totalmente transparente y 1 o 100% totalmente opaco. Ejemplo:
+> 
+> ```css
+> background-color: rgb(100% 50% 25% / 50%);
+>  background-color: rgb(255 127 63 / 0.5);  
+>```
 
 ## 3.4. Valores HSL
 
@@ -228,7 +235,24 @@ También hemos usado otras propiedades no relacionadas con el color como `overfl
 </html>
 ```
 
-# 4. Modelo de caja (box model)
+# 4. Modo claro / oscuro
+
+Muchos de los sitios y aplicaciones más actuales soportan tanto el modo claro como el oscuro. Con CSS podemos indicar el color de frente y el color de fondo para ambos modos con la función [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark). Ejemplo:
+
+
+```css
+:root {
+  color-scheme: light dark;
+}
+body {
+  color: light-dark( darkgray, whitesmoke );
+  background-color: light-dark( whitesmoke, darkgray );
+}
+```
+
+
+
+# 5. Modelo de caja (box model)
 
 ![Box Model](assets/box-model.png)
 
@@ -255,7 +279,7 @@ Aunque, con frecuencia usan;
 }
 ```
 
-## 4.1. Colapso de márgenes
+## 5.1. Colapso de márgenes
 
 Referencia: https://www.w3schools.com/css/css_margin_collapse.asp
 
@@ -286,7 +310,7 @@ El margen entre `h1` y `h2` no será 50px+20px = 70px.
 **El margen entre `h1` y `h2` será igual al mayor de los márgenes, es decir 50px.**
 
 
-# 5. Texto
+# 6. Texto
 
 Las propiedades más frecuentes para el texto son las siguientes:
 
@@ -329,7 +353,7 @@ Los valores por defecto son:
     font-weight: 400;
 ```
 
-## 5.1. Efectos 
+## 6.1. Efectos 
 
 [Muchas fuentes de Google Fonts soportan efectos](https://developers.google.com/fonts/docs/getting_started?hl=es-419).
 Estos efectos se ven realmente bien en títulos, no en texto de párrafo.
@@ -371,7 +395,7 @@ Se vería así
 Referencia: https://www.w3schools.com/css/css_font_google.asp
 
 
-# 6. Listas
+# 7. Listas
 
 La propiedad más usada es
 
@@ -394,7 +418,7 @@ ol {
 }
 ```
 
-# 7. Tablas
+# 8. Tablas
 
 Los principales elementos a los cuales dar estilo son:
 
@@ -440,7 +464,7 @@ Si la tabla es ancha y se va a visualizar en dispositivos móviles, debemos aseg
 ```
 
 
-# 8. Introducción a la maquetación
+# 9. Introducción a la maquetación
 
 Entendemos la maquetación como el proceso de realizar la **disposición de elementos** dentro de la página web.
 
@@ -547,7 +571,7 @@ La maquetación con `flex` y `grid` proporciona numerosas opciones que estudiare
 > ```
 
 
-# 9. Linter para CSS
+# 10. Linter para CSS
 
 Un `linter` es una herramienta que te ayuda a mejorar tu código mediante el análisis del código fuente en busca de problemas.
 
@@ -580,9 +604,9 @@ npx  stylelint  *.css  --fix
 
 
 
-# 10. Recursos
+# 11. Recursos
 
-## 10.1. Herramientas
+## 11.1. Herramientas
 
 - [HTML Colors](https://htmlcolorcodes.com/)
 - [Conversor de color](https://www.w3schools.com/colors/colors_converter.asp)
@@ -592,7 +616,7 @@ npx  stylelint  *.css  --fix
 - [Emojipedia](https://emojipedia.org/)
 - [Algunos símbolos Unicode](https://www.w3schools.com/charsets/ref_utf_symbols.asp)
 
-## 10.2. Formación
+## 11.2. Formación
 
 - [Modelo de color HSL: qué es y qué ventajas tiene](https://www.uifrommars.com/que-es-hsl/)
 - [Google Fonts Knowledge](https://fonts.google.com/knowledge)
