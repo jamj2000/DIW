@@ -339,6 +339,9 @@ display: flex;
 display: grid;
 ```
 
+- [Listado de elementos block e inline](https://www.w3schools.com/html/html_blocks.asp)
+
+
 
 ## 5.1. Block
 
@@ -404,9 +407,10 @@ Hay otros *display* menos frecuentes como son:
 
 ```css
 display: table;
+display: table-cell;
+display: table-row;
 display: list-item;
 ```  
-
 
 
 # 6. Position
