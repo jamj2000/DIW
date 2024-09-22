@@ -3,6 +3,7 @@
 # Tema 1: Planificación de interfaces gráficas <!-- omit in toc -->
 > FORMATO DE REGLA, COLOR, MODELO DE CAJA, TEXTO, LISTAS, TABLAS
 
+
 - [1. Introducción](#1-introducción)
 - [2. Formato de regla CSS](#2-formato-de-regla-css)
 - [3. Color](#3-color)
@@ -11,19 +12,23 @@
   - [3.3. Valores RGBA](#33-valores-rgba)
   - [3.4. Valores HSL](#34-valores-hsl)
   - [3.5. Valores HSLA](#35-valores-hsla)
-  - [3.6. Uso](#36-uso)
+  - [3.6. Gradientes de color](#36-gradientes-de-color)
+  - [3.7. Uso](#37-uso)
 - [4. Modo claro / oscuro](#4-modo-claro--oscuro)
 - [5. Modelo de caja (box model)](#5-modelo-de-caja-box-model)
   - [5.1. Colapso de márgenes](#51-colapso-de-márgenes)
 - [6. Texto](#6-texto)
-  - [6.1. Efectos](#61-efectos)
-- [7. Listas](#7-listas)
-- [8. Tablas](#8-tablas)
-- [9. Introducción a la maquetación](#9-introducción-a-la-maquetación)
-- [10. Linter para CSS](#10-linter-para-css)
-- [11. Recursos](#11-recursos)
-  - [11.1. Herramientas](#111-herramientas)
-  - [11.2. Formación](#112-formación)
+- [7. Tipos de fuentes](#7-tipos-de-fuentes)
+  - [7.1. Según su diseño](#71-según-su-diseño)
+  - [7.2. Según el formato de archivo](#72-según-el-formato-de-archivo)
+  - [7.3. Efectos](#73-efectos)
+- [8. Listas](#8-listas)
+- [9. Tablas](#9-tablas)
+- [10. Introducción a la maquetación](#10-introducción-a-la-maquetación)
+- [11. Linter para CSS](#11-linter-para-css)
+- [12. Recursos](#12-recursos)
+  - [12.1. Herramientas](#121-herramientas)
+  - [12.2. Formación](#122-formación)
 
 
 
@@ -147,7 +152,39 @@ El parámetro alfa es un número entre:
 -  **0,0**: completamente **transparente**
 -  **1,0**: completamente **opaco**
 
-## 3.6. Uso
+
+## 3.6. Gradientes de color
+
+Un gradiente de color es la transición gradual entre dos o más colores. En CSS tenemos 3 tipos de gradientes:
+
+- **LINEAL**
+- **RADIAL**
+- **CÓNICO**
+
+
+Para generar dichos gradientes usamos las funciones:
+
+- `linear-gradient()`
+- `radial-gradient()`
+- `conic-gradient()`
+
+![gradientes](assets/gradientes.png)
+
+En su forma más sencilla, usando sólo dos colores, tenemos los siguientes ejemplos:
+
+```css
+background: linear-gradient( red, blue );
+background: radial-gradient( red, blue );
+background: conic-gradient( red, blue );
+```
+
+Para ver usos más elaborados consultar los siguientes enlaces:
+
+- [MDN: linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient)
+- [MDN: radial-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient)
+- [MDN: conic-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/conic-gradient)
+
+## 3.7. Uso
 
 El color está presente en numerosas propiedades. A continuación, se muestran unas cuantas:
 
@@ -353,7 +390,40 @@ Los valores por defecto son:
     font-weight: 400;
 ```
 
-## 6.1. Efectos 
+# 7. Tipos de fuentes
+
+## 7.1. Según su diseño
+
+Las tipografías más habituales son las siguientes:
+
+- **SERIF**
+- **SANS-SERIF**, **SLAB-SERIF**
+- **MONOSPACE**
+
+
+Referencias:
+
+- [Artículo en wikipedia: Tipografía gráfica](https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_tipogr%C3%A1fica)
+- [Artículo en wikipedia: Clasificación de Francis Thibaudeau](https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_de_Francis_Thibaudeau)
+- [Artículo en wikipedia: Clasificación Vox-ATypI](https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_Vox-ATypI)
+- [Google Fonts Knowledge: Making sense of typographic classifications](https://fonts.google.com/knowledge/introducing_type/making_sense_of_typographic_classifications)
+- [Google Fonts Knowledge](https://fonts.google.com/knowledge)
+
+## 7.2. Según el formato de archivo
+
+Las fuentes se distribuyen habitualmente en alguno de los siguientes formatos:
+
+- **OTF** (OpenType)
+- **TTF** (TrueType)
+- **WOFF**, **WOFF2** (Web Open Font Format)
+- **SVG**
+
+Referencias:
+
+- [Artículo en tutsplus](https://design.tutsplus.com/es/articles/different-font-file-types-explained-ott-ttf-woff--cms-39047)
+- [Artículo en creativefabrica](https://www.creativefabrica.com/es/the-ultimate-font-guide/difference-between-font-formats/)
+
+## 7.3. Efectos 
 
 [Muchas fuentes de Google Fonts soportan efectos](https://developers.google.com/fonts/docs/getting_started?hl=es-419).
 Estos efectos se ven realmente bien en títulos, no en texto de párrafo.
@@ -395,7 +465,7 @@ Se vería así
 Referencia: https://www.w3schools.com/css/css_font_google.asp
 
 
-# 7. Listas
+# 8. Listas
 
 La propiedad más usada es
 
@@ -418,7 +488,7 @@ ol {
 }
 ```
 
-# 8. Tablas
+# 9. Tablas
 
 Los principales elementos a los cuales dar estilo son:
 
@@ -464,7 +534,7 @@ Si la tabla es ancha y se va a visualizar en dispositivos móviles, debemos aseg
 ```
 
 
-# 9. Introducción a la maquetación
+# 10. Introducción a la maquetación
 
 Entendemos la maquetación como el proceso de realizar la **disposición de elementos** dentro de la página web.
 
@@ -571,7 +641,7 @@ La maquetación con `flex` y `grid` proporciona numerosas opciones que estudiare
 > ```
 
 
-# 10. Linter para CSS
+# 11. Linter para CSS
 
 Un `linter` es una herramienta que te ayuda a mejorar tu código mediante el análisis del código fuente en busca de problemas.
 
@@ -604,9 +674,9 @@ npx  stylelint  *.css  --fix
 
 
 
-# 11. Recursos
+# 12. Recursos
 
-## 11.1. Herramientas
+## 12.1. Herramientas
 
 - [HTML Colors](https://htmlcolorcodes.com/)
 - [Conversor de color](https://www.w3schools.com/colors/colors_converter.asp)
@@ -616,7 +686,7 @@ npx  stylelint  *.css  --fix
 - [Emojipedia](https://emojipedia.org/)
 - [Algunos símbolos Unicode](https://www.w3schools.com/charsets/ref_utf_symbols.asp)
 
-## 11.2. Formación
+## 12.2. Formación
 
 - [Modelo de color HSL: qué es y qué ventajas tiene](https://www.uifrommars.com/que-es-hsl/)
 - [Google Fonts Knowledge](https://fonts.google.com/knowledge)
