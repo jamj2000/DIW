@@ -282,8 +282,8 @@ Muchos de los sitios y aplicaciones más actuales soportan tanto el modo claro c
   color-scheme: light dark;
 }
 body {
-  color: light-dark( darkgray, whitesmoke );
-  background-color: light-dark( whitesmoke, darkgray );
+  color: light-dark( black, white );
+  background-color: light-dark( white, black );
 }
 ```
 
