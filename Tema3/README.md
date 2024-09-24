@@ -586,6 +586,7 @@ Y haz un resumen de la página anterior. ¿Qué es la licencia CC0?
 # 7. Recursos
 
 ## 7.1. Herramientas
+- [BoxIcons](https://boxicons.com/)
 - [Simple Icons](https://simpleicons.org/)
 - [Tabler Icons - Iconos SVG](https://tablericons.com/)
 - [Flaticon - Iconos SVG](https://www.flaticon.es/)
