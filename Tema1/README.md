@@ -178,6 +178,10 @@ background: radial-gradient( red, blue );
 background: conic-gradient( red, blue );
 ```
 
+> **NOTA:**
+>
+> Para usar gradientes en CSS, no se usa la propiedad `background-color`, sino la propiedad **`background-image`**.
+
 Para ver usos más elaborados consultar los siguientes enlaces:
 
 - [MDN: linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient)
