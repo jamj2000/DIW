@@ -283,6 +283,65 @@ En el siguiente enlace tienes más información:
 
 ![Filter Blur](assets/filter-blur.png)
 
+- propiedad **`backdrop-filter`**
+  
+Permite aplicar efectos gráficos como desenfoque o cambio de color al área detrás de un elemento. Debido a que se aplica a todo lo que hay detrás del elemento, para ver el efecto debe hacer que el elemento o su fondo sean al menos parcialmente transparentes.
+
+En el siguiente enlace tienes más información:
+
+- [MDN - Backdrop Filter](https://developer.mozilla.org/es/docs/Web/CSS/backdrop-filter)
+
+![backdrop-filter](assets/backdrop-filter.png)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=,, initial-scale=1.0">
+    <title> backdrop-filter </title>
+    <style>
+         * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-content: center;
+            background: url(https://images.unsplash.com/photo-1724942462164-7c30f103d91c) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;  
+        }
+        
+
+        div {
+            display: grid;
+            place-content: center;
+            width: 300px;
+            height: 200px;                        
+            border: solid 1px rgba(0, 0, 0, .05);
+            border-radius: 5px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+            font-size: 40px; 
+            color: white;
+            background-color: rgb(50% 0 0 / 0.10);   /* <-------------- */
+            backdrop-filter: blur(5px);              /* <-------------- */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+      Hola Mundo
+    </div>
+</body>
+</html>
+```
+
+
 
 ## 2.8. Optimización de imágenes para la Web
 
