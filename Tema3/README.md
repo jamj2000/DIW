@@ -291,7 +291,7 @@ En el siguiente enlace tienes más información:
 
 - [MDN - Backdrop Filter](https://developer.mozilla.org/es/docs/Web/CSS/backdrop-filter)
 
-![backdrop-filter](assets/backdrop-filter.png)
+![backdrop-filter](assets/backdrop-filter.avif)
 
 ```html
 <!DOCTYPE html>
