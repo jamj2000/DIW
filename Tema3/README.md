@@ -659,6 +659,7 @@ Y haz un resumen de la página anterior. ¿Qué es la licencia CC0?
 - [Open-source illustrations - Ilustraciones gratuitas](https://undraw.co/)
 - [Get Waves](https://getwaves.io/)
 - [Clip Path Generator](https://bennettfeely.com/clippy/)
+- [Glassmorphism CSS Generator](https://css.glass/)
 - [Optimizador de imágenes online](https://tinypng.com/)
 
 ## 7.2. Formación
