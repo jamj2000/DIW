@@ -539,6 +539,8 @@ La API View Transitions proporciona un mecanismo para crear fácilmente transici
 - [Animista: Web para crear animaciones](https://animista.net/)
 - [Transition: Web: Web para crear transiciones y animaciones](https://www.transition.style/)
 - [Generador de curvas de Bezier](https://cubic-bezier.com/)
+- [Avatares](https://pravatar.cc/)
+
 
 ## 7.2. Formación
 
