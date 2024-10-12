@@ -85,6 +85,15 @@ Por favor, para un tratamiento en mayor profundidad y demos on-line, no dudes en
 
 ![Ejemplo colores](assets/ejemplo-colores.png)
 
+> **CURIOSIDAD:** 
+>
+> Existe el color `transparent`, que puede ser usado tanto para primer como segundo plano.
+>
+> ```css
+> color: transparent;
+> background-color: transparent;
+>```
+
 
 ## 3.2. Valores RGB
 
