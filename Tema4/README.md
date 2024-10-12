@@ -549,6 +549,8 @@ La API View Transitions proporciona un mecanismo para crear fácilmente transici
 - [Videotutorial de animaciones](https://www.youtube.com/watch?v=RwjgfNX41TE&t=44s)
 - [MDN - Animaciones basadas en desplazamiento](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - [Google - Animaciones basadas en desplazamiento](https://scroll-driven-animations.style/)
+- [Glassmorphism: una tendencia de diseño UX](https://torresburriel.com/weblog/glassmorphism/)
+- [Video: Glassmorphism Login Form](https://youtu.be/I1ptUuzMkf4?si=dB-bt1KS-jwEVIay)
 - [Video: Breve tutorial de transiciones y animaciones](https://youtu.be/YsrE1xe94Dk?si=bysc2-hfo3cfp7x5)
 - [Video: Hamburger Menu Toggle - Only with CSS](https://www.youtube.com/watch?v=XM7sEpl0f7c&t=332s)
 - [Video: Pure CSS Image Slider with Text animation & Dots indicator](https://www.youtube.com/watch?v=UnWd2END-IY)

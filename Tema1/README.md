@@ -117,7 +117,7 @@ El parámetro alfa es un número entre:
 > 
 > ```css
 > background-color: rgb(100% 50% 25% / 50%);
->  background-color: rgb(255 127 63 / 0.5);  
+> background-color: rgb(255 127 63 / 0.5);  
 >```
 
 ## 3.4. Valores HSL
@@ -153,6 +153,14 @@ Un valor de color HSLA se especifica con:
 El parámetro alfa es un número entre:
 -  **0,0**: completamente **transparente**
 -  **1,0**: completamente **opaco**
+
+> **NOTA:** La [`función hsl()`](https://lenguajecss.com/css/colores/funcion-hsl/) también admite una forma más moderna, en la cual separamos los valores por espacios y podemos indicar la opacidad después del separador de /, siendo 0 o 0% totalmente transparente y 1 o 100% totalmente opaco. Ejemplo:
+> 
+> ```css
+> background-color: hsl(180deg 50% 25% / 75%);
+> background-color: hsl(180 50% 25% / 0.75); 
+>``
+
 
 
 ## 3.6. Gradientes de color

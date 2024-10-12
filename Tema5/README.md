@@ -294,3 +294,4 @@ No hace falta media-query porque será nuestro diseño por defecto
 - [Media queries](https://lenguajecss.com/css/responsive-web-design/media-queries/)
 - [W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/design-develop/es)
 - [WCAG 2.1 de un vistazo](https://www.w3.org/WAI/standards-guidelines/wcag/glance/es)
+- [Vídeo: Menú lateral responsive con iconos Material Symbols Outlined](https://youtu.be/iiKDMFlXZkY?si=OrICcuK3pPeMe5ee)
