@@ -462,7 +462,7 @@ Resultado:
 
 ![ material symbols outlined](assets/material-symbols-outlined.png)
 
-
+Para la configuración de la apariencia del icono, consultar la [guía disponible en Google Fonts](https://developers.google.com/fonts/docs/material_icons?hl=es-419). 
 
 ## 7.4. Efectos 
 
