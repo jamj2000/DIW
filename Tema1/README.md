@@ -21,7 +21,8 @@
 - [7. Tipos de fuentes](#7-tipos-de-fuentes)
   - [7.1. Según su diseño](#71-según-su-diseño)
   - [7.2. Según el formato de archivo](#72-según-el-formato-de-archivo)
-  - [7.3. Efectos](#73-efectos)
+  - [7.3. Fuentes de iconos](#73-fuentes-de-iconos)
+  - [7.4. Efectos](#74-efectos)
 - [8. Listas](#8-listas)
 - [9. Tablas](#9-tablas)
 - [10. Introducción a la maquetación](#10-introducción-a-la-maquetación)
@@ -29,6 +30,7 @@
 - [12. Recursos](#12-recursos)
   - [12.1. Herramientas](#121-herramientas)
   - [12.2. Formación](#122-formación)
+
 
 
 
@@ -427,7 +429,42 @@ Referencias:
 - [Artículo en tutsplus](https://design.tutsplus.com/es/articles/different-font-file-types-explained-ott-ttf-woff--cms-39047)
 - [Artículo en creativefabrica](https://www.creativefabrica.com/es/the-ultimate-font-guide/difference-between-font-formats/)
 
-## 7.3. Efectos 
+
+## 7.3. Fuentes de iconos
+
+Existen fuentes, que en lugar de contener [glifos](https://es.wikipedia.org/wiki/Glifo#:~:text=En%20tipograf%C3%ADa%2C%20un%20glifo%20es,glifo%20es%20una%20unidad%20gr%C3%A1fica.) para caracteres de texto, están conformados por iconos.
+
+Por ejemplo, **[Material Symbols Outlined](https://fonts.google.com/icons)**
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Lista de iconos y los settings para ellos -->
+  <!-- Guía: https://developers.google.com/fonts/docs/material_symbols?hl=es-419 -->
+  <!-- Iconos que usaremos: favorite,home,search,settings -->
+  <!-- Settings: opsz,wght,FILL,GRAD -->
+  <!-- Valores que usaremos para los settings anteriores: 20,700,1,200 -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,700,1,200&icon_names=favorite,home,search,settings" rel="stylesheet" />
+</head>
+
+<body>
+  <span class="material-symbols-outlined">search</span> <!-- Icono search -->
+  <span class="material-symbols-outlined">home</span> <!-- Icono home -->
+  <span class="material-symbols-outlined">settings</span> <!-- Icono settigs -->
+  <span class="material-symbols-outlined">favorite</span> <!-- Icono favorite -->
+</body>
+</html>
+```
+
+Resultado:
+
+![ material symbols outlined](assets/material-symbols-outlined.png)
+
+
+
+## 7.4. Efectos 
 
 [Muchas fuentes de Google Fonts soportan efectos](https://developers.google.com/fonts/docs/getting_started?hl=es-419).
 Estos efectos se ven realmente bien en títulos, no en texto de párrafo.
