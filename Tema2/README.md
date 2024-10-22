@@ -3,7 +3,6 @@
 # Tema 2: Creación de interfaces web utilizando estilos <!-- omit in toc -->
 > INSERTAR CSS, SELECTORES, CASCADA, ESPECIFICIDAD, HERENCIA, DISPLAY, POSITION
 
-p- [1. Introducción](#1-introducción)
 - [1. Introducción](#1-introducción)
 - [2. Formas de insertar CSS](#2-formas-de-insertar-css)
 - [3. Selectores](#3-selectores)
