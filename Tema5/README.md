@@ -292,6 +292,7 @@ No hace falta media-query porque será nuestro diseño por defecto
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Media queries](https://lenguajecss.com/css/responsive-web-design/media-queries/)
+- [Flexbox Cheatshet]( https://jonitrythall.com/flexbox-cheatsheet )
 - [W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/design-develop/es)
 - [WCAG 2.1 de un vistazo](https://www.w3.org/WAI/standards-guidelines/wcag/glance/es)
 - [Vídeo: Menú lateral responsive con iconos Material Symbols Outlined](https://youtu.be/iiKDMFlXZkY?si=OrICcuK3pPeMe5ee)
