@@ -33,4 +33,5 @@ Módulo de **Diseño de Interfaces Web** del ciclo de Desarrollo de Aplicaciones
 
 ## Referencias
 
-- [Normativa DIW](https://aapri.es/wp/?page_id=537)
+- [Video: 20 Browser Extensions For Web Design & Developmen ](https://youtu.be/OhU4yaNih2M?si=EbTO_TflU7UFDV-F)
+- [Web article: 20 Browser Extensions For Web Design & Developmen ](https://www.traversymedia.com/blog/20-browser-extensions)
