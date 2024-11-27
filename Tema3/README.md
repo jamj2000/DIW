@@ -341,6 +341,11 @@ En el siguiente enlace tienes más información:
 </html>
 ```
 
+**Otros ejemplos**
+
+- [CSS Tricks 1](https://css-tricks.com/backdrop-filter-effect-with-css/)
+- [CSS Tricks 2](https://css-tricks.com/the-backdrop-filter-css-property/)
+
 
 
 ## 2.8. Optimización de imágenes para la Web
