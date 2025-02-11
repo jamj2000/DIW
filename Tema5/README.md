@@ -149,12 +149,11 @@ Un aspecto más avanzado es la posibilidad de definir un número automático de 
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 ```
-Los valores `auto-fill` y `auto-fit` deciden si debe rellenarse o no una fila que dispone de espacio sobrante pero para la cual no hay elementos hijo que usar.
+Los valores `auto-fill` y `auto-fit` deciden si **debe rellenarse o no una fila** que dispone de espacio sobrante para la cual no hay elementos hijo que usar.
 
 <video width="640" controls>
   <source src="assets/auto-fill-devtools.mov" type="video/mp4">
 </video>
-
 
 
 - Referencia: https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
