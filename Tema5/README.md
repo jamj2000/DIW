@@ -142,6 +142,25 @@ align-items: stretch;
 
 > **NOTA**: El orden inicial de los elementos de la cuadrícula no importa. Con CSS se pueden colocar en cualquier orden, lo que hace que sea muy fácil reorganizar la cuadrícula usando `media queries`. Imagina definir el diseño de toda tu página y luego reorganizarla completamente para acomodar un ancho de pantalla diferente, todo con solo un par de líneas de CSS.
 
+Un aspecto más avanzado es la posibilidad de definir un número automático de columnas sin la necesidad de usar media query alguna. Para ello usamos la función `repeat` junto a la función `minmax` que establece un ancho mínimo y máximo para cada columna.
+
+
+```css
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+```
+Los valores `auto-fill` y `auto-fit` deciden si debe rellenarse o no una fila que dispone de espacio sobrante pero para la cual no hay elementos hijo que usar.
+
+<video width="640" controls>
+  <source src="assets/auto-fill-devtools.mov" type="video/mp4">
+</video>
+
+
+
+- Referencia: https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
+
+
+
 ## 3.3. Propiedades del item
 
  ```css
