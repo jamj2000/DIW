@@ -1,6 +1,6 @@
 > DISEÑO DE INTERFACES WEB
 
-# Tema 6: Desarrollo de interfaces Web amigables  <!-- omit in toc -->
+# Anexo I: Frameworks CSS  <!-- omit in toc -->
 > BOOTSTRAP, TAILWIND
 
 - [1. Introducción](#1-introducción)
