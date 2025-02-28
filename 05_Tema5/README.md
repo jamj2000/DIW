@@ -15,9 +15,11 @@
 - [4. Media queries](#4-media-queries)
   - [4.1. Mobile first](#41-mobile-first)
   - [4.2. Desktop first](#42-desktop-first)
-- [5. Recursos](#5-recursos)
-  - [5.1. Herramientas](#51-herramientas)
-  - [5.2. Formación](#52-formación)
+- [5. Container queries](#5-container-queries)
+- [6. Recursos](#6-recursos)
+  - [6.1. Herramientas](#61-herramientas)
+  - [6.2. Formación](#62-formación)
+
 
 
 ---
@@ -292,15 +294,54 @@ No hace falta media-query porque será nuestro diseño por defecto
 ```
 
 
-# 5. Recursos
+# 5. Container queries
 
-## 5.1. Herramientas
+![container queries](assets/container-query.svg)
+
+Las consultas de tamaño con `@container` son relativamente nuevas y proporcionan una forma de consultar el tamaño de un contenedor y aplicar CSS condicionalmente al contenido de ese contenedor, tanto sus hijos como otros descendientes.
+
+```css
+.contenedor {
+  container-type: inline-size;    
+  container-name: tarjeta;      /* nombre del container */
+  resize: horizontal;           /* esto es opcional */  
+}
+
+
+.contenido {
+  /* estilos css */
+}
+
+
+@container tarjeta (width > 480px) {
+  .contenido {
+    /* otros estilos css */
+  }
+
+}
+```
+
+Con la propiedad `container-type` indicamos el ***contexto de contención***, que nos permite indicar el tamaño a monitorizar. Tiene 2 valores:
+
+- `inline-size`, para el tamaño horizontal
+- `size`, para el tamaño horizontal y vertical
+
+La propiedad [`resize`](https://developer.mozilla.org/en-US/docs/Web/CSS/resize) nos permite redimensionar con el ratón un elemento. 
+
+
+- Referencia: [Video acerca de container query](https://youtu.be/mWtAyB5zikM?si=ULSg0l36i-FKDC38)
+
+
+# 6. Recursos
+
+## 6.1. Herramientas
 
 - [Juego - Flexbox Froggy](https://flexboxfroggy.com/#es)
 - [Juego - CSS Grid Garden](https://cssgridgarden.com/#es)
 - [Juegos Flex Box Adventure y Grid Attack](https://codingfantasy.com)
+- [Generador de Grid](https://cssgridgenerator.io/)
 
-## 5.2. Formación
+## 6.2. Formación
 
 - [MDN - CSS Layout](https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout)
 - [MDN - Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
