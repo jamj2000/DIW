@@ -23,12 +23,14 @@
     - [3.3.6. Propiedades con medidas con sm, md, xl, 2xl, ...](#336-propiedades-con-medidas-con-sm-md-xl-2xl-)
     - [3.3.7. Propiedades con medidas específicas](#337-propiedades-con-medidas-específicas)
     - [3.3.8. Colores](#338-colores)
+    - [3.3.9. Combinación de selectores](#339-combinación-de-selectores)
 - [4. Reto Landing Page](#4-reto-landing-page)
   - [4.1. Solución usando Tailwind](#41-solución-usando-tailwind)
   - [4.2. Solución usando sólo CSS](#42-solución-usando-sólo-css)
 - [5. Recursos](#5-recursos)
   - [5.1. Herramientas](#51-herramientas)
   - [5.2. Formación](#52-formación)
+
 
 --- 
 
@@ -104,7 +106,7 @@ Bootstrap viene ya con muchos componentes que podremos usar simplemente copiando
 Bootstrap incluye seis puntos de interrupción predeterminados,
 
 | Punto de ruptura  | Infijo de clase | Dimensiones |
-|-------------------|-----------------|-------------|
+| ----------------- | --------------- | ----------- |
 | Extra small       | None            | <576px      |
 | Small             | sm              | ≥576px      |
 | Medium            | md              | ≥768px      |
@@ -522,7 +524,68 @@ outline-black    /* Color de contorno */
 shadow-slate-950 /* Color de sombra */
 ```
 
+### 3.3.9. Combinación de selectores
 
+Tailwind también soporta combinación de selectores. Por ejemplo, esto es usado a menudo cuando queremos aplicar un estilo a los descendientes o hermanos de un elemento según el estado de éste.
+
+**Cualquier descendiente**
+
+Supongamos que queremos que todos los descendientes `svg`, `h3` y `p` del elemento `a` cambien de estilo al hacer *hover* sobre éste último. 
+
+En CSS escribiriamos:
+
+```css
+a:hover svg {
+  /* ... */
+}
+
+a:hover h3 {
+  /* ... */
+}
+
+a:hover p {
+  /* ... */
+}
+```
+
+En tailwind hacemos uso de la clase **[`group`](https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state)** y las variantes **`group-*`**
+
+
+```html
+<a href="#" class="group ...">
+  <div>
+    <svg class="stroke-sky-500 group-hover:stroke-white ..." fill="none" viewBox="0 0 24 24">
+      <!-- ... -->
+    </svg>
+    <h3 class="text-gray-900 group-hover:text-white ...">New project</h3>
+  </div>
+  <p class="text-gray-500 group-hover:text-white ...">Create a new project from a variety of starting templates.</p>
+</a>
+```
+
+
+**Cualquier hermano**
+
+Supongamos que queremos que todos los hermanos adjacentes `p` del elemento `input` cambien de estilo al tener un valor *invalid* éste último. 
+
+En CSS escribiriamos:
+
+```css
+input:invalid ~ p {
+  /* ... */
+}
+```
+
+En tailwind hacemos uso de la clase **[`peer`](https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-sibling-state)** y las variantes **`peer-*`**
+
+
+```html
+ <input type="email" class="peer ..." />
+ <p class="invisible peer-invalid:visible ...">Please provide a valid email address.</p>
+```
+
+> **IMPORTANTE**: El elemento con clase `peer` debe declararse antes que el elemento hermano que lo referencia.
+> 
 
 # 4. Reto Landing Page
 
