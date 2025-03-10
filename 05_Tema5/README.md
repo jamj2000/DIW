@@ -153,6 +153,8 @@ Un aspecto más avanzado es la posibilidad de definir un número automático de 
 ```
 Los valores `auto-fill` y `auto-fit` deciden si **debe rellenarse o no una fila** que dispone de espacio sobrante para la cual no hay elementos hijo que usar.
 
+[Auto-fill vs Auto-fit](assets/auto-fill-devtools.mov)
+
 <video width="640" controls>
   <source src="assets/auto-fill-devtools.mov" type="video/mp4">
 </video>
