@@ -15,19 +15,13 @@
   - [4.1. Cascada](#41-cascada)
   - [4.2. Especificidad](#42-especificidad)
   - [4.3. Herencia](#43-herencia)
-- [5. Display](#5-display)
-  - [5.1. Block](#51-block)
-  - [5.2. Inline](#52-inline)
-  - [5.3. Inline-Block](#53-inline-block)
-  - [5.4. Flex y Grid](#54-flex-y-grid)
-  - [5.5. None, para ocultar un elemento](#55-none-para-ocultar-un-elemento)
-  - [5.6. Otros displays](#56-otros-displays)
-- [6. Position](#6-position)
-  - [6.1. z-index](#61-z-index)
-- [7. Alineación horizontal y vertical](#7-alineación-horizontal-y-vertical)
-- [8. Recursos](#8-recursos)
-  - [8.1. Herramientas](#81-herramientas)
-  - [8.2. Formación](#82-formación)
+- [5. Position](#5-position)
+  - [5.1. z-index](#51-z-index)
+- [6. Alineación horizontal y vertical](#6-alineación-horizontal-y-vertical)
+- [7. Recursos](#7-recursos)
+  - [7.1. Herramientas](#71-herramientas)
+  - [7.2. Formación](#72-formación)
+
 
 
 
@@ -248,7 +242,7 @@ El listado de reglas CSS que establecemos es interpretado de forma secuencial. E
 | 1000 | en línea                                      | `<h1 style="color: pink;"></h1>` |
 |  100 | id                                            | #navbar                          |
 |   10 | clases, pseudoclases, selectores de atributos | .test, :hover, [href]            |
-|    1 | elementos, pseudoelementos                    | h1, p::before                     |
+|    1 | elementos, pseudoelementos                    | h1, p::before                    |
 
 
 > Material de consulta: https://www.w3schools.com/css/css_specificity.asp
@@ -320,99 +314,8 @@ p {
 ```
 
 
-# 5. Display
 
-Según la forma en la que es renderizado un elemento dentro de la página existen, en principio, 2+2 tipos de elementos:
-
-- `block`: **Elemento de bloque**
-- `inline`: **Elemento en línea**
-- `flex`: **Contenedor flexible**
-- `grid`: **Contenedor de cuadrícula o grilla**
-
-Para hacer uso en CSS de los `display` anteriores, escribimos:
-
-```css
-display: block;
-display: inline;
-display: flex;
-display: grid;
-```
-
-- [Listado de elementos block e inline](https://www.w3schools.com/html/html_blocks.asp)
-
-
-
-## 5.1. Block
-
-**Un elemento a nivel de bloque siempre comienza en una nueva línea y ocupa todo el ancho disponible** (se extiende hacia la izquierda y hacia la derecha tanto como puede).
-
-El elemento `<div>` es un elemento a nivel de bloque.
-
-Ejemplos de elementos a nivel de bloque:
-
-- `<div>`
-- `<h1> - <h6>`
-- `<p>`
-- `<form>`
-- `<header>`
-- `<footer>`
-- `<section>`
-
-
-## 5.2. Inline
-
-**Un elemento en línea no comienza en una nueva línea y solo ocupa el ancho necesario**.
-
-El elemento <span> es un elemento en línea.
-
-Ejemplos de elementos en línea:
-
-- `<span>`
-- `<a>`
-- `<input>`
-- `<textarea>`
-- `<button>`
-
-> **IMPORTANTE:** Los elementos anteriores no admiten configuración de ancho (`width`) ni alto (`height`). Tampoco admiten `margin-top` ni `margin-bottom`. Y `padding-top` y `padding-bottom` se comportan de una manera particular.
-
-## 5.3. Inline-Block
-
-**Un elemento de bloque en línea se comporta igual que un elemento de bloque con la salvedad que no se realiza salto de línea**.
-
-Ejemplos de elementos de bloque en línea:
-
-- `<img>`
-
-
-## 5.4. Flex y Grid
-
-**Los elementos de tipo `flex` y `grid` nos permiten distribuir otros elementos hijo dentro de ellos. Por tanto, estos valores se usan para elementos contenedores.**
-
-Estudiaremos estos tipos de `display` en un tema posterior.
-
-
-## 5.5. None, para ocultar un elemento
-
-Existen 2 formas de ocultar un elemento:
-
-- **`display: none;`**
-- **`visibility: hidden;`**
-
-La primera forma, elimina de la vista el elemento y también elimina el hueco que ocupaba. Mientras que la segunda forma, no elimina el hueco que ocupaba el elemento.
-
-## 5.6. Otros displays
-
-Hay otros *display* menos frecuentes como son:
-
-```css
-display: table;
-display: table-cell;
-display: table-row;
-display: list-item;
-```  
-
-
-# 6. Position
+# 5. Position
 
 Un elemento HTML puede ser posicionado de 5 maneras posibles:
 
@@ -487,7 +390,7 @@ footer {
 Más información en https://www.w3schools.com/css/css_positioning.asp
 
 
-## 6.1. z-index
+## 5.1. z-index
 
 Esta propiedad especifica el orden de pila de un elemento (qué elemento debe colocarse delante o detrás de los demás). Puede entenderse como la posición del elemento en el `eje de coordenadas Z`
 
@@ -499,19 +402,19 @@ Un elemento puede tener un orden de pila positivo o negativo. Por defecto, el va
 
 > **NOTA**: `z-index` sólo funciona en elementos posicionados (`absolute`, `relative`, `fixed`, or `sticky`) y elementos flexibles (elementos que son hijos directos de un elemento `display: flex`).
 
-# 7. Alineación horizontal y vertical
+# 6. Alineación horizontal y vertical
 
 Existen numerosas formas de alinear un elemento tanto horizontalmente como verticalmente.
 
 Para más información consultar https://www.w3schools.com/css/css_align.asp
 
-# 8. Recursos
+# 7. Recursos
 
-## 8.1. Herramientas
+## 7.1. Herramientas
 
 - [Conversor px / em](https://www.w3schools.com/cssref/css_pxtoemconversion.php)
 
-## 8.2. Formación
+## 7.2. Formación
 
 - [Valores por defecto de los elementos HTML](https://www.w3schools.com/cssref/css_default_values.php)
 - [Unidades de medida](https://www.w3schools.com/cssref/css_units.php)
