@@ -81,20 +81,20 @@ input[type=number]
 
 Pseudoclases habituales, en orden alfabético, para elementos de un formulario son:
 
-Pseudoclase     | Ejemplo              | Descripción
-----------------|----------------------|---------------------------------
-`:checked`	    | `input:checked`	     | Selecciona cada elemento `input` marcado
-`:disabled`	    | `input:disabled`	   | Selecciona cada elemento `input` deshabilitado
-`:enabled`	    | `input:enabled`	     | Selecciona cada elemento `input` habilitado
-`:focus`	      | `input:focus`	       | Selecciona el elemento `input` que tiene el foco
-`:in-range`	    | `input:in-range`	   | Selecciona elementos `input` con un valor dentro del rango especificado
-`:invalid`	    | `input:invalid`	     | Selecciona todos los elementos `input` con un valor  inválido
-`:optional`	    | `input:optional`	   | Selecciona elementos `input` sin atributo "required" 
-`:out-of-range` |	`input:out-of-range` | Selecciona elementos `input` con un valor fuera del rango especificado
-`:read-only`    |	`input:read-only`	   | Selecciona elementos `input` con atributo "readonly" 
-`:read-write`	  | `input:read-write`	 | Selecciona elementos `input` sin atributo "readonly" 
-`:required`     | `input:required`	   | Selecciona elementos `input` con atributo "required" 
-`:valid`        | `input:valid`	       | Selecciona todos los elementos `input` con un valor válido
+| Pseudoclase     | Ejemplo              | Descripción                                                             |
+| --------------- | -------------------- | ----------------------------------------------------------------------- |
+| `:checked`      | `input:checked`      | Selecciona cada elemento `input` marcado                                |
+| `:disabled`     | `input:disabled`     | Selecciona cada elemento `input` deshabilitado                          |
+| `:enabled`      | `input:enabled`      | Selecciona cada elemento `input` habilitado                             |
+| `:focus`        | `input:focus`        | Selecciona el elemento `input` que tiene el foco                        |
+| `:in-range`     | `input:in-range`     | Selecciona elementos `input` con un valor dentro del rango especificado |
+| `:invalid`      | `input:invalid`      | Selecciona todos los elementos `input` con un valor  inválido           |
+| `:optional`     | `input:optional`     | Selecciona elementos `input` sin atributo "required"                    |
+| `:out-of-range` | `input:out-of-range` | Selecciona elementos `input` con un valor fuera del rango especificado  |
+| `:read-only`    | `input:read-only`    | Selecciona elementos `input` con atributo "readonly"                    |
+| `:read-write`   | `input:read-write`   | Selecciona elementos `input` sin atributo "readonly"                    |
+| `:required`     | `input:required`     | Selecciona elementos `input` con atributo "required"                    |
+| `:valid`        | `input:valid`        | Selecciona todos los elementos `input` con un valor válido              |
 
 ## 2.3. Validación de formularios
 
@@ -540,6 +540,7 @@ La API View Transitions proporciona un mecanismo para crear fácilmente transici
 - [Transition: Web: Web para crear transiciones y animaciones](https://www.transition.style/)
 - [Generador de curvas de Bezier](https://cubic-bezier.com/)
 - [Avatares](https://pravatar.cc/)
+- [Loaders](https://css-loaders.com/)
 
 
 ## 7.2. Formación
@@ -573,3 +574,4 @@ La API View Transitions proporciona un mecanismo para crear fácilmente transici
 - [Video: Cómo ANIMAR Imágenes (Galería CSS GRID)](https://www.youtube.com/watch?v=vtIMLry3BiU&list=PLP7LlHfxfuM-mKDdrIRsu_xieIVv8UsEa&index=14)
 - [Lista de videos: RETO 100 dias CSS](https://www.youtube.com/playlist?list=PLhVFSJ7h7bHSnwF_AvukvFHWKjqedntU6)
 - [Lista de videos: CSS Isométrico](https://www.youtube.com/watch?v=YRp8kSUZiss&list=PL5e68lK9hEzclSmLas50cetVaTYHfLQda)
+  
