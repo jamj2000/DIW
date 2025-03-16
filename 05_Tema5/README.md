@@ -356,10 +356,13 @@ En algunas situaciones, sobre todo si tenemos el mismo fondo fijo en distintas p
 > }
 > ```
 
-- [Espacio para barra de scroll ](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter)
+- [Espacio para barra de desplazamiento](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter)
 
 
 ## 6.2. Desplazamiento suave
+
+En algunas páginas y aplicaciones web disponemos de un menú en la parte superior con enlaces a diferentes secciones de la página. Podemos conseguir que, cuando el usuario pulse en uno de estos enlaces, se produzca un desplazamiento suave a la sección correspondiente, en lugar del desplazamiento inmediato que es el comportamiento por defecto. Para ello usaremos la propiedad **`scroll-behavior`** con el valor `smooth`.
+
 
 >
 > ```css
@@ -368,7 +371,7 @@ En algunas situaciones, sobre todo si tenemos el mismo fondo fijo en distintas p
 > }
 > ```
 
-- [Scroll suave](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)
+- [Desplazamiento suave](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)
 
 Cuando esta propiedad se especifica en el pseudoelemento `:root`, se aplica a la ventana gráfica. Si se especifica en el elemento `body`, no se propaga a la ventana gráfica.
 
