@@ -3,7 +3,6 @@
 # Tema 1: Planificación de interfaces gráficas <!-- omit in toc -->
 > FORMATO DE REGLA, COLOR, MODELO DE CAJA, TEXTO, LISTAS, TABLAS
 
-
 - [1. Introducción](#1-introducción)
 - [2. Formato de regla CSS](#2-formato-de-regla-css)
 - [3. Color](#3-color)
@@ -14,18 +13,24 @@
   - [3.5. Valores HSLA](#35-valores-hsla)
   - [3.6. Gradientes de color](#36-gradientes-de-color)
   - [3.7. Uso](#37-uso)
-- [4. Modo claro / oscuro](#4-modo-claro--oscuro)
-- [5. Modelo de caja (box model)](#5-modelo-de-caja-box-model)
-  - [5.1. Colapso de márgenes](#51-colapso-de-márgenes)
-- [6. Texto](#6-texto)
-- [7. Tipos de fuentes](#7-tipos-de-fuentes)
-  - [7.1. Según su diseño](#71-según-su-diseño)
-  - [7.2. Según el formato de archivo](#72-según-el-formato-de-archivo)
-  - [7.3. Fuentes de iconos](#73-fuentes-de-iconos)
-  - [7.4. Efectos](#74-efectos)
-- [8. Listas](#8-listas)
-- [9. Tablas](#9-tablas)
-- [10. Introducción a la maquetación](#10-introducción-a-la-maquetación)
+- [4. Texto y Tipos de fuentes](#4-texto-y-tipos-de-fuentes)
+  - [4.1. Fuentes según su diseño](#41-fuentes-según-su-diseño)
+  - [4.2. Fuentes según el formato de archivo](#42-fuentes-según-el-formato-de-archivo)
+  - [4.3. Fuentes de iconos](#43-fuentes-de-iconos)
+  - [4.4. Efectos](#44-efectos)
+- [5. Listas](#5-listas)
+- [6. Tablas](#6-tablas)
+- [7. Modelo de caja (box model)](#7-modelo-de-caja-box-model)
+  - [7.1. Colapso de márgenes](#71-colapso-de-márgenes)
+- [8. Display](#8-display)
+  - [8.1. Block](#81-block)
+  - [8.2. Inline](#82-inline)
+  - [8.3. Inline-Block](#83-inline-block)
+  - [8.4. Flex y Grid](#84-flex-y-grid)
+  - [8.5. None, para ocultar un elemento](#85-none-para-ocultar-un-elemento)
+  - [8.6. Otros displays](#86-otros-displays)
+- [9. Introducción a la maquetación](#9-introducción-a-la-maquetación)
+- [10. Modo claro / oscuro](#10-modo-claro--oscuro)
 - [11. Linter para CSS](#11-linter-para-css)
 - [12. Recursos](#12-recursos)
   - [12.1. Herramientas](#121-herramientas)
@@ -295,82 +300,8 @@ También hemos usado otras propiedades no relacionadas con el color como `overfl
 </html>
 ```
 
-# 4. Modo claro / oscuro
 
-Muchos de los sitios y aplicaciones más actuales soportan tanto el modo claro como el oscuro. Con CSS podemos indicar el color de frente y el color de fondo para ambos modos con la función [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark). Ejemplo:
-
-
-```css
-:root {
-  color-scheme: light dark;
-}
-body {
-  color: light-dark( black, white );
-  background-color: light-dark( white, black );
-}
-```
-
-
-
-# 5. Modelo de caja (box model)
-
-![Box Model](assets/box-model.png)
-
-La propiedad **`box-sizing`** permite indicar si:
-
-- Ancho y Alto se refiere al contenido. Valor **`content-box`**. Es el valor por defecto
-- Ancho y Alto se refiere al margen exterior. Valor **`border-box`**
-
-Muchos diseñadores prefieren usar un **border-box**, para así evitar descuadres:
-
-```css
-* {
-  box-sizing: border-box;
-}
-```
-
-Aunque, con frecuencia usan;
-
-```css
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;  
-}
-```
-
-## 5.1. Colapso de márgenes
-
-Referencia: https://www.w3schools.com/css/css_margin_collapse.asp
-
-**Los márgenes superior e inferior de los elementos a veces se contraen en un solo margen que es igual al mayor de los dos márgenes**.
-
-¡Esto NO sucede en los márgenes izquierdo y derecho! **¡Solo márgenes superior e inferior!**
-
-Ejemplo:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-  h1 {  margin: 0 0 50px 0; }
-  h2 {  margin: 20px 0 0 0; }
-  </style>
-</head>
-<body>
-  <h1>Título 1</h1>
-  <h2>Título 2</h2>
-</body>
-</html>
-```
-
-El margen entre `h1` y `h2` no será 50px+20px = 70px.
-
-**El margen entre `h1` y `h2` será igual al mayor de los márgenes, es decir 50px.**
-
-
-# 6. Texto
+# 4. Texto y Tipos de fuentes
 
 Las propiedades más frecuentes para el texto son las siguientes:
 
@@ -413,9 +344,11 @@ Los valores por defecto son:
     font-weight: 400;
 ```
 
-# 7. Tipos de fuentes
+- [Herramienta para comprobar tamaño de fuentes](https://typescale.com/)
 
-## 7.1. Según su diseño
+
+
+## 4.1. Fuentes según su diseño
 
 Las tipografías más habituales son las siguientes:
 
@@ -432,7 +365,7 @@ Referencias:
 - [Google Fonts Knowledge: Making sense of typographic classifications](https://fonts.google.com/knowledge/introducing_type/making_sense_of_typographic_classifications)
 - [Google Fonts Knowledge](https://fonts.google.com/knowledge)
 
-## 7.2. Según el formato de archivo
+## 4.2. Fuentes según el formato de archivo
 
 Las fuentes se distribuyen habitualmente en alguno de los siguientes formatos:
 
@@ -447,7 +380,7 @@ Referencias:
 - [Artículo en creativefabrica](https://www.creativefabrica.com/es/the-ultimate-font-guide/difference-between-font-formats/)
 
 
-## 7.3. Fuentes de iconos
+## 4.3. Fuentes de iconos
 
 Existen fuentes, que en lugar de contener [glifos](https://es.wikipedia.org/wiki/Glifo#:~:text=En%20tipograf%C3%ADa%2C%20un%20glifo%20es,glifo%20es%20una%20unidad%20gr%C3%A1fica.) para caracteres de texto, están conformados por iconos.
 
@@ -481,7 +414,7 @@ Resultado:
 
 Para la configuración de la apariencia del icono, consultar la [guía disponible en Google Fonts](https://developers.google.com/fonts/docs/material_icons?hl=es-419). 
 
-## 7.4. Efectos 
+## 4.4. Efectos 
 
 [Muchas fuentes de Google Fonts soportan efectos](https://developers.google.com/fonts/docs/getting_started?hl=es-419).
 Estos efectos se ven realmente bien en títulos, no en texto de párrafo.
@@ -523,7 +456,7 @@ Se vería así
 Referencia: https://www.w3schools.com/css/css_font_google.asp
 
 
-# 8. Listas
+# 5. Listas
 
 La propiedad más usada es
 
@@ -546,7 +479,7 @@ ol {
 }
 ```
 
-# 9. Tablas
+# 6. Tablas
 
 Los principales elementos a los cuales dar estilo son:
 
@@ -592,7 +525,157 @@ Si la tabla es ancha y se va a visualizar en dispositivos móviles, debemos aseg
 ```
 
 
-# 10. Introducción a la maquetación
+# 7. Modelo de caja (box model)
+
+![Box Model](assets/box-model.png)
+
+La propiedad **`box-sizing`** permite indicar si:
+
+- Ancho y Alto se refiere al contenido. Valor **`content-box`**. Es el valor por defecto
+- Ancho y Alto se refiere al margen exterior. Valor **`border-box`**
+
+Muchos diseñadores prefieren usar un **border-box**, para así evitar descuadres:
+
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+Aunque, con frecuencia usan;
+
+```css
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
+}
+```
+
+## 7.1. Colapso de márgenes
+
+Referencia: https://www.w3schools.com/css/css_margin_collapse.asp
+
+**Los márgenes superior e inferior de los elementos a veces se contraen en un solo margen que es igual al mayor de los dos márgenes**.
+
+¡Esto NO sucede en los márgenes izquierdo y derecho! **¡Solo márgenes superior e inferior!**
+
+Ejemplo:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  h1 {  margin: 0 0 50px 0; }
+  h2 {  margin: 20px 0 0 0; }
+  </style>
+</head>
+<body>
+  <h1>Título 1</h1>
+  <h2>Título 2</h2>
+</body>
+</html>
+```
+
+El margen entre `h1` y `h2` no será 50px+20px = 70px.
+
+**El margen entre `h1` y `h2` será igual al mayor de los márgenes, es decir 50px.**
+
+
+
+# 8. Display
+
+Según la forma en la que es renderizado un elemento dentro de la página existen, en principio, 2+2 tipos de elementos:
+
+- `block`: **Elemento de bloque**
+- `inline`: **Elemento en línea**
+- `flex`: **Contenedor flexible**
+- `grid`: **Contenedor de cuadrícula o grilla**
+
+Para hacer uso en CSS de los `display` anteriores, escribimos:
+
+```css
+display: block;
+display: inline;
+display: flex;
+display: grid;
+```
+
+- [Listado de elementos block e inline](https://www.w3schools.com/html/html_blocks.asp)
+
+
+
+## 8.1. Block
+
+**Un elemento a nivel de bloque siempre comienza en una nueva línea y ocupa todo el ancho disponible** (se extiende hacia la izquierda y hacia la derecha tanto como puede).
+
+El elemento `<div>` es un elemento a nivel de bloque.
+
+Ejemplos de elementos a nivel de bloque:
+
+- `<div>`
+- `<h1> - <h6>`
+- `<p>`
+- `<form>`
+- `<header>`
+- `<footer>`
+- `<section>`
+
+
+## 8.2. Inline
+
+**Un elemento en línea no comienza en una nueva línea y solo ocupa el ancho necesario**.
+
+El elemento <span> es un elemento en línea.
+
+Ejemplos de elementos en línea:
+
+- `<span>`
+- `<a>`
+- `<input>`
+- `<textarea>`
+- `<button>`
+
+> **IMPORTANTE:** Los elementos anteriores no admiten configuración de ancho (`width`) ni alto (`height`). Tampoco admiten `margin-top` ni `margin-bottom`. Y `padding-top` y `padding-bottom` se comportan de una manera particular.
+
+## 8.3. Inline-Block
+
+**Un elemento de bloque en línea se comporta igual que un elemento de bloque con la salvedad que no se realiza salto de línea**.
+
+Ejemplos de elementos de bloque en línea:
+
+- `<img>`
+
+
+## 8.4. Flex y Grid
+
+**Los elementos de tipo `flex` y `grid` nos permiten distribuir otros elementos hijo dentro de ellos. Por tanto, estos valores se usan para elementos contenedores.**
+
+Estudiaremos estos tipos de `display` en un tema posterior.
+
+
+## 8.5. None, para ocultar un elemento
+
+Existen 2 formas de ocultar un elemento:
+
+- **`display: none;`**
+- **`visibility: hidden;`**
+
+La primera forma, elimina de la vista el elemento y también elimina el hueco que ocupaba. Mientras que la segunda forma, no elimina el hueco que ocupaba el elemento.
+
+## 8.6. Otros displays
+
+Hay otros *display* menos frecuentes como son:
+
+```css
+display: table;
+display: table-cell;
+display: table-row;
+display: list-item;
+```  
+
+# 9. Introducción a la maquetación
 
 Entendemos la maquetación como el proceso de realizar la **disposición de elementos** dentro de la página web.
 
@@ -690,20 +773,62 @@ body {
 
 La maquetación con `flex` y `grid` proporciona numerosas opciones que estudiaremos en mucho mayor detalle en un tema posterior.
 
-> **CURIOSIDAD:** En algunas situaciones, sobre todo si tenemos el mismo fondo fijo en distintas páginas, puede observarse que éste se desplaza ligeramente a la izquierda al aparecer la barra de scroll en páginas con mucho contenido y vuelve a la derecha al desaparecer esta barra en páginas con poco contenido. Para evitar este molesto efecto usamos la propiedad `scrollbar-gutter` dentro de la etiqueta html.
->
-> ```css
-> html {
->   scrollbar-gutter: stable; 
-> }
-> ```
+
+
+
+
+# 10. Modo claro / oscuro
+
+Muchos de los sitios y aplicaciones más actuales soportan tanto el modo claro como el oscuro. Con CSS podemos indicar el color de frente y el color de fondo para ambos modos con la función [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark). Ejemplo:
+
+
+```css
+:root {
+  color-scheme: light dark;
+}
+body {
+  color: light-dark( black, white );
+  background-color: light-dark( white, black );
+}
+```
+
+Otra manera de definir los estilos para los modos claro y oscuro es hacer uso de variables y *media query* con la regla **`prefers-color-scheme`**. Así definimos los valores de las distintas variables en cada modo. Luego podremos usar dichas variables en nuestro archivo CSS. Con esto conseguimos mejor legibilidad y mejor organización del código.
+
+**Ejemplo**
+
+
+```css
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: rgb(0 0 0);
+    --background-color: rgb(255 255 255);
+    --background-img: url(assets/bg-light.png);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: rgb(255 255 255);
+    --background-color: rgb(0 0 0);
+    --background-img: url(assets/bg-dark.png);
+  }
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  background-image: var(--background-img);
+}
+```
+
+
 
 
 # 11. Linter para CSS
 
-Un `linter` es una herramienta que te ayuda a mejorar tu código mediante el análisis del código fuente en busca de problemas.
+En el caso de utilizar un entorno de desarrollo basado en `node.js` para desarrollar nuestro proyecto, podemos instalar un analizador estático o *linter* de código llamado `stylelint` para nuestro código css.
 
-Para CSS, un `linter` muy usado es `stylelint`.
+Un `linter` es una herramienta que te ayuda a mejorar tu código mediante el análisis del código fuente en busca de problemas.
 
 Una forma rápida y sencilla de pasar esta herramienta a tu código CSS es ejecutando:
 

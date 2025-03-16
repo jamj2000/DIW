@@ -16,9 +16,15 @@
   - [4.1. Mobile first](#41-mobile-first)
   - [4.2. Desktop first](#42-desktop-first)
 - [5. Container queries](#5-container-queries)
-- [6. Recursos](#6-recursos)
-  - [6.1. Herramientas](#61-herramientas)
-  - [6.2. Formación](#62-formación)
+- [6. Optimizaciones](#6-optimizaciones)
+  - [6.1. Hueco de la barra de desplazamiento](#61-hueco-de-la-barra-de-desplazamiento)
+  - [6.2. Desplazamiento suave](#62-desplazamiento-suave)
+  - [6.3. Redimensionado de un elemento](#63-redimensionado-de-un-elemento)
+  - [6.4. Recortado de un texto](#64-recortado-de-un-texto)
+- [7. Recursos](#7-recursos)
+  - [7.1. Herramientas](#71-herramientas)
+  - [7.2. Formación](#72-formación)
+
 
 
 
@@ -334,16 +340,101 @@ La propiedad [`resize`](https://developer.mozilla.org/en-US/docs/Web/CSS/resize)
 - Referencia: [Video acerca de container query](https://youtu.be/mWtAyB5zikM?si=ULSg0l36i-FKDC38)
 
 
-# 6. Recursos
+# 6. Optimizaciones
 
-## 6.1. Herramientas
+A continuación se comentan brevemente algunos detalles que podemos afinar para una mejor experiencia del usuario.
+
+
+## 6.1. Hueco de la barra de desplazamiento
+
+En algunas situaciones, sobre todo si tenemos el mismo fondo fijo en distintas páginas, puede observarse que éste se desplaza ligeramente a la izquierda al aparecer la barra de scroll en páginas con mucho contenido y vuelve a la derecha al desaparecer esta barra en páginas con poco contenido. Para evitar este molesto efecto usamos la propiedad **`scrollbar-gutter`** dentro de la etiqueta html.
+
+>
+> ```css
+> html {
+>   scrollbar-gutter: stable; 
+> }
+> ```
+
+- [Espacio para barra de scroll ](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter)
+
+
+## 6.2. Desplazamiento suave
+
+>
+> ```css
+> body {
+>   scroll-behavior: smooth;
+> }
+> ```
+
+- [Scroll suave](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)
+
+Cuando esta propiedad se especifica en el pseudoelemento `:root`, se aplica a la ventana gráfica. Si se especifica en el elemento `body`, no se propaga a la ventana gráfica.
+
+
+## 6.3. Redimensionado de un elemento
+
+En ciertas circunstancias, la propiedad **`resize`** resulta de gran utilidad. Esta propiedad nos permite definir si un elemento va a permitir el redimiensionado o no. Los valores pueden ser `none`,  `horizontal`, `vertical` o `both`. 
+
+
+
+Aunque en la mayoría de los casos se emplea con elementos `textarea`,
+
+```css
+textarea {
+  resize: none;
+}
+```
+
+es también posible emplearlo en otro tipo de elementos, como `div`, `p`, etc
+
+
+```css
+p {
+  overflow: auto; /* recomendable para evitar desbordamiento del texto */
+  resize: both;
+
+  border: 1px solid black;
+}
+```
+![resize](assets/resize.png)
+
+- [Redimensionado de un elemento](https://developer.mozilla.org/en-US/docs/Web/CSS/resize)
+
+
+## 6.4. Recortado de un texto
+
+En ciertos casos puede ser útil recortar una línea de texto, quizás porque la información que contiene es una previsualización. Para ello podemos usar la propiedad **`text-overflow`** con los valores `ellipsis` o `clip`. 
+
+Esta propiedad requiere también el uso de `white-space: nowrap` y `overflow: hidden`.
+
+
+```css
+p {
+  text-overflow: ellipsis;
+  /* Las 2 propiedades siguientes son necesarias para text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+
+  border: 1px solid black;
+}
+``` 
+![text overflow](assets/text-overflow.png)
+
+- [Recortado de un texto](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
+
+
+# 7. Recursos
+
+## 7.1. Herramientas
 
 - [Juego - Flexbox Froggy](https://flexboxfroggy.com/#es)
 - [Juego - CSS Grid Garden](https://cssgridgarden.com/#es)
 - [Juegos Flex Box Adventure y Grid Attack](https://codingfantasy.com)
 - [Generador de Grid](https://cssgridgenerator.io/)
 
-## 6.2. Formación
+## 7.2. Formación
 
 - [MDN - CSS Layout](https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout)
 - [MDN - Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
