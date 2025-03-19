@@ -344,9 +344,6 @@ Los valores por defecto son:
     font-weight: 400;
 ```
 
-- [Herramienta para comprobar tamaño de fuentes](https://typescale.com/)
-
-
 
 ## 4.1. Fuentes según su diseño
 
@@ -865,6 +862,7 @@ npx  stylelint  *.css  --fix
 - [Conversor de color](https://www.w3schools.com/colors/colors_converter.asp)
 - [Fresh Background Gradients](https://webgradients.com/)
 - [Gradient Generator](https://www.joshwcomeau.com/gradient-generator/)
+- [Herramienta para comprobar tamaño de fuentes](https://typescale.com/)
 - [Google Fonts](https://fonts.google.com)
 - [Emojipedia](https://emojipedia.org/)
 - [Algunos símbolos Unicode](https://www.w3schools.com/charsets/ref_utf_symbols.asp)
