@@ -118,7 +118,9 @@ A continuación se muestran ejemplos de cada uno de ellos.
 - `img`, `a`, `span`
 - `form`, `input`, ...
 
-> **NOTA**: `*` se conoce como `selector universal`. Hace referencia a todos los elementos HTML.
+> [!NOTE] 
+> 
+> `*` se conoce como `selector universal`. Hace referencia a todos los elementos HTML.
 
 
 **IDs** **`#`**
@@ -163,7 +165,9 @@ Cualquier elemento `p` dentro de un elemento `div` en el primer nivel de anidami
 
 Primer elemento `p` adjacente de un `div`.
 
-> **NOTA:** Sólo se tienen en cuenta los hermanos siguientes, no los anteriores.
+> [!NOTE] 
+> 
+> Sólo se tienen en cuenta los hermanos siguientes, no los anteriores.
 
 **Todos los hermanos adjacentes** **`~`**
 
@@ -171,7 +175,9 @@ Primer elemento `p` adjacente de un `div`.
 
 Cualquier elemento `p` adjacente de un `div`.
 
-> **NOTA:** Sólo se tienen en cuenta los hermanos siguientes, no los anteriores.
+> [!NOTE] 
+> 
+> Sólo se tienen en cuenta los hermanos siguientes, no los anteriores.
 
 
 ## 3.3. Selectores de pseudoclase 
@@ -400,7 +406,9 @@ Un elemento puede tener un orden de pila positivo o negativo. Por defecto, el va
 
 ![z-index](assets/z-index.webp)
 
-> **NOTA**: `z-index` sólo funciona en elementos posicionados (`absolute`, `relative`, `fixed`, or `sticky`) y elementos flexibles (elementos que son hijos directos de un elemento `display: flex`).
+> [!NOTE] 
+> 
+> `z-index` sólo funciona en elementos posicionados (`absolute`, `relative`, `fixed`, or `sticky`) y elementos flexibles (elementos que son hijos directos de un elemento `display: flex`).
 
 # 6. Alineación horizontal y vertical
 

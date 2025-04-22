@@ -163,7 +163,9 @@ Existen otras transformaciones que son menos usadas y que no veremos aquí, como
 
 Por otro lado, la transformaciones se pueden aplicar en el plano 2D o en el espacio 3D. Nos centraremos en las transformaciones 2D, y se anima al lector a seguir profundizando por su cuenta consultando el abundante material disponible en Internet.
 
-> **NOTA**: Todas las transformaciones que veremos a continuación se aplican sobre el punto *origin* central del elemento en cuestión. Para cambiar dicho punto usaremos la propiedad `transform-origin` que, habitualmente, tiene el siguiente formato: 
+> [!NOTE] 
+> 
+> Todas las transformaciones que veremos a continuación se aplican sobre el punto *origin* central del elemento en cuestión. Para cambiar dicho punto usaremos la propiedad `transform-origin` que, habitualmente, tiene el siguiente formato: 
 >
 > `transform-origin:  x-offset  y-offset;`
 >
@@ -199,7 +201,9 @@ La función `rotate()` define una transformación que mueve al elemento alrededo
 }
 ```
 
-> **NOTA**: También existe una forma más simple de realizar rotaciones, usando la propiedad `rotate`:
+> [!NOTE] 
+> 
+> También existe una forma más simple de realizar rotaciones, usando la propiedad `rotate`:
 >
 >```css
 > #div4 {
@@ -230,7 +234,9 @@ La función `scale()` modifica el tamaño del elemento. Puede aumentar o disminu
 }
 ```
 
-> **NOTA**: También existe una forma más simple de realizar escalado, usando la propiedad `scale`:
+> [!NOTE] 
+> 
+> También existe una forma más simple de realizar escalado, usando la propiedad `scale`:
 > 
 >```css
 > #div4 {
@@ -261,7 +267,9 @@ La función `translate()` mueve la posición del elemento sobre el plano. Esta t
 }
 ```
 
-> **NOTA**: También existe una forma más simple de realizar traslaciones, usando la propiedad `traslate`:
+> [!NOTE] 
+> 
+> También existe una forma más simple de realizar traslaciones, usando la propiedad `traslate`:
 >
 >```css
 > #div4 {

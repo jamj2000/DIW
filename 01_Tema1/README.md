@@ -127,7 +127,9 @@ El parámetro alfa es un número entre:
 -  **1,0**: completamente **opaco**
 
 
-> **NOTA:** La [`función rgb()`](https://lenguajecss.com/css/colores/funcion-rgb/) también admite una forma más moderna, en la cual separamos los valores por espacios y podemos indicar la opacidad después del separador de /, siendo 0 o 0% totalmente transparente y 1 o 100% totalmente opaco. Ejemplo:
+> [!NOTE] 
+> 
+> La [`función rgb()`](https://lenguajecss.com/css/colores/funcion-rgb/) también admite una forma más moderna, en la cual separamos los valores por espacios y podemos indicar la opacidad después del separador de /, siendo 0 o 0% totalmente transparente y 1 o 100% totalmente opaco. Ejemplo:
 > 
 > ```css
 > background-color: rgb(100% 50% 25% / 50%);
@@ -168,12 +170,14 @@ El parámetro alfa es un número entre:
 -  **0,0**: completamente **transparente**
 -  **1,0**: completamente **opaco**
 
-> **NOTA:** La [`función hsl()`](https://lenguajecss.com/css/colores/funcion-hsl/) también admite una forma más moderna, en la cual separamos los valores por espacios y podemos indicar la opacidad después del separador de /, siendo 0 o 0% totalmente transparente y 1 o 100% totalmente opaco. Ejemplo:
+> [!NOTE] 
+> 
+> La [`función hsl()`](https://lenguajecss.com/css/colores/funcion-hsl/) también admite una forma más moderna, en la cual separamos los valores por espacios y podemos indicar la opacidad después del separador de /, siendo 0 o 0% totalmente transparente y 1 o 100% totalmente opaco. Ejemplo:
 > 
 > ```css
 > background-color: hsl(180deg 50% 25% / 75%);
 > background-color: hsl(180 50% 25% / 0.75); 
->``
+>```
 
 
 
@@ -202,7 +206,7 @@ background: radial-gradient( red, blue );
 background: conic-gradient( red, blue );
 ```
 
-> **NOTA:**
+> [!NOTE]
 >
 > Para usar gradientes en CSS, no se usa la propiedad `background-color`, sino la propiedad **`background-image`**.
 
@@ -764,7 +768,7 @@ body {
 }
 ```
 
-> **NOTA:**
+> [!NOTE]
 >
 > Otra propiedad similar a `place-content` es `place-items` aunque con [un comportamiento ligeramente diferente](https://www.youtube.com/watch?v=vNwoDkn7AIc).
 

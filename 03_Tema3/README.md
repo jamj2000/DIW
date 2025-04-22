@@ -553,7 +553,9 @@ Referencias:
 
 Para hacer uso de esta funcionalidad no basta con tener código HTML. Es necesario además añadir código Javascript.
 
-> **NOTA**: Firefox no soporta PIP
+> [!NOTE] 
+> 
+> Firefox no soporta PIP
 
 **Ejemplo**
 

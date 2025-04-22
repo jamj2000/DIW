@@ -74,7 +74,9 @@ align-items: center;
 align-content: center;
 ```
 
-> **NOTA**: También existen las propiedades `row-gap` y `column-gap` de forma independiente.
+> [!NOTE] 
+> 
+> También existen las propiedades `row-gap` y `column-gap` de forma independiente.
 
 > **IMPORTANTE**: 
 >
@@ -146,9 +148,13 @@ justify-items: stretch;
 align-items: stretch;
 ```
 
-> **NOTA**: También existen las propiedades `row-gap` y `column-gap` de forma independiente.
+> [!NOTE] 
+> 
+> También existen las propiedades `row-gap` y `column-gap` de forma independiente.
 
-> **NOTA**: El orden inicial de los elementos de la cuadrícula no importa. Con CSS se pueden colocar en cualquier orden, lo que hace que sea muy fácil reorganizar la cuadrícula usando `media queries`. Imagina definir el diseño de toda tu página y luego reorganizarla completamente para acomodar un ancho de pantalla diferente, todo con solo un par de líneas de CSS.
+> [!NOTE] 
+> 
+> El orden inicial de los elementos de la cuadrícula no importa. Con CSS se pueden colocar en cualquier orden, lo que hace que sea muy fácil reorganizar la cuadrícula usando `media queries`. Imagina definir el diseño de toda tu página y luego reorganizarla completamente para acomodar un ancho de pantalla diferente, todo con solo un par de líneas de CSS.
 
 Un aspecto más avanzado es la posibilidad de definir un número automático de columnas sin la necesidad de usar media query alguna. Para ello usamos la función `repeat` junto a la función `minmax` que establece un ancho mínimo y máximo para cada columna.
 
@@ -187,7 +193,9 @@ Los valores `auto-fill` y `auto-fit` deciden si **debe rellenarse o no una fila*
 }
 ```
 
-> **NOTA**: Sólo hemos comentados las propiedades, tanto del contenedor como del item, más habituales. [Existen muchas más propiedades](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-css-grid-properties), que podrás consultar en el enlace anterior. 
+> [!NOTE] 
+> 
+> Sólo hemos comentados las propiedades, tanto del contenedor como del item, más habituales. [Existen muchas más propiedades](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-css-grid-properties), que podrás consultar en el enlace anterior. 
 
 
 # 4. Media queries
