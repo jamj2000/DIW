@@ -78,7 +78,7 @@ align-content: center;
 > 
 > También existen las propiedades `row-gap` y `column-gap` de forma independiente.
 
-> **IMPORTANTE**: 
+> [!IMPORTANT] 
 >
 > - `justify-content` distribuye elementos en el eje principal, ¡no necesariamente horizontal! 
 > - `align-items` distribuye elementos en el eje transversal, ¡no necesariamente vertical!

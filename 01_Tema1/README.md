@@ -90,7 +90,7 @@ Por favor, para un tratamiento en mayor profundidad y demos on-line, no dudes en
 
 ![Ejemplo colores](assets/ejemplo-colores.png)
 
-> **CURIOSIDAD:** 
+> [!TIP] 
 >
 > Existe el color `transparent`, que puede ser usado tanto para primer como segundo plano.
 >
@@ -638,7 +638,9 @@ Ejemplos de elementos en línea:
 - `<textarea>`
 - `<button>`
 
-> **IMPORTANTE:** Los elementos anteriores no admiten configuración de ancho (`width`) ni alto (`height`). Tampoco admiten `margin-top` ni `margin-bottom`. Y `padding-top` y `padding-bottom` se comportan de una manera particular.
+> [!IMPORTANT] 
+> 
+> Los elementos anteriores no admiten configuración de ancho (`width`) ni alto (`height`). Tampoco admiten `margin-top` ni `margin-bottom`. Y `padding-top` y `padding-bottom` se comportan de una manera particular.
 
 ## 8.3. Inline-Block
 
@@ -836,7 +838,7 @@ Una forma rápida y sencilla de pasar esta herramienta a tu código CSS es ejecu
 ```bash
 npx  stylelint  *.css
 ```
-> **IMPORTANTE**:
+> [!IMPORTANT]
 >
 > Previamente deberás crear un archivo `.stylelintrc.json` con la configuración deseada. Una configuración muy básica es:
 >

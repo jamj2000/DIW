@@ -426,7 +426,7 @@ Mas info:
 
 # 6. Funcionalidades avanzadas
 
-> **IMPORTANTE**: 
+> [!IMPORTANT] 
 > 
 > **Las siguientes funcionalidades son bastante modernas. Por tanto, es esperable que el soporte entre navegadores sea muy dispar. Por tanto, antes de usarlas, asegúrate de que estén suficientemente soportadas para evitar problemas de accesibilidad.**
 

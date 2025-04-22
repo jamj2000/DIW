@@ -584,7 +584,9 @@ En tailwind hacemos uso de la clase **[`peer`](https://tailwindcss.com/docs/hove
  <p class="invisible peer-invalid:visible ...">Please provide a valid email address.</p>
 ```
 
-> **IMPORTANTE**: El elemento con clase `peer` debe declararse antes que el elemento hermano que lo referencia.
+> [!IMPORTANT] 
+> 
+> El elemento con clase `peer` debe declararse antes que el elemento hermano que lo referencia.
 > 
 
 # 4. Reto Landing Page
