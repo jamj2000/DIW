@@ -526,7 +526,44 @@ shadow-slate-950 /* Color de sombra */
 
 ### 3.3.9. Combinación de selectores
 
-Tailwind también soporta combinación de selectores. Por ejemplo, esto es usado a menudo cuando queremos aplicar un estilo a los descendientes o hermanos de un elemento según el estado de éste.
+Tailwind también soporta combinación de selectores. Por ejemplo, esto es usado a menudo cuando queremos aplicar un estilo al ascendiente, los descendientes o hermanos de un elemento según el estado de éste.
+
+
+
+**Ascendiente**
+
+Supongamos que queremos que el ascendiente de un `input` cambie de estilo al ser *checked* este último.
+
+En HTML/CSS escribiriamos:
+
+```html
+<label>
+  <input type="radio" />   Google Pay
+</label>
+```
+
+
+```css
+input:checked {
+  border-color: #6366f1; /* indigo-500 */
+}
+
+/* Cuando el radio dentro del label está checked */
+label:has(input:checked) {
+  background-color: #eef2ff; /* indigo-50 */
+  color: #312e81;            /* indigo-900 */
+}
+```
+
+En tailwind hacemos uso de las variantes **[`has-*`](https://tailwindcss.com/docs/hover-focus-and-other-states#has)** 
+
+
+```html
+<label class="has-checked:bg-indigo-50 has-checked:text-indigo-900">  
+  <input type="radio" class="checked:border-indigo-500" /> Google Pay
+</label>
+```
+
 
 **Cualquier descendiente**
 
