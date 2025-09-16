@@ -11,6 +11,7 @@
   - [3.3. Valores RGBA](#33-valores-rgba)
   - [3.4. Valores HSL](#34-valores-hsl)
   - [3.5. Valores HSLA](#35-valores-hsla)
+  - [Valores OKLCH](#valores-oklch)
   - [3.6. Gradientes de color](#36-gradientes-de-color)
   - [3.7. Uso](#37-uso)
 - [4. Texto y Tipos de fuentes](#4-texto-y-tipos-de-fuentes)
@@ -179,6 +180,49 @@ El parámetro alfa es un número entre:
 > background-color: hsl(180 50% 25% / 0.75); 
 >```
 
+## Valores OKLCH
+
+Las pantallas modernas no pueden mostrar todos los colores visibles para el ojo humano. El subconjunto de colores estándar actual se denomina **sRGB** y solo puede reproducir el **35% de estos colores visibles para el ojo humano**.
+
+**Las nuevas pantallas solucionan este problema, ya que añaden un 30% más de colores nuevos**; este conjunto de colores se denomina **P3** (también conocido como gama amplia). En cuanto a su adopción, todos los dispositivos Apple modernos, y muchas pantallas OLED, son compatibles con el color P3. Por lo tanto, esto no es algo del futuro lejano; es algo que ya está sucediendo.
+
+Afortunadamente, OKLCH tiene una buena legibilidad, admite P3 y superiores, así como cualquier color visible para el ojo humano.
+
+`**oklch()**` es una nueva forma de definir colores CSS. En oklch(L C H) u oklch(L C H / a), cada elemento corresponde a lo siguiente:
+
+- `L` es la **luminosidad percibida** (0-1). "Percibido" significa que tiene una luminosidad constante para nuestros ojos, a diferencia de L en hsl().
+- `C` es el **croma**, desde el gris hasta el color más saturado.
+- `H` es el ángulo de **tono** (0-360).
+- `a` es la **opacidad** (0-1 o 0-100%).
+
+**Ejemplo:**
+
+```css
+a:hover {
+  background:   oklch(0.45 0.26 264); /* blue */
+  color:        oklch(1 0 0);     /* white */
+  color:        oklch(0 0 0 / 50%); /* black with 50% opacity */
+}
+``` 
+
+**Beneficios de OKLCH**
+
+1. OKLCH libera a los diseñadores de la necesidad de elegir manualmente cada color. Pueden definir una fórmula, elegir algunos colores y se genera automáticamente una paleta completa del sistema de diseño.
+2. OKLCH se puede utilizar para colores P3 de amplia gama. Por ejemplo, los dispositivos nuevos (como los de Apple) pueden mostrar más colores que los antiguos monitores sRGB, y podemos usar OKLCH para especificar estos nuevos colores.
+3. A diferencia de hsl(), OKLCH es mejor para las modificaciones de color y la generación de paletas. Utiliza la luminosidad perceptual, por lo que se evitan los resultados inesperados, como los que se producían con darken() en Sass.
+4. Además, gracias a su luminosidad predecible, OKLCH ofrece una mejor *a11y*. 
+5. A diferencia de rgb() o hex (#ca0000), OKLCH es legible. Puedes saber rápida y fácilmente qué color representa un valor de OKLCH simplemente observando los números. OKLCH funciona como HSL, pero codifica la luminosidad mejor que HSL.
+
+> [!NOTE]
+> El término **a11y** es una abreviatura numérica de la palabra "accessibility" (**accesibilidad** en inglés). Se llama así porque hay 11 letras entre la "a" y la "y" en la palabra accessibility.
+>
+
+
+> [!INFO]
+>
+> **Más información:
+>
+> - [OKLCH in CSS: why we moved from RGB and HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
 
 
 ## 3.6. Gradientes de color
