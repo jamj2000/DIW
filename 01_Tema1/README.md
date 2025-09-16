@@ -224,6 +224,7 @@ a:hover {
 > **Más información:**
 >
 > - [OKLCH in CSS: why we moved from RGB and HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
+> - [OKLCH Color Picker & Converter](https://oklch.com/#0.7,0.1,295,100)
 
 
 ## 3.7. Gradientes de color
