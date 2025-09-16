@@ -449,19 +449,19 @@ La accesibilidad busca que todas las personas (incluyendo con discapacidad visua
 Se apoya en las normas **WCAG 2.1** y el estándar **WAI-ARIA**.
 
 **Principios básicos (POUR)**:
+
 - **Perceptible:** la información debe presentarse de manera que todos puedan percibirla.  
 - **Operable:** la interfaz debe poder usarse con diferentes dispositivos (ratón, teclado, lector de pantalla).  
 - **Comprensible:** el contenido y la navegación deben ser claros y predecibles.  
 - **Robusto:** debe funcionar con diferentes navegadores, dispositivos y tecnologías de asistencia.
 
----
+
 
 ## 7.2. Roles y atributos WAI-ARIA
 
 Los atributos **ARIA** (*Accessible Rich Internet Applications*) mejoran la accesibilidad en aplicaciones web dinámicas.
 
 **Ejemplos comunes:**
-- `role="navigation"` → define una zona como menú de navegación.  
 - `aria-label="..."` → etiqueta accesible para describir un elemento.  
 - `aria-hidden="true"` → oculta un elemento a los lectores de pantalla.  
 - `aria-expanded="true|false"` → indica si un menú/elemento está desplegado o no.  
@@ -477,6 +477,80 @@ Los atributos **ARIA** (*Accessible Rich Internet Applications*) mejoran la acce
   </ul>
 </nav>
 ```
+
+El atributo **`role`** (definido en la especificación [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/)) permite describir **la función o propósito** de un elemento en la interfaz web, sobre todo cuando el HTML semántico por sí solo no es suficiente.
+
+
+**¿Por qué es importante?**
+
+- Ayuda a los **lectores de pantalla** y otras tecnologías asistivas a interpretar correctamente los elementos.  
+- Permite mejorar la **semántica** en interfaces dinámicas (menús, diálogos, pestañas, sliders, etc.).  
+- Útil cuando usamos elementos genéricos como `<div>` o `<span>` y necesitamos darles un propósito.
+
+
+**Ejemplos:**
+
+- **Roles de estructura o landmark**  
+  Identifican secciones importantes de la página.  
+  - `role="banner"` → cabecera del sitio.  
+  - `role="navigation"` → menú de navegación.  
+  - `role="main"` → contenido principal.  
+  - `role="contentinfo"` → pie de página.  
+  - `role="complementary"` → información adicional (ej. barra lateral).  
+
+```html
+<header role="banner">
+  <h1>Mi sitio web</h1>
+</header>
+<nav role="navigation">
+  <ul>
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/blog">Blog</a></li>
+  </ul>
+</nav>
+<main role="main">
+  <h2>Artículo destacado</h2>
+  <p>Contenido principal de la página.</p>
+</main>
+<footer role="contentinfo">
+  <p>© 2025 Mi sitio web</p>
+</footer>
+``` 
+
+- **Roles de documento**
+  Describen contenido estructurado.
+  - `role="article"` → artículo independiente.
+  - `role="note"` → nota informativa.
+  - `role="presentation"` → ignora la semántica visual (ej. tablas usadas solo para maquetar).
+
+
+```html
+<article role="article">
+  <h2>Novedades</h2>
+  <p>Este es un artículo con información relevante.</p>
+</article>
+```
+
+
+> [!TIP]
+> **Buenas prácticas con `role`**
+>
+> **Usar primero HTML semántico**. Muchos elementos ya tienen un `role` implícito.  
+>  - `<header>` → `role="banner"`  
+>  - `<nav>` → `role="navigation"`  
+>  - `<main>` → `role="main"`  
+>  - `<footer>` → `role="contentinfo"`  
+>
+> No es necesario duplicar el atributo.
+> ✅ **Añadir `role` solo cuando sea necesario**: Especialmente en elementos genéricos como `<div>` o `<span>` que se usan como botones, menús o pestañas.
+>
+>
+>```html
+><div role="button" tabindex="0" aria-pressed="false">
+>  Hacer clic aquí
+></div>
+>``` 
+
 
 ## 7.3. Atributos `data-`
 
