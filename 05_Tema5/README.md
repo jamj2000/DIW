@@ -21,9 +21,16 @@
   - [6.2. Desplazamiento suave](#62-desplazamiento-suave)
   - [6.3. Redimensionado de un elemento](#63-redimensionado-de-un-elemento)
   - [6.4. Recortado de un texto](#64-recortado-de-un-texto)
-- [7. Recursos](#7-recursos)
-  - [7.1. Herramientas](#71-herramientas)
-  - [7.2. Formación](#72-formación)
+- [7. Desarrollo de web accesibles](#7-desarrollo-de-web-accesibles)
+  - [7.1. Principios de Accesibilidad Web](#71-principios-de-accesibilidad-web)
+  - [7.2. Roles y atributos WAI-ARIA](#72-roles-y-atributos-wai-aria)
+  - [7.3. Atributos `data-`](#73-atributos-data-)
+  - [7.4. Clase `sr-only` (screen reader only)](#74-clase-sr-only-screen-reader-only)
+  - [7.5. Buenas prácticas en accesibilidad](#75-buenas-prácticas-en-accesibilidad)
+  - [7.6. Ejemplo completo accesible](#76-ejemplo-completo-accesible)
+- [8. Recursos](#8-recursos)
+  - [8.1. Herramientas](#81-herramientas)
+  - [8.2. Formación](#82-formación)
 
 
 
@@ -435,17 +442,117 @@ p {
 
 - [Recortado de un texto](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
 
+# 7. Desarrollo de web accesibles
 
-# 7. Recursos
+## 7.1. Principios de Accesibilidad Web
+La accesibilidad busca que todas las personas (incluyendo con discapacidad visual, auditiva, motriz o cognitiva) puedan **percibir, comprender, navegar e interactuar** con un sitio web.  
+Se apoya en las normas **WCAG 2.1** y el estándar **WAI-ARIA**.
 
-## 7.1. Herramientas
+**Principios básicos (POUR)**:
+- **Perceptible:** la información debe presentarse de manera que todos puedan percibirla.  
+- **Operable:** la interfaz debe poder usarse con diferentes dispositivos (ratón, teclado, lector de pantalla).  
+- **Comprensible:** el contenido y la navegación deben ser claros y predecibles.  
+- **Robusto:** debe funcionar con diferentes navegadores, dispositivos y tecnologías de asistencia.
+
+---
+
+## 7.2. Roles y atributos WAI-ARIA
+
+Los atributos **ARIA** (*Accessible Rich Internet Applications*) mejoran la accesibilidad en aplicaciones web dinámicas.
+
+**Ejemplos comunes:**
+- `role="navigation"` → define una zona como menú de navegación.  
+- `aria-label="..."` → etiqueta accesible para describir un elemento.  
+- `aria-hidden="true"` → oculta un elemento a los lectores de pantalla.  
+- `aria-expanded="true|false"` → indica si un menú/elemento está desplegado o no.  
+- `aria-current="page"` → señala la página actual en una navegación.  
+
+
+```html
+<nav aria-label="Menú principal">
+  <ul>
+    <li><a href="/" aria-current="page">Inicio</a></li>
+    <li><a href="/servicios">Servicios</a></li>
+    <li><a href="/contacto">Contacto</a></li>
+  </ul>
+</nav>
+```
+
+## 7.3. Atributos `data-`
+
+Los atributos `data-*` permiten almacenar información personalizada en los elementos HTML, útil para JavaScript o CSS sin romper la semántica.
+
+- **Ejemplo de uso:**
+```html
+<button data-toggle="modal" data-target="#loginModal">
+  Iniciar sesión
+</button>
+```
+
+- **Acceso con JS:**
+
+```js
+const btn = document.querySelector("button");
+console.log(btn.dataset.toggle); // "modal"
+console.log(btn.dataset.target); // "#loginModal"
+```
+
+## 7.4. Clase `sr-only` (screen reader only)
+La clase `sr-only` (usada en frameworks como **Bootstrap**) oculta visualmente un elemento, pero lo mantiene accesible para lectores de pantalla.
+
+- **Ejemplo:**
+
+```html
+<label for="busqueda" class="sr-only">Buscar en la web</label>
+<input type="text" id="busqueda" placeholder="Buscar...">
+``` 
+
+👉 El usuario visual solo ve el campo de búsqueda, pero el lector de pantalla anuncia el texto del `label`.
+
+## 7.5. Buenas prácticas en accesibilidad
+- Usar **HTML semántico**: encabezados `<h1>–<h6>`, listas, tablas con `<thead>` y `<th>`.  
+- Proporcionar **texto alternativo** en imágenes (`alt`).  
+- Asegurar **contraste suficiente** entre texto y fondo.  
+- Hacer que todo sea **navegable con teclado** (evitar depender solo del ratón).  
+- Evitar usar solo color para transmitir información.  
+- Añadir **descripciones ARIA** en botones e iconos sin texto.  
+- Validar accesibilidad con herramientas como **Lighthouse**, **WAVE** o el **validador de la W3C**.
+
+## 7.6. Ejemplo completo accesible
+
+```html
+<header>
+  <h1>Portal de Cursos Online</h1>
+  <nav aria-label="Menú de navegación principal">
+    <ul>
+      <li><a href="/" aria-current="page">Inicio</a></li>
+      <li><a href="/cursos">Cursos</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>Buscar curso</h2>
+  <form>
+    <label for="busqueda" class="sr-only">Buscar curso</label>
+    <input type="text" id="busqueda" placeholder="Buscar..." data-type="search">
+    <button type="submit" aria-label="Buscar curso">🔍</button>
+  </form>
+</main>
+``` 
+
+
+# 8. Recursos
+
+## 8.1. Herramientas
 
 - [Juego - Flexbox Froggy](https://flexboxfroggy.com/#es)
 - [Juego - CSS Grid Garden](https://cssgridgarden.com/#es)
 - [Juegos Flex Box Adventure y Grid Attack](https://codingfantasy.com)
 - [Generador de Grid](https://cssgridgenerator.io/)
 
-## 7.2. Formación
+## 8.2. Formación
 
 - [MDN - CSS Layout](https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout)
 - [MDN - Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
