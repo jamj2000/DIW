@@ -11,9 +11,9 @@
   - [3.3. Valores RGBA](#33-valores-rgba)
   - [3.4. Valores HSL](#34-valores-hsl)
   - [3.5. Valores HSLA](#35-valores-hsla)
-  - [Valores OKLCH](#valores-oklch)
-  - [3.6. Gradientes de color](#36-gradientes-de-color)
-  - [3.7. Uso](#37-uso)
+  - [3.6. Valores OKLCH](#36-valores-oklch)
+  - [3.7. Gradientes de color](#37-gradientes-de-color)
+  - [3.8. Uso](#38-uso)
 - [4. Texto y Tipos de fuentes](#4-texto-y-tipos-de-fuentes)
   - [4.1. Fuentes según su diseño](#41-fuentes-según-su-diseño)
   - [4.2. Fuentes según el formato de archivo](#42-fuentes-según-el-formato-de-archivo)
@@ -36,6 +36,7 @@
 - [12. Recursos](#12-recursos)
   - [12.1. Herramientas](#121-herramientas)
   - [12.2. Formación](#122-formación)
+
 
 
 
@@ -180,7 +181,7 @@ El parámetro alfa es un número entre:
 > background-color: hsl(180 50% 25% / 0.75); 
 >```
 
-## Valores OKLCH
+## 3.6. Valores OKLCH
 
 Las pantallas modernas no pueden mostrar todos los colores visibles para el ojo humano. El subconjunto de colores estándar actual se denomina **sRGB** y solo puede reproducir el **35% de estos colores visibles para el ojo humano**.
 
@@ -218,14 +219,14 @@ a:hover {
 >
 
 
-> [!INFO]
+> [!TIP]
 >
-> **Más información:
+> **Más información:**
 >
 > - [OKLCH in CSS: why we moved from RGB and HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
 
 
-## 3.6. Gradientes de color
+## 3.7. Gradientes de color
 
 Un gradiente de color es la transición gradual entre dos o más colores. En CSS tenemos 3 tipos de gradientes:
 
@@ -260,7 +261,7 @@ Para ver usos más elaborados consultar los siguientes enlaces:
 - [MDN: radial-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient)
 - [MDN: conic-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/conic-gradient)
 
-## 3.7. Uso
+## 3.8. Uso
 
 El color está presente en numerosas propiedades. A continuación, se muestran unas cuantas:
 
