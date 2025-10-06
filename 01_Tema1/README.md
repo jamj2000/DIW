@@ -32,6 +32,7 @@
   - [8.6. Otros displays](#86-otros-displays)
 - [9. Introducción a la maquetación](#9-introducción-a-la-maquetación)
 - [10. Modo claro / oscuro](#10-modo-claro--oscuro)
+- [Reset CSS](#reset-css)
 - [11. Linter para CSS](#11-linter-para-css)
 - [12. Recursos](#12-recursos)
   - [12.1. Herramientas](#121-herramientas)
@@ -393,6 +394,11 @@ Los valores por defecto son:
     font-size: 1rem;  /* o  font-size: 16px */
     font-weight: 400;
 ```
+
+> [!NOTE]
+> 
+> `1rem` = 1 "root em" → es relativo al tamaño de fuente (font-size) del elemento raíz (<html>)
+> `1em` → es relativo al tamaño de fuente (font-size) del elemento padre, un antecesor o en su defecto <body>
 
 
 ## 4.1. Fuentes según su diseño
@@ -847,12 +853,10 @@ Otra manera de definir los estilos para los modos claro y oscuro es hacer uso de
 
 
 ```css
-@media (prefers-color-scheme: light) {
-  :root {
+:root {
     --text-color: rgb(0 0 0);
     --background-color: rgb(255 255 255);
     --background-img: url(assets/bg-light.png);
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -870,7 +874,15 @@ body {
 }
 ```
 
+# Reset CSS
 
+Los navegadores insertan ciertos estilos por defecto. Esto es fácil de comprobar, si sólo escribes HTML sin indicar ningún estilo CSS. Observarás que la página muestra algunos elementos con cierto estilo, como por ejemplo, que los `<body>` tienen márgenes o que los `<h1>` tienen un cierto tamaño y margen.
+
+Muchos programadores prefieren resetear todos los estilos del navegador, de modo que sea mucho más sencillo que los estilos sean similares entre diferentes navegadores.
+
+Más información y `ejemplos de reset` en:
+
+- [Sitio de Manz.dev](https://lenguajecss.com/cascada-css/herencia/reset-css/)
 
 
 # 11. Linter para CSS
