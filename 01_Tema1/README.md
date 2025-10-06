@@ -32,11 +32,12 @@
   - [8.6. Otros displays](#86-otros-displays)
 - [9. Introducción a la maquetación](#9-introducción-a-la-maquetación)
 - [10. Modo claro / oscuro](#10-modo-claro--oscuro)
-- [Reset CSS](#reset-css)
-- [11. Linter para CSS](#11-linter-para-css)
-- [12. Recursos](#12-recursos)
-  - [12.1. Herramientas](#121-herramientas)
-  - [12.2. Formación](#122-formación)
+- [11. Reset CSS](#11-reset-css)
+- [12. Linter para CSS](#12-linter-para-css)
+- [13. Recursos](#13-recursos)
+  - [13.1. Herramientas](#131-herramientas)
+  - [13.2. Formación](#132-formación)
+
 
 
 
@@ -874,7 +875,7 @@ body {
 }
 ```
 
-# Reset CSS
+# 11. Reset CSS
 
 Los navegadores insertan ciertos estilos por defecto. Esto es fácil de comprobar, si sólo escribes HTML sin indicar ningún estilo CSS. Observarás que la página muestra algunos elementos con cierto estilo, como por ejemplo, que los `<body>` tienen márgenes o que los `<h1>` tienen un cierto tamaño y margen.
 
@@ -885,7 +886,7 @@ Más información y `ejemplos de reset` en:
 - [Sitio de Manz.dev](https://lenguajecss.com/cascada-css/herencia/reset-css/)
 
 
-# 11. Linter para CSS
+# 12. Linter para CSS
 
 En el caso de utilizar un entorno de desarrollo basado en `node.js` para desarrollar nuestro proyecto, podemos instalar un analizador estático o *linter* de código llamado `stylelint` para nuestro código css.
 
@@ -918,9 +919,9 @@ npx  stylelint  *.css  --fix
 
 
 
-# 12. Recursos
+# 13. Recursos
 
-## 12.1. Herramientas
+## 13.1. Herramientas
 
 - [HTML Colors](https://htmlcolorcodes.com/)
 - [Conversor de color](https://www.w3schools.com/colors/colors_converter.asp)
@@ -931,7 +932,7 @@ npx  stylelint  *.css  --fix
 - [Emojipedia](https://emojipedia.org/)
 - [Algunos símbolos Unicode](https://www.w3schools.com/charsets/ref_utf_symbols.asp)
 
-## 12.2. Formación
+## 13.2. Formación
 
 - [Modelo de color HSL: qué es y qué ventajas tiene](https://www.uifrommars.com/que-es-hsl/)
 - [Google Fonts Knowledge](https://fonts.google.com/knowledge)
