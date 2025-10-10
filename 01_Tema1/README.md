@@ -689,7 +689,7 @@ Ejemplos de elementos en línea:
 - `<a>`
 - `<input>`
 - `<textarea>`
-- `<button>`
+
 
 > [!IMPORTANT] 
 > 
@@ -702,6 +702,18 @@ Ejemplos de elementos en línea:
 Ejemplos de elementos de bloque en línea:
 
 - `<img>`
+- `<button>` (en la mayoría de navegadores)
+
+
+**Resumen**
+
+| `display`      | ¿Ocupa toda la línea? | ¿Permite ancho/alto/márgenes? | ¿Se puede alinear con otros elementos en línea? |
+| -------------- | --------------------- | ----------------------------- | ----------------------------------------------- |
+| `inline`       | ❌ No                  | ❌ No                          | ✅ Sí                                            |
+| `inline-block` | ❌ No                  | ✅ Sí                          | ✅ Sí                                            |
+| `block`        | ✅ Sí                  | ✅ Sí                          | ❌ No                                            |
+
+
 
 
 ## 8.4. Flex y Grid
