@@ -214,6 +214,7 @@ Para seleccionar partes de un elemento HTML. Se indica con **`::`**. Ejemplos:
 - `p::first-letter`
 - `p::selection`
 - `dialog::backdrop`
+- `li::marker`
 - ...
 
 Mas información en https://www.w3schools.com/css/css_pseudo_elements.asp
