@@ -243,33 +243,11 @@ No obstante, si deseamos empezar a trabajar en un proyecto independiente del fra
 
 ```sh
 npm init -y
-npm i -D tailwindcss 
-npx tailwindcss init
+npm i tailwindcss @tailwindcss/cli
 ```
-La última sentencia generará un archivo `tailwind.config.js`, que podremos editar para la configuración de tailwind, si así lo deseamos. A continuación se muestra un ejemplo de configuración realizada:
 
-```js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [ './index.html' ],
-  theme: {
-    screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-    },
-    extend: {
-      colors: {
-        brightRed: 'hsl(12, 88%, 59%)',
-        darkBlue: 'hsl(228, 39%, 23%)'
-      }
-    },
-  },
-  plugins: [],
-}
-```
-Además de los archivos indicados en la propiedad `content`, que serán analizados para traducir las clases de tailwind que aparezca en ellos, necesitaremos 2 archivos más:
+
+Necesitaremos al menos 2 archivos:
 
 - un archivo css de entrada, al que llamaré `entrada.css`
 - un archivo css de salida, al que llamaré `style.css`
@@ -277,9 +255,7 @@ Además de los archivos indicados en la propiedad `content`, que serán analizad
 En el archivo `entrada.css` colocaremos el siguiente contenido:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Otro contenido CSS */
 ```
@@ -302,8 +278,8 @@ Por último, en el archivo `package.json`, crearemos los scrips siguientes:
 ```json
  ...
  "scripts": {
-    "build": "tailwindcss -i ./entrada.css -o ./style.css",
-    "watch": "tailwindcss -i ./entrada.css -o ./style.css --watch"
+    "build": "@tailwindcss/cli  -i ./entrada.css -o ./style.css",
+    "watch": "@tailwindcss/cli  -i ./entrada.css -o ./style.css --watch"
   },
   ...
 ```
@@ -321,6 +297,31 @@ y empezar a editar los archivos html, añadiendo las clases tailwind deseadas. E
 Es aconsejable tener un servidor web con recarga automática para ver los cambios en tiempo real. Una buena alternativa para ello es usar el plugin `Live Preview` de VSCode.
 
 ![VSCode](assets/vscode.png)
+
+
+> [!NOTE]
+>
+> Si estamos usando un framework como **Next.js y tailwind v4**, no tendremos que hacer nada salvo indicar al crear el nuevo proyecto que vamos a usar tailwindcss.
+>
+> Se creará un archivo `src/app/globals.css`, donde podremos colocar nuestra configuración. A continuación se muestra un ejemplo:
+>
+> ```css
+> @import "tailwindcss";
+>
+> @plugin "daisyui";
+> 
+>
+> @theme {
+>  --color-bright-red: hsl(12, 88%, 59%);
+>  --color-dark-blue: hsl(228, 39%, 23%);
+>  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+>  --screen-sm: 480px;
+>  --screen-md: 768px;
+>  --screen-lg: 976px;
+>  --screen-xl: 1440px;
+> }
+>```
+
 
 
 ## 3.3. Características
