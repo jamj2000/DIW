@@ -374,14 +374,7 @@ De forma predeterminada, los estilos aplicados por reglas como `md:flex` se apli
 
 La clase `container` establece el ancho máximo de un elemento para que coincida con el ancho mínimo del punto de interrupción actual. Esto es útil si deseas diseñar para un conjunto fijo de tamaños de pantalla en lugar de intentar acomodar un *viewport* completamente fluido.
 
-| Clase        | Punto de ruptura   | Propiedades  |
-| ------------ | ------------------ | ------------ |
-| container    | None               | width: 100%; |
-| sm (640px)   | max-width: 640px;  |
-| md (768px)   | max-width: 768px;  |
-| lg (1024px)  | max-width: 1024px; |
-| xl (1280px)  | max-width: 1280px; |
-| 2xl (1536px) | max-width: 1536px; |
+[Medidas de container](https://tailwindcss.com/docs/responsive-design#container-size-reference)
 
 Ten en cuenta que, a diferencia de los contenedores que podría haber utilizado en otros marcos, el contenedor de Tailwind no se centra automáticamente y no tiene ningún relleno horizontal incorporado.
 
