@@ -656,6 +656,7 @@ Es una [lista de reproducción con 11 vídeos](https://youtube.com/playlist?list
 ## 5.1. Herramientas
 
 - [Generador de columnas para Bootstrap](https://mdbootstrap.com/docs/standard/tools/builders/grid/)
+- [TailwindCSS Play](https://play.tailwindcss.com/)
 
 ## 5.2. Formación
 
@@ -665,3 +666,4 @@ Es una [lista de reproducción con 11 vídeos](https://youtube.com/playlist?list
 - [Documentación oficial de Tailwind](https://tailwindcss.com/docs)
 - [DesarrolloWeb: Manual de Tailwind](https://desarrolloweb.com/manuales/manual-de-tailwindcss)
 - [css2wind: Aprende Tailwind a partir de CSS](https://www.css2wind.com/)
+- [TailwindCSS Course](https://tailwindcss.com/build-uis-that-dont-suck)
