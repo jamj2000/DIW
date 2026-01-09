@@ -150,6 +150,12 @@ input:valid {
 ```
 
 
+> [!TIP]
+>
+> Una buena aplicación web para hacer pruebas con expresiones regulares es:
+>
+> - [regex101](https://regex101.com/)
+
 
 # 3. Transformaciones
 
