@@ -936,6 +936,7 @@ npx  stylelint  *.css  --fix
 ## 13.1. Herramientas
 
 - [HTML Colors](https://htmlcolorcodes.com/)
+- [Experimentos con el color](https://color.method.ac)
 - [Conversor de color](https://www.w3schools.com/colors/colors_converter.asp)
 - [Fresh Background Gradients](https://webgradients.com/)
 - [Gradient Generator](https://www.joshwcomeau.com/gradient-generator/)
