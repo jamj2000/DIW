@@ -640,3 +640,4 @@ La clase `sr-only` (usada en frameworks como **Bootstrap**) oculta visualmente u
 - [W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/design-develop/es)
 - [WCAG 2.1 de un vistazo](https://www.w3.org/WAI/standards-guidelines/wcag/glance/es)
 - [Vídeo: Menú lateral responsive con iconos Material Symbols Outlined](https://youtu.be/iiKDMFlXZkY?si=OrICcuK3pPeMe5ee)
+- [Extensión para navegador de Web Accessibility Evaluation Tool](https://wave.webaim.org/extension/)
