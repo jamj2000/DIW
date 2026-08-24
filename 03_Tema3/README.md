@@ -653,6 +653,7 @@ Y haz un resumen de la página anterior. ¿Qué es la licencia CC0?
 
 ## 7.1. Herramientas
 - [SVG Repo](https://www.svgrepo.com/)
+- [Favicon Generator](https://realfavicongenerator.net/)
 - [BoxIcons](https://boxicons.com/)
 - [Simple Icons](https://simpleicons.org/)
 - [Tabler Icons - Iconos SVG](https://tablericons.com/)
