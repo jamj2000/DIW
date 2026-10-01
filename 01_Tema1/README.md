@@ -389,7 +389,27 @@ div {
 }
 ```
 
-Los valores por defecto son:
+> [!TIP]
+>
+> No existen fuentes que sean 100% seguras para la web. Siempre existe la posibilidad de que una fuente no se encuentre o no esté instalada correctamente; por ello, es fundamental utilizar siempre fuentes alternativas.
+>
+> Esto significa que debes incluir una lista de fuentes de respaldo similares en la propiedad `font-family`. Si la primera fuente no funciona, el navegador probará con la siguiente, luego con la posterior, y así sucesivamente. Finaliza siempre la lista con el nombre de una familia de fuentes genérica que funciona con fallback.
+>
+> En el siguiente código, el fallback es monospace.
+> 
+> ```css
+> font-family: 'Fira Code', monospace;
+> ```
+>
+> Existen varios fallbacks. Los más frecuentes son:
+> - serif
+> - sans-serif
+> - monospace
+> - cursive
+> - fantasy
+> 
+
+Los valores por defecto para el tamaño y el peso son:
 
 ```css
     font-size: 1rem;  /* o  font-size: 16px */
