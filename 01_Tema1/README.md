@@ -411,15 +411,15 @@ div {
 > - fantasy
 > 
 
-Los valores por defecto para el tamaño y el peso son:
-
-```css
-    font-size: 1rem;  /* o  font-size: 16px */
-    font-weight: 400;
-```
-
 > [!NOTE]
-> 
+>
+> Los valores por defecto para el tamaño y el peso son:
+>
+>```css
+>    font-size: 1rem;  /* o  font-size: 16px */
+>    font-weight: 400;
+>```
+>
 > `1rem` = 1 "root em" → es relativo al tamaño de fuente (font-size) del elemento raíz (<html>)
 > `1em` → es relativo al tamaño de fuente (font-size) del elemento padre, un antecesor o en su defecto <body>
 
