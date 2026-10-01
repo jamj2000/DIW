@@ -389,7 +389,7 @@ div {
 }
 ```
 
-> [!TIP]
+> [!TIP] **Fallback para la fuente**
 >
 > No existen fuentes que sean 100% seguras para la web. Siempre existe la posibilidad de que una fuente no se encuentre o no esté instalada correctamente; por ello, es fundamental utilizar siempre fuentes alternativas.
 >
