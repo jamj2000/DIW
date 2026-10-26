@@ -16,21 +16,38 @@
   - [4.1. Mobile first](#41-mobile-first)
   - [4.2. Desktop first](#42-desktop-first)
 - [5. Container queries](#5-container-queries)
-- [6. Optimizaciones](#6-optimizaciones)
-  - [6.1. Hueco de la barra de desplazamiento](#61-hueco-de-la-barra-de-desplazamiento)
-  - [6.2. Desplazamiento suave](#62-desplazamiento-suave)
-  - [6.3. Redimensionado de un elemento](#63-redimensionado-de-un-elemento)
-  - [6.4. Recortado de un texto](#64-recortado-de-un-texto)
-- [7. Desarrollo de web accesibles](#7-desarrollo-de-web-accesibles)
-  - [7.1. Principios de Accesibilidad Web](#71-principios-de-accesibilidad-web)
-  - [7.2. Roles y atributos WAI-ARIA](#72-roles-y-atributos-wai-aria)
-  - [7.3. Atributos `data-`](#73-atributos-data-)
-  - [7.4. Clase `sr-only` (screen reader only)](#74-clase-sr-only-screen-reader-only)
-  - [7.5. Buenas prácticas en accesibilidad](#75-buenas-prácticas-en-accesibilidad)
-  - [7.6. Ejemplo completo accesible](#76-ejemplo-completo-accesible)
-- [8. Recursos](#8-recursos)
-  - [8.1. Herramientas](#81-herramientas)
-  - [8.2. Formación](#82-formación)
+- [6. Reglas @ (At-rules) en CSS](#6-reglas--at-rules-en-css)
+  - [6.1. Principales at-rules de CSS](#61-principales-at-rules-de-css)
+    - [6.1.1. `@media`](#611-media)
+    - [6.1.2. `@import`](#612-import)
+    - [6.1.3. `@font-face`](#613-font-face)
+    - [6.1.4. `@keyframes`](#614-keyframes)
+    - [6.1.5. `@supports`](#615-supports)
+    - [6.1.6. `@layer`](#616-layer)
+  - [6.2. Otras reglas arroba importantes](#62-otras-reglas-arroba-importantes)
+  - [6.3. Diferencia entre `@media` y `@container`](#63-diferencia-entre-media-y-container)
+    - [6.3.1. `@media`: consulta el dispositivo o entorno](#631-media-consulta-el-dispositivo-o-entorno)
+    - [6.3.2. `@container`: consulta el contenedor](#632-container-consulta-el-contenedor)
+  - [6.4. ¿Cómo se clasifican las at-rules?](#64-cómo-se-clasifican-las-at-rules)
+    - [6.4.1. Reglas con bloque](#641-reglas-con-bloque)
+    - [6.4.2. Reglas con terminación en punto y coma](#642-reglas-con-terminación-en-punto-y-coma)
+  - [6.5. Consejo para aprender CSS](#65-consejo-para-aprender-css)
+- [7. Optimizaciones](#7-optimizaciones)
+  - [7.1. Hueco de la barra de desplazamiento](#71-hueco-de-la-barra-de-desplazamiento)
+  - [7.2. Desplazamiento suave](#72-desplazamiento-suave)
+  - [7.3. Redimensionado de un elemento](#73-redimensionado-de-un-elemento)
+  - [7.4. Recortado de un texto](#74-recortado-de-un-texto)
+- [8. Desarrollo de web accesibles](#8-desarrollo-de-web-accesibles)
+  - [8.1. Principios de Accesibilidad Web](#81-principios-de-accesibilidad-web)
+  - [8.2. Roles y atributos WAI-ARIA](#82-roles-y-atributos-wai-aria)
+  - [8.3. Atributos `data-`](#83-atributos-data-)
+  - [8.4. Clase `sr-only` (screen reader only)](#84-clase-sr-only-screen-reader-only)
+  - [8.5. Buenas prácticas en accesibilidad](#85-buenas-prácticas-en-accesibilidad)
+  - [8.6. Ejemplo completo accesible](#86-ejemplo-completo-accesible)
+- [9. Recursos](#9-recursos)
+  - [9.1. Herramientas](#91-herramientas)
+  - [9.2. Formación](#92-formación)
+
 
 
 
@@ -355,12 +372,204 @@ La propiedad [`resize`](https://developer.mozilla.org/en-US/docs/Web/CSS/resize)
 - Referencia: [Video acerca de container query](https://youtu.be/mWtAyB5zikM?si=ULSg0l36i-FKDC38)
 
 
-# 6. Optimizaciones
+# 6. Reglas @ (At-rules) en CSS
+
+A continuación mostramos un resumen de las reglas arroba más frecuentes.
+
+Las **at-rules** o **reglas arroba** son instrucciones especiales de CSS que comienzan con el símbolo `@`. Sirven para definir condiciones, importar hojas de estilo, declarar fuentes, establecer animaciones y controlar cómo se aplican los estilos según diferentes situaciones.
+
+## 6.1. Principales at-rules de CSS
+
+Estas son las reglas arroba más utilizadas.
+
+### 6.1.1. `@media`
+
+Adapta los estilos según el tamaño de pantalla, la orientación o las características del dispositivo.
+
+```css
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+```
+
+**Ejemplo:** cambiar el diseño para móviles.
+
+### 6.1.2. `@import`
+
+Importa otra hoja de estilos CSS.
+
+```css
+@import url("estilos.css");
+```
+
+Normalmente se coloca al principio de la hoja de estilos, antes de las reglas ordinarias.
+
+### 6.1.3. `@font-face`
+
+Permite registrar fuentes personalizadas para utilizarlas en la página.
+
+```css
+@font-face {
+  font-family: "MiFuente";
+  src: url("fuente.woff2");
+}
+
+body {
+  font-family: "MiFuente", sans-serif;
+}
+```
+
+### 6.1.4. `@keyframes`
+
+Define los pasos de una animación CSS.
+
+```css
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.caja {
+  animation: aparecer 2s;
+}
+```
+
+### 6.1.5. `@supports`
+
+Comprueba si el navegador admite una característica CSS antes de aplicar los estilos.
+
+```css
+@supports (display: grid) {
+  .contenedor {
+    display: grid;
+  }
+}
+```
+
+### 6.1.6. `@layer`
+
+Organiza las reglas CSS en capas y permite controlar su prioridad en la cascada.
+
+```css
+@layer base, componentes;
+
+@layer base {
+  p {
+    color: gray;
+  }
+}
+
+@layer componentes {
+  p {
+    color: blue;
+  }
+}
+```
+
+## 6.2. Otras reglas arroba importantes
+
+| At-rule           | Función                                                                                                  |
+| ----------------- | -------------------------------------------------------------------------------------------------------- |
+| `@container`      | Aplica estilos según el tamaño o las características de un contenedor.                                   |
+| `@page`           | Define estilos para la impresión, como márgenes y tamaño de página.                                      |
+| `@namespace`      | Declara espacios de nombres para selectores XML.                                                         |
+| `@counter-style`  | Define estilos personalizados para contadores y listas.                                                  |
+| `@property`       | Registra propiedades CSS personalizadas con tipo y comportamiento definidos.                             |
+| `@starting-style` | Define los estilos iniciales para determinadas transiciones de entrada.                                  |
+| `@scope`          | Limita el ámbito de aplicación de determinadas reglas CSS.                                               |
+| `@charset`        | Declara la codificación de caracteres de una hoja de estilos; si se utiliza, debe aparecer al principio. |
+
+## 6.3. Diferencia entre `@media` y `@container`
+
+Aunque se parecen, cumplen funciones diferentes.
+
+### 6.3.1. `@media`: consulta el dispositivo o entorno
+
+```css
+@media (max-width: 600px) {
+  .tarjeta {
+    width: 100%;
+  }
+}
+```
+
+Se activa cuando la ventana del navegador tiene 600 píxeles de ancho o menos.
+
+### 6.3.2. `@container`: consulta el contenedor
+
+```css
+.contenedor {
+  container-type: inline-size;
+}
+
+@container (max-width: 400px) {
+  .tarjeta {
+    font-size: 14px;
+  }
+}
+```
+
+Se activa cuando el contenedor de referencia cumple la condición, independientemente del ancho total de la ventana.
+
+## 6.4. ¿Cómo se clasifican las at-rules?
+
+Se pueden agrupar en dos grandes tipos.
+
+### 6.4.1. Reglas con bloque
+
+Contienen otras declaraciones o reglas entre llaves `{ }`.
+
+Ejemplos:
+
+- `@media`
+- `@supports`
+- `@keyframes`
+- `@layer`
+
+### 6.4.2. Reglas con terminación en punto y coma
+
+Suelen introducir una declaración o instrucción.
+
+Ejemplos:
+
+- `@import`
+- `@charset`
+
+Esta clasificación es orientativa: algunas reglas tienen una sintaxis más específica.
+
+
+
+## 6.5. Consejo para aprender CSS
+
+Si estás empezando con CSS, aprende primero:
+
+1. `@media`
+2. `@import`
+3. `@font-face`
+4. `@keyframes`
+
+Después estudia:
+
+5. `@supports`
+6. `@container`
+7. `@layer`
+
+Estas reglas te ayudarán a crear diseños adaptables, animaciones y hojas de estilos más avanzadas y fáciles de mantener.
+
+
+
+# 7. Optimizaciones
 
 A continuación se comentan brevemente algunos detalles que podemos afinar para una mejor experiencia del usuario.
 
 
-## 6.1. Hueco de la barra de desplazamiento
+## 7.1. Hueco de la barra de desplazamiento
 
 En algunas situaciones, sobre todo si tenemos el mismo fondo fijo en distintas páginas, puede observarse que éste se desplaza ligeramente a la izquierda al aparecer la barra de scroll en páginas con mucho contenido y vuelve a la derecha al desaparecer esta barra en páginas con poco contenido. Para evitar este molesto efecto usamos la propiedad **`scrollbar-gutter`** dentro de la etiqueta html.
 
@@ -374,7 +583,7 @@ En algunas situaciones, sobre todo si tenemos el mismo fondo fijo en distintas p
 - [Espacio para barra de desplazamiento](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter)
 
 
-## 6.2. Desplazamiento suave
+## 7.2. Desplazamiento suave
 
 En algunas páginas y aplicaciones web disponemos de un menú en la parte superior con enlaces a diferentes secciones de la página. Podemos conseguir que, cuando el usuario pulse en uno de estos enlaces, se produzca un desplazamiento suave a la sección correspondiente, en lugar del desplazamiento inmediato que es el comportamiento por defecto. Para ello usaremos la propiedad **`scroll-behavior`** con el valor `smooth`.
 
@@ -391,7 +600,7 @@ En algunas páginas y aplicaciones web disponemos de un menú en la parte superi
 Cuando esta propiedad se especifica en el pseudoelemento `:root`, se aplica a la ventana gráfica. Si se especifica en el elemento `body`, no se propaga a la ventana gráfica.
 
 
-## 6.3. Redimensionado de un elemento
+## 7.3. Redimensionado de un elemento
 
 En ciertas circunstancias, la propiedad **`resize`** resulta de gran utilidad. Esta propiedad nos permite definir si un elemento va a permitir el redimiensionado o no. Los valores pueden ser `none`,  `horizontal`, `vertical` o `both`. 
 
@@ -421,7 +630,7 @@ p {
 - [Redimensionado de un elemento](https://developer.mozilla.org/en-US/docs/Web/CSS/resize)
 
 
-## 6.4. Recortado de un texto
+## 7.4. Recortado de un texto
 
 En ciertos casos puede ser útil recortar una línea de texto, quizás porque la información que contiene es una previsualización. Para ello podemos usar la propiedad **`text-overflow`** con los valores `ellipsis` o `clip`. 
 
@@ -442,9 +651,9 @@ p {
 
 - [Recortado de un texto](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
 
-# 7. Desarrollo de web accesibles
+# 8. Desarrollo de web accesibles
 
-## 7.1. Principios de Accesibilidad Web
+## 8.1. Principios de Accesibilidad Web
 La accesibilidad busca que todas las personas (incluyendo con discapacidad visual, auditiva, motriz o cognitiva) puedan **percibir, comprender, navegar e interactuar** con un sitio web.  
 Se apoya en las normas **WCAG 2.1** y el estándar **WAI-ARIA**.
 
@@ -457,7 +666,7 @@ Se apoya en las normas **WCAG 2.1** y el estándar **WAI-ARIA**.
 
 
 
-## 7.2. Roles y atributos WAI-ARIA
+## 8.2. Roles y atributos WAI-ARIA
 
 Los atributos **ARIA** (*Accessible Rich Internet Applications*) mejoran la accesibilidad en aplicaciones web dinámicas.
 
@@ -552,7 +761,7 @@ El atributo **`role`** (definido en la especificación [WAI-ARIA](https://www.w3
 >``` 
 
 
-## 7.3. Atributos `data-`
+## 8.3. Atributos `data-`
 
 Los atributos `data-*` permiten almacenar información personalizada en los elementos HTML, útil para JavaScript o CSS sin romper la semántica.
 
@@ -571,7 +780,7 @@ console.log(btn.dataset.toggle); // "modal"
 console.log(btn.dataset.target); // "#loginModal"
 ```
 
-## 7.4. Clase `sr-only` (screen reader only)
+## 8.4. Clase `sr-only` (screen reader only)
 La clase `sr-only` (usada en frameworks como **Bootstrap**) oculta visualmente un elemento, pero lo mantiene accesible para lectores de pantalla.
 
 - **Ejemplo:**
@@ -583,7 +792,7 @@ La clase `sr-only` (usada en frameworks como **Bootstrap**) oculta visualmente u
 
 👉 El usuario visual solo ve el campo de búsqueda, pero el lector de pantalla anuncia el texto del `label`.
 
-## 7.5. Buenas prácticas en accesibilidad
+## 8.5. Buenas prácticas en accesibilidad
 - Usar **HTML semántico**: encabezados `<h1>–<h6>`, listas, tablas con `<thead>` y `<th>`.  
 - Proporcionar **texto alternativo** en imágenes (`alt`).  
 - Asegurar **contraste suficiente** entre texto y fondo.  
@@ -592,7 +801,7 @@ La clase `sr-only` (usada en frameworks como **Bootstrap**) oculta visualmente u
 - Añadir **descripciones ARIA** en botones e iconos sin texto.  
 - Validar accesibilidad con herramientas como **Lighthouse**, **WAVE** o el **validador de la W3C**.
 
-## 7.6. Ejemplo completo accesible
+## 8.6. Ejemplo completo accesible
 
 ```html
 <header>
@@ -617,16 +826,16 @@ La clase `sr-only` (usada en frameworks como **Bootstrap**) oculta visualmente u
 ``` 
 
 
-# 8. Recursos
+# 9. Recursos
 
-## 8.1. Herramientas
+## 9.1. Herramientas
 
 - [Juego - Flexbox Froggy](https://flexboxfroggy.com/#es)
 - [Juego - CSS Grid Garden](https://cssgridgarden.com/#es)
 - [Juegos Flex Box Adventure y Grid Attack](https://codingfantasy.com)
 - [Generador de Grid](https://cssgridgenerator.io/)
 
-## 8.2. Formación
+## 9.2. Formación
 
 - [MDN - CSS Layout](https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout)
 - [MDN - Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

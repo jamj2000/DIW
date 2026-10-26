@@ -17,8 +17,10 @@
 - [4. Texto y Tipos de fuentes](#4-texto-y-tipos-de-fuentes)
   - [4.1. Fuentes según su diseño](#41-fuentes-según-su-diseño)
   - [4.2. Fuentes según el formato de archivo](#42-fuentes-según-el-formato-de-archivo)
-  - [4.3. Fuentes de iconos](#43-fuentes-de-iconos)
-  - [4.4. Efectos](#44-efectos)
+  - [4.3. Importación y uso de fuentes](#43-importación-y-uso-de-fuentes)
+  - [4.4. Propiedades frecuentes](#44-propiedades-frecuentes)
+  - [4.5. Fuentes de iconos](#45-fuentes-de-iconos)
+  - [4.6. Efectos](#46-efectos)
 - [5. Listas](#5-listas)
 - [6. Tablas](#6-tablas)
 - [7. Modelo de caja (box model)](#7-modelo-de-caja-box-model)
@@ -355,39 +357,93 @@ También hemos usado otras propiedades no relacionadas con el color como `overfl
 
 # 4. Texto y Tipos de fuentes
 
-Las propiedades más frecuentes para el texto son las siguientes:
 
-- `color`
-- `font-family`
-- `font-size`
-- `font-weight`
-- `text-align`
-- `text-indent`
-- `word-spacing`
-- `letter-spacing`
-- `line-height`
-- `text-shadow`
+## 4.1. Fuentes según su diseño
 
-Para importar un tipo de letra o fuente, podemos usar la regla `@import`
+Las tipografías más habituales son las siguientes:
 
-Ejemplo:
+- **SERIF**
+- **SANS-SERIF**, **SLAB-SERIF**
+- **MONOSPACE**
+
+
+Referencias:
+
+- [Artículo en wikipedia: Tipografía gráfica](https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_tipogr%C3%A1fica)
+- [Artículo en wikipedia: Clasificación de Francis Thibaudeau](https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_de_Francis_Thibaudeau)
+- [Artículo en wikipedia: Clasificación Vox-ATypI](https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_Vox-ATypI)
+- [Google Fonts Knowledge: Making sense of typographic classifications](https://fonts.google.com/knowledge/introducing_type/making_sense_of_typographic_classifications)
+- [Google Fonts Knowledge](https://fonts.google.com/knowledge)
+
+## 4.2. Fuentes según el formato de archivo
+
+Las fuentes se distribuyen habitualmente en alguno de los siguientes formatos:
+
+- **OTF** (OpenType)
+- **TTF** (TrueType)
+- **WOFF**, **WOFF2** (Web Open Font Format)
+- **SVG**
+
+Referencias:
+
+- [Artículo en tutsplus](https://design.tutsplus.com/es/articles/different-font-file-types-explained-ott-ttf-woff--cms-39047)
+- [Artículo en creativefabrica](https://www.creativefabrica.com/es/the-ultimate-font-guide/difference-between-font-formats/)
+
+
+## 4.3. Importación y uso de fuentes
+
+Para registrar fuentes personalizadas desde un archivo podemos usar la regla @font-face
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
+/* Fuente local */
+@font-face {
+  font-family: "MiFuente";
+  src: url("fuente.woff2");
+}
 
-div {
-    color: tomato;
-    font-family: 'Fira Code', monospace;
-    font-size: 1rem;  /* 16px */
-    font-weight: 400;    
-    word-spacing: 8px;
-    letter-spacing: 1rem;
-    line-height: 300px;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 4px 4px 4px #aaa;
+body {
+  font-family: "MiFuente", sans-serif;
+} 
+```
+
+```css
+/* Fuente remota */
+@font-face {
+  font-family: "MiFuente";
+  src: url("https://ejemplo.com/fuentes/mifuente.woff2")
+       format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "MiFuente", sans-serif;
 }
 ```
+
+
+> ![TIP]
+>
+> Otra alternativa para importar un tipo de letra o fuente es usar la regla `@import`
+> 
+> Ejemplo:
+>
+> ```css
+> @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
+> 
+> div {
+>    color: tomato;
+>    font-family: 'Fira Code', monospace;
+>    font-size: 1rem;  /* 16px */
+>    font-weight: 400;    
+>    word-spacing: 8px;
+>    letter-spacing: 1rem;
+>    line-height: 300px;
+>    text-align: center;
+>    text-decoration: none;
+>    text-shadow: 4px 4px 4px #aaa;
+>}
+>```
 
 > [!TIP] 
 > 
@@ -423,40 +479,24 @@ div {
 > `1rem` = 1 "root em" → es relativo al tamaño de fuente (font-size) del elemento raíz (<html>)
 > `1em` → es relativo al tamaño de fuente (font-size) del elemento padre, un antecesor o en su defecto <body>
 
+## 4.4. Propiedades frecuentes
 
-## 4.1. Fuentes según su diseño
+Las propiedades más frecuentes para el texto son las siguientes:
 
-Las tipografías más habituales son las siguientes:
-
-- **SERIF**
-- **SANS-SERIF**, **SLAB-SERIF**
-- **MONOSPACE**
-
-
-Referencias:
-
-- [Artículo en wikipedia: Tipografía gráfica](https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_tipogr%C3%A1fica)
-- [Artículo en wikipedia: Clasificación de Francis Thibaudeau](https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_de_Francis_Thibaudeau)
-- [Artículo en wikipedia: Clasificación Vox-ATypI](https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_Vox-ATypI)
-- [Google Fonts Knowledge: Making sense of typographic classifications](https://fonts.google.com/knowledge/introducing_type/making_sense_of_typographic_classifications)
-- [Google Fonts Knowledge](https://fonts.google.com/knowledge)
-
-## 4.2. Fuentes según el formato de archivo
-
-Las fuentes se distribuyen habitualmente en alguno de los siguientes formatos:
-
-- **OTF** (OpenType)
-- **TTF** (TrueType)
-- **WOFF**, **WOFF2** (Web Open Font Format)
-- **SVG**
-
-Referencias:
-
-- [Artículo en tutsplus](https://design.tutsplus.com/es/articles/different-font-file-types-explained-ott-ttf-woff--cms-39047)
-- [Artículo en creativefabrica](https://www.creativefabrica.com/es/the-ultimate-font-guide/difference-between-font-formats/)
+- `color`
+- `font-family`
+- `font-size`
+- `font-weight`
+- `text-align`
+- `text-indent`
+- `word-spacing`
+- `letter-spacing`
+- `line-height`
+- `text-shadow`
 
 
-## 4.3. Fuentes de iconos
+
+## 4.5. Fuentes de iconos
 
 Existen fuentes, que en lugar de contener [glifos](https://es.wikipedia.org/wiki/Glifo#:~:text=En%20tipograf%C3%ADa%2C%20un%20glifo%20es,glifo%20es%20una%20unidad%20gr%C3%A1fica.) para caracteres de texto, están conformados por iconos.
 
@@ -490,7 +530,7 @@ Resultado:
 
 Para la configuración de la apariencia del icono, consultar la [guía disponible en Google Fonts](https://developers.google.com/fonts/docs/material_icons?hl=es-419). 
 
-## 4.4. Efectos 
+## 4.6. Efectos 
 
 [Muchas fuentes de Google Fonts soportan efectos](https://developers.google.com/fonts/docs/getting_started?hl=es-419).
 Estos efectos se ven realmente bien en títulos, no en texto de párrafo.
