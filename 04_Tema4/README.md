@@ -433,6 +433,10 @@ Mas info:
 - https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes 
 - https://developer.mozilla.org/en-US/docs/Web/CSS/animation
 
+**Referencia:**
+
+- [Video (incluye publicidad): Animaciones avanzadas con @property y contadores](https://youtu.be/7VXYe5i__dI?si=AqLQdw2xQdbko-D0)
+
 
 # 6. Funcionalidades avanzadas
 
