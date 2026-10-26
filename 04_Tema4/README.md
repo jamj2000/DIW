@@ -349,6 +349,10 @@ input[type=text]:focus {
 }
 ```
 
+**Referencia:**
+
+- [Video: Transiciones CSS desde cero](https://youtu.be/aI_JPJAVXvk?si=1EwaZgvNNM-vLhm1)
+
 
 # 5. Animaciones
 
