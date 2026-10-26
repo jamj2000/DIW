@@ -444,6 +444,9 @@ body {
 >    text-shadow: 4px 4px 4px #aaa;
 >}
 >```
+>
+> **Recomendación**: para Google Fonts, los enlaces mediante <link> en el HTML suelen ser una alternativa preferible a @import, ya que permiten al navegador descubrir antes la hoja de estilos.
+> 
 
 > [!TIP] 
 > 
