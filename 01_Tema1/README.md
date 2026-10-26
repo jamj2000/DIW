@@ -392,7 +392,7 @@ Referencias:
 
 ## 4.3. Importación y uso de fuentes
 
-Para registrar fuentes personalizadas desde un archivo podemos usar la regla @font-face
+Para registrar fuentes personalizadas **desde un archivo** podemos usar la regla @font-face
 
 ```css
 /* Fuente local */
@@ -422,65 +422,79 @@ body {
 ```
 
 
-> ![TIP]
->
-> Otra alternativa para importar un tipo de letra o fuente es usar la regla `@import`
-> 
-> Ejemplo:
->
-> ```css
-> @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
-> 
-> div {
->    color: tomato;
->    font-family: 'Fira Code', monospace;
->    font-size: 1rem;  /* 16px */
->    font-weight: 400;    
->    word-spacing: 8px;
->    letter-spacing: 1rem;
->    line-height: 300px;
->    text-align: center;
->    text-decoration: none;
->    text-shadow: 4px 4px 4px #aaa;
->}
->```
->
-> **Recomendación**: para Google Fonts, los enlaces mediante <link> en el HTML suelen ser una alternativa preferible a @import, ya que permiten al navegador descubrir antes la hoja de estilos.
-> 
 
-> [!TIP] 
+Otra alternativa para importar un tipo de letra o fuente es usar la regla `@import`
+
+Ejemplo:
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
+
+div {
+   color: tomato;
+   font-family: 'Fira Code', monospace;
+   font-size: 1rem;  /* 16px */
+   font-weight: 400;    
+   word-spacing: 8px;
+   letter-spacing: 1rem;
+   line-height: 300px;
+   text-align: center;
+   text-decoration: none;
+   text-shadow: 4px 4px 4px #aaa;
+}
+```
+
+Google Fonts proporciona una hoja de estilos CSS que contiene las declaraciones @font-face necesarias para cargar la fuente.
+
+
+Los valores por defecto para el tamaño y el peso son:
+
+```css
+    font-size: 1rem;  /* o  font-size: 16px */
+    font-weight: 400;
+```
+
+- `1rem` = 1 "root em" → es relativo al tamaño de fuente (font-size) del elemento raíz (<html)
+- `1em` → es relativo al tamaño de fuente (font-size) del elemento padre, un antecesor o en su defecto <body>
+
+**Fallback para la fuente**
+
+No existen fuentes que sean 100% seguras para la web. Siempre existe la posibilidad de que una fuente no se encuentre o no esté instalada correctamente; por ello, es fundamental utilizar siempre fuentes alternativas.
+
+Esto significa que debes incluir una lista de fuentes de respaldo similares en la propiedad `font-family`. Si la primera fuente no funciona, el navegador probará con la siguiente, luego con la posterior, y así sucesivamente. Finaliza siempre la lista con el nombre de una familia de fuentes genérica que funciona con fallback.
+
+En el siguiente código, el fallback es monospace.
+
+```css
+font-family: 'Fira Code', monospace;
+```
+
+Existen varios fallbacks. Los más frecuentes son:
+
+- **`serif`**
+- **`sans-serif`**
+- **`monospace`**
+- **`cursive`**
+- **`fantasy`**
+
+
+
+> [!TIP]
 > 
-> **Fallback para la fuente**
+> Para Google Fonts, los enlaces mediante `<link>` en el HTML suelen ser una alternativa preferible a `@import`, ya que permiten al navegador descubrir antes la hoja de estilos.
 >
-> No existen fuentes que sean 100% seguras para la web. Siempre existe la posibilidad de que una fuente no se encuentre o no esté instalada correctamente; por ello, es fundamental utilizar siempre fuentes alternativas.
+>```html
+><!-- Importar la fuente Roboto -->
+><link rel="preconnect" href="https://fonts.googleapis.com">
+><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 >
-> Esto significa que debes incluir una lista de fuentes de respaldo similares en la propiedad `font-family`. Si la primera fuente no funciona, el navegador probará con la siguiente, luego con la posterior, y así sucesivamente. Finaliza siempre la lista con el nombre de una familia de fuentes genérica que funciona con fallback.
->
-> En el siguiente código, el fallback es monospace.
-> 
-> ```css
-> font-family: 'Fira Code', monospace;
+><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+>       rel="stylesheet">
 > ```
->
-> Existen varios fallbacks. Los más frecuentes son:
-> - serif
-> - sans-serif
-> - monospace
-> - cursive
-> - fantasy
-> 
+> Google Fonts proporciona una hoja de estilos CSS que contiene las declaraciones @font-face necesarias para cargar la fuente.
 
-> [!NOTE]
->
-> Los valores por defecto para el tamaño y el peso son:
->
->```css
->    font-size: 1rem;  /* o  font-size: 16px */
->    font-weight: 400;
->```
->
-> `1rem` = 1 "root em" → es relativo al tamaño de fuente (font-size) del elemento raíz (<html>)
-> `1em` → es relativo al tamaño de fuente (font-size) del elemento padre, un antecesor o en su defecto <body>
+
+
 
 ## 4.4. Propiedades frecuentes
 
