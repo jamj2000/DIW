@@ -441,7 +441,7 @@ Mas info:
 
 # 6. Preferencias del usuario
 
-Por motivos de accesibilidad, un usuario puede desear minimizar los elementos animados de una página, tanto respecto a transiciones y como a animaciones.
+Por motivos de accesibilidad, un usuario puede desear minimizar los elementos animados de una página, tanto respecto a transiciones como a animaciones.
 
 `@media (prefers-reduced-motion)` es una media query de CSS que permite detectar si el usuario ha solicitado reducir las animaciones y los efectos de movimiento en su dispositivo.
 
