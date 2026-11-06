@@ -17,12 +17,13 @@
   - [3.4. Combinar transformaciones](#34-combinar-transformaciones)
 - [4. Transiciones](#4-transiciones)
 - [5. Animaciones](#5-animaciones)
-- [6. Funcionalidades avanzadas](#6-funcionalidades-avanzadas)
-  - [6.1. Scroll driven animations](#61-scroll-driven-animations)
-  - [6.2. View Transitions](#62-view-transitions)
-- [7. Recursos](#7-recursos)
-  - [7.1. Herramientas](#71-herramientas)
-  - [7.2. Formación](#72-formación)
+- [6. Preferencias del usuario](#6-preferencias-del-usuario)
+- [7. Funcionalidades avanzadas](#7-funcionalidades-avanzadas)
+  - [7.1. Scroll driven animations](#71-scroll-driven-animations)
+  - [7.2. View Transitions](#72-view-transitions)
+- [8. Recursos](#8-recursos)
+  - [8.1. Herramientas](#81-herramientas)
+  - [8.2. Formación](#82-formación)
 
 
 --- 
@@ -438,14 +439,114 @@ Mas info:
 - [Video (incluye publicidad): Animaciones avanzadas con @property y contadores](https://youtu.be/7VXYe5i__dI?si=AqLQdw2xQdbko-D0)
 
 
-# 6. Funcionalidades avanzadas
+# 6. Preferencias del usuario
+
+Por motivos de accesibilidad, un usuario puede desear tener minimizar los elementos animados de una página, tanto respecto a transiciones y como a animaciones.
+
+`@media (prefers-reduced-motion)` es una media query de CSS que permite detectar si el usuario ha solicitado reducir las animaciones y los efectos de movimiento en su dispositivo.
+
+Es especialmente importante cuando desarrollamos páginas con animaciones, carruseles, efectos de desplazamiento, elementos que giran o transiciones llamativas.
+
+Su objetivo principal es mejorar la accesibilidad web, especialmente para personas que pueden experimentar mareos, vértigo, náuseas o molestias ante movimientos y animaciones en pantalla.
+
+El sistema operativo permite configurar una preferencia de accesibilidad para reducir las animaciones.
+
+**¿Cómo activar esta opción en el sistema operativo?**
+
+- Windows: Configuración → Accesibilidad → Efectos visuales → Efectos de animación.
+- macOS: Ajustes del Sistema → Accesibilidad → Pantalla → Reducir movimiento.
+- iPhone/iPad: Ajustes → Accesibilidad → Movimiento → Reducir movimiento.
+- Android: Depende del fabricante y de la versión; suele encontrarse en Accesibilidad o en las opciones de desarrollador.
+
+
+CSS puede detectar esa preferencia mediante `prefers-reduced-motion`.
+
+Tiene dos valores:
+
+| Valor         | Significado                                        |
+| ------------- | -------------------------------------------------- |
+| no-preference | El usuario no ha solicitado reducir el movimiento. |
+| reduce        | El usuario ha solicitado reducir el movimiento.    |
+
+> [!TIP]
+>
+> `@media (prefers-reduced-motion: reduce)` puede escribirse de forma simplificada como `@media (prefers-reduced-motion)` 
+
+**Ejemplo 1**
+
+Imaginemos que tenemos un botón que aumenta de tamaño al pasar el ratón por encima.
+
+```css
+button {
+    transition: transform 0.5s ease;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+```
+
+El botón aumenta progresivamente un 20% de su tamaño.
+
+Podemos adaptar este comportamiento para usuarios que prefieren reducir el movimiento:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+    button {
+        transition: none;
+    }
+
+    button:hover {
+        transform: none;
+    }
+}
+```
+
+
+**Ejemplo 2**
+
+Imaginemos que tenemos un elemento que gira continuamente:
+
+```css
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.icono {
+    animation: girar 2s linear infinite;
+}
+```
+
+Podemos desactivar esa animación para quienes prefieran reducir el movimiento:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+    .icono {
+        animation: none;
+    }
+}
+```
+
+
+Mas info:
+
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion
+
+
+# 7. Funcionalidades avanzadas
 
 > [!IMPORTANT] 
 > 
 > **Las siguientes funcionalidades son bastante modernas. Por tanto, es esperable que el soporte entre navegadores sea muy dispar. Por tanto, antes de usarlas, asegúrate de que estén suficientemente soportadas para evitar problemas de accesibilidad.**
 
 
-## 6.1. Scroll driven animations
+## 7.1. Scroll driven animations
 
 Las **animaciones asociadas al desplazamiento** proporcionan efectos visuales muy atractivos en una página a medida que nos desplazamos hacia abajo hasta el final de dicha página, como puede verse en el siguiente vídeo. 
 
@@ -529,7 +630,7 @@ En este caso hemos usado además la propiedad **`animation-range: entry 25% cove
 
 ![animation scroll](assets/animation-scroll.png)
 
-## 6.2. View Transitions
+## 7.2. View Transitions
 
 Las **transiciones de vista** son una opción de diseño popular para reducir la carga cognitiva de los usuarios, ayudarlos a mantenerse en contexto y reducir la latencia de carga percibida a medida que se mueven entre estados o vistas de una aplicación.
 
@@ -553,9 +654,9 @@ La API View Transitions proporciona un mecanismo para crear fácilmente transici
 
 ![view transitions](assets/view-transitions.png)
 
-# 7. Recursos
+# 8. Recursos
 
-## 7.1. Herramientas
+## 8.1. Herramientas
 
 - [Can I use](https://caniuse.com/)
 - [Animista: Web para crear animaciones](https://animista.net/)
@@ -565,7 +666,7 @@ La API View Transitions proporciona un mecanismo para crear fácilmente transici
 - [Loaders](https://css-loaders.com/)
 
 
-## 7.2. Formación
+## 8.2. Formación
 
 - [MDN: Funciones de transformación](https://developer.mozilla.org/es/docs/Web/CSS/transform-function)
 - [OpenWebinars: Taller Animaciones CSS3](https://github.com/OpenWebinarsNet/Taller_Animaciones_CSS3)
