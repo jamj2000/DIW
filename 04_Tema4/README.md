@@ -443,7 +443,7 @@ Mas info:
 
 Por motivos de accesibilidad, un usuario puede desear minimizar los elementos animados de una página, tanto respecto a transiciones como a animaciones.
 
-`@media (prefers-reduced-motion)` es una media query de CSS que permite detectar si el usuario ha solicitado reducir las animaciones y los efectos de movimiento en su dispositivo.
+**`@media (prefers-reduced-motion)`** es una media query de CSS que permite detectar si el usuario ha solicitado reducir las animaciones y los efectos de movimiento en su dispositivo.
 
 Es especialmente importante cuando desarrollamos páginas con animaciones, carruseles, efectos de desplazamiento, elementos que giran o transiciones llamativas.
 
