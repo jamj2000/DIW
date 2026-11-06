@@ -249,7 +249,35 @@ El listado de reglas CSS que establecemos es interpretado de forma secuencial. E
 | 1000 | en línea                                      | `<h1 style="color: pink;"></h1>` |
 |  100 | id                                            | #navbar                          |
 |   10 | clases, pseudoclases, selectores de atributos | .test, :hover, [href]            |
-|    1 | elementos, pseudoelementos                    | h1, p::before                    |
+|    1 | elementos, pseudoelementos                    | h1,  ::before                    |
+
+**Ejemplos**
+
+| Selector CSS                           | Especificidad |
+| -------------------------------------- | ------------- |
+| *                                      | 0-0-0-0       |
+| p                                      | 0-0-0-1       |
+| p::before                              | 0-0-0-2       |
+| .menu                                  | 0-0-1-0       |
+| [type="text"]                          | 0-0-1-0       |
+| :hover                                 | 0-0-1-0       |
+| div p                                  | 0-0-0-2       |
+| div.menu                               | 0-0-1-1       |
+| #cabecera                              | 0-1-0-0       |
+| #cabecera p                            | 0-1-0-1       |
+| #cabecera .menu p                      | 0-1-1-1       |
+| style="color:red"                      | 1-0-0-0       |
+| div > p:hover                          | 0-0-1-2       |
+| .menu > li:hover                       | 0-0-2-1       |
+| #menu > li:first-child                 | 0-1-1-1       |
+| h2 + p.destacado:hover                 | 0-0-2-2       |
+| .caja + p:first-child                  | 0-0-2-1       |
+| #cabecera ~ p:hover                    | 0-1-1-1       |
+| div ~ p.activo                         | 0-0-1-2       |
+| ul > li + li                           | 0-0-0-3       |
+| .menu > li + li.activo                 | 0-0-2-2       |
+| #principal div > p.texto:hover         | 0-1-2-2       |
+| body #menu > ul li:first-child a:hover | 0-1-2-4       |
 
 
 > Material de consulta: https://www.w3schools.com/css/css_specificity.asp
@@ -259,7 +287,9 @@ El listado de reglas CSS que establecemos es interpretado de forma secuencial. E
 
 Muchas de los valores de las propiedades se heredan de padres a hijos, es decir que elementos contenedores a elementos contenidos.
 
-No todas las propiedades son heredadas. Las propiedades que se heredan son:
+No todas las propiedades son heredadas. 
+
+Las **propiedades que se heredan** son:
 
 - `border-collapse`
 - `border-spacing`
@@ -320,6 +350,20 @@ p {
 }
 ```
 
+Alguna **propieades que no se heredan** son:
+
+- `border`
+- `outline`
+- `margin`
+- `padding`
+- `height`
+- `width`
+- `background-color`
+- `display`
+- `position`
+- `z-index`
+- `opacity`
+- `overflow`
 
 
 # 5. Position
@@ -410,6 +454,16 @@ Un elemento puede tener un orden de pila positivo o negativo. Por defecto, el va
 > [!NOTE] 
 > 
 > `z-index` sólo funciona en elementos posicionados (`absolute`, `relative`, `fixed`, or `sticky`) y elementos flexibles (elementos que son hijos directos de un elemento `display: flex`).
+
+
+> [!IMPORTANT]
+>
+> El z-index no funciona como una competición global de números.
+>
+> Los elementos primero compiten dentro de su **contexto de apilamiento** y los contextos compiten entre sí.
+>
+> Un elemento con `z-index: 999999` puede quedar detrás de otro con `z-index: 2` si está dentro de un contexto de apilamiento inferior.
+
 
 # 6. Alineación horizontal y vertical
 
