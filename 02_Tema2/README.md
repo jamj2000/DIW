@@ -280,16 +280,19 @@ El listado de reglas CSS que establecemos es interpretado de forma secuencial. E
 | body #menu > ul li:first-child a:hover | 0-1-2-4       |
 
 
-> [!NOTE]
-> Una regla que posea !important tiene prioridad sobre las declaraciones normales, aunque tengan mayor especificidad.
+> [!CAUTION]
 >
-> Por ejemplo, el siguiente código tiene máxima prioridad, incluso mayor que los estilos en línea.
+> Una propiedad que finalice con **`!important`** tiene máxima prioridad, incluso mayor que los estilos en línea.
+>
+> Por ejemplo, el siguiente código hará que cualquier párrafo se muestre en color azul, independientemente del resto de reglas CSS.
 > 
 > ```css
 > p {
 >   color: blue !important;
 > }
 > ```
+>
+> **Como norma general el uso de `!important` se considera una mala práctica.**
   
 
 **Material de consulta**: https://www.w3schools.com/css/css_specificity.asp
