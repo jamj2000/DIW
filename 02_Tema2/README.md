@@ -280,7 +280,19 @@ El listado de reglas CSS que establecemos es interpretado de forma secuencial. E
 | body #menu > ul li:first-child a:hover | 0-1-2-4       |
 
 
-> Material de consulta: https://www.w3schools.com/css/css_specificity.asp
+> [!NOTE]
+> Una regla que posea !important tiene prioridad sobre las declaraciones normales, aunque tengan mayor especificidad.
+>
+> Por ejemplo, el siguiente código tiene máxima prioridad, incluso mayor que los estilos en línea.
+> 
+> ```css
+> p {
+>   color: blue !important;
+> }
+> ```
+  
+
+**Material de consulta**: https://www.w3schools.com/css/css_specificity.asp
 
 
 ## 4.3. Herencia
