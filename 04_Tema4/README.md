@@ -453,10 +453,10 @@ El sistema operativo permite configurar una preferencia de accesibilidad para re
 
 **¿Cómo activar esta opción en el sistema operativo?**
 
-- Windows: Configuración → Accesibilidad → Efectos visuales → Efectos de animación.
-- macOS: Ajustes del Sistema → Accesibilidad → Pantalla → Reducir movimiento.
-- iPhone/iPad: Ajustes → Accesibilidad → Movimiento → Reducir movimiento.
-- Android: Depende del fabricante y de la versión; suele encontrarse en Accesibilidad o en las opciones de desarrollador.
+- **Windows**: Configuración → Accesibilidad → Efectos visuales → Efectos de animación.
+- **macOS**: Ajustes del Sistema → Accesibilidad → Pantalla → Reducir movimiento.
+- **iPhone/iPad**: Ajustes → Accesibilidad → Movimiento → Reducir movimiento.
+- **Android**: Depende del fabricante y de la versión; suele encontrarse en Accesibilidad o en las opciones de desarrollador.
 
 
 CSS puede detectar esa preferencia mediante `prefers-reduced-motion`.
